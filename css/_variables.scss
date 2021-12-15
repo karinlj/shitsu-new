@@ -1,0 +1,98 @@
+//$xs-max: 575.9px;
+$xs-max: 480px;
+$sm-min: 576px;
+
+$sm-max: 767.9px;
+$md-min: 768px;
+
+$md-max: 991.9px;
+$lg-min: 992px;
+
+$lg-max: 1199.9px;
+$xl-min: 1200px;
+
+$xl-max: 1309px;
+$max-page-width: 1380px;
+
+/* colors */
+//original thelab purple colors
+// $themecolorLila: #2a2966;
+// $themecolorLilaDark: #2c407d;
+// $themecolorLilaDarkest: #161637;
+
+$themecolorBlueDark: #22315e;
+$themecolorBlueDarkBg: linear-gradient(
+  to right,
+  #1b274b,
+  #1e2c54,
+  #22315d,
+  #253667,
+  #293b70
+);
+$themecolorBlueDarkLighter: #293b70;
+$themecolorBlueDarkest: #1c284a;
+$themecolorPurpleDark: #502d52;
+$themecolorPurpleDarkBg: linear-gradient(
+  to right,
+  #402442,
+  #48284a,
+  #502d52,
+  #58315b,
+  #603663
+);
+$themecolorPurple: linear-gradient(
+  to right,
+  #4f4686,
+  #5b4c8e,
+  #675196,
+  #73579e,
+  #7f5da6
+);
+$themecolorNewBlue: #0085cc;
+$themecolorNewBlueDarker: #006399;
+$themecolorNewBlueBg: linear-gradient(
+  to right bottom,
+  #0074b3,
+  #007cc0,
+  #0084cc,
+  #008dd9,
+  #0095e6
+);
+//text color
+$themecolor: #4a5669;
+$themecolorLight: #66758d;
+$themecolorLightest: #b5bdc9;
+$themeHeadingcolor: #212735;
+$themecolorFront: #dae0f1;
+
+$themeBorderColor: #ebebeb;
+$themeBorderColorFront: #293b70;
+$lightgrey: #f5f6f9;
+$themecolorPink: #f24d7f;
+$themecolorGreen: #00ac7d;
+
+//overlays
+$themecolorBlueDarkOverlay: rgba(34, 49, 94, 0.8);
+$themecolorBlueOverlay: rgba(0, 116, 179, 0.75);
+$themecolorNewBlueDarkerOverlay: rgba(0, 83, 128, 0.85);
+$themecolorPurpleOverlay: rgba(87, 78, 147, 0.85);
+$themecolorPurpleDarkOverlay: rgba(80, 45, 82, 0.8);
+
+//other
+$themefont: "Roboto", "Helvetica", sans-serif;
+$navfont: $themefont;
+$headingfont: $themefont;
+$themeBorder_radius: 8px;
+$btnBorder_radius: 4px;
+
+$themeBox_shadow: 0 4px 8px 0 hsl(217deg 17% 35% / 8%);
+$themeBox_shadow_more: 0px 2px 10px rgb(0 0 0 / 20%);
+$themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+  rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+$themeBox_shadow_images_hover: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+
+$navcolor: #fff;
+$navcolorDark: $themecolor;
+$navBg_transp: transparent;
+$linkcolor: $themecolorNewBlue;
+//old  blue light: #2e9ce6;

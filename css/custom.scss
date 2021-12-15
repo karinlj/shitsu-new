@@ -1,0 +1,119 @@
+/*
+Theme Name: Theme Shiatsu 
+Author: Karin Ljunggren
+Author URI: http://karinljunggren.com/
+Description:  Theme for Shiatsurummet.
+Version: 1.0.1
+License: GNU General Public License v2 or later
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import "_mixins.scss";
+@import "variables.scss";
+
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  color: #555;
+  font-size: 14px;
+  width: 100%;
+  background-color: /*#f5f0e6;*/ #f5f0eb; /* - ving*/ /*#ece6df;*/ /*#ededed;*/ /*#EEF1EF; isabelline */ /*#fcfcfc;*/
+}
+
+.content-container-full-width {
+  max-width: 1200px;
+  /*margin: 0 auto 3em auto;*/
+  margin: 0 auto;
+  background: #fff;
+}
+
+/*********************
+   footer 
+*********************/
+.footer-parent-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+  .social-icons {
+    padding: 1.5rem 0;
+    ul.social {
+      @include d-inline-flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      li.social-item {
+        padding: 0 0.4rem;
+        &:first-child {
+          padding-left: 0;
+        }
+        .fab,
+        .fas {
+          font-size: 20px;
+          padding-right: 1rem;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 50%;
+          transition: 1s;
+          color: #fff;
+          background-position: center;
+          cursor: pointer;
+          box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
+          transition: all 0.25s ease;
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
+          }
+        }
+      }
+    }
+  }
+}
+.footer-child {
+  padding: 0;
+  width: 100%;
+  @media only screen and (min-width: $md-min) {
+    width: 33%;
+    padding: 2em;
+  }
+  h5 {
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    color: #56b1bf;
+    font-size: 1.6em;
+  }
+  p {
+    font-size: 0.95em;
+  }
+}
+
+.footer-bottom {
+  padding: 3em 10%;
+  background-color: #262626;
+  color: #999;
+  position: relative;
+  p {
+    margin: 0;
+  }
+  .to-top {
+    position: absolute;
+    right: 70px;
+    bottom: 50px;
+    display: none;
+    @media only screen and (min-width: $md-min) {
+      display: block;
+    }
+    &::before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f077";
+      font-size: 1.7rem;
+      color: #56b1bf;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,0 +1,1441 @@
+/*
+Theme Name: Theme Shiatsu 
+Author: Karin Ljunggren
+Author URI: http://karinljunggren.com/
+Description:  Theme for Shiatsurummet.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*---------------------------------------
+>>> TABLE OF CONTENTS:
+-----------------------------------------
+# Globals
+# Override Bootstrap's default container
+
+# Header and Menu
+# Pages general
+# Front page layout - Pict, Intro, Widget Image boxes, Reference section 
+
+# Page Banner layout
+
+# Treatment Pages - 2 columns - pics every other side
+
+# Enterprise Page - 1 column, 2 columns, Pdf section
+
+# About Page - 1 column for every post
+
+# Contact Page - 1 column for every post, Contact Form, social widget
+
+# Footer
+
+# Media Queries for smallest screen
+-----------------------------------------*/
+
+/***************
+  Globals
+****************/
+
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  color: #555;
+  font-size: 14px;
+  width: 100%;
+  background-color: /*#f5f0e6;*/ #f5f0eb; /* - ving*/ /*#ece6df;*/ /*#ededed;*/ /*#EEF1EF; isabelline */ /*#fcfcfc;*/
+}
+
+.content-container-full-width {
+  max-width: 1200px;
+  /*margin: 0 auto 3em auto;*/
+  margin: 0 auto;
+  background: #fff;
+}
+
+.custom-container {
+}
+
+p {
+  line-height: 1.7em;
+  letter-spacing: 0.4px;
+}
+
+a {
+  color: /* #4aa3df; */
+    /*#0099ff ;*/ #46aab9;
+
+  font-size: 1em;
+}
+
+a:hover {
+  color: #009ccc;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #009ccc;
+  text-decoration: none;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.to-the-right {
+  float: right;
+  margin-right: 5%;
+}
+
+.to-the-left {
+  float: left;
+  margin-left: 5%;
+}
+
+/*@font-face {
+        font-family: 'GeosansLightRegular';
+        src: url('fonts/geosanslight-webfont.eot');
+        src: url('fonts/geosanslight-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/geosanslight-webfont.woff') format('woff'),
+             url('fonts/geosanslight-webfont.ttf') format('truetype'),
+             url('fonts/geosanslight-webfont.svg#GeosansLightRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 0.8px;
+  padding: 5px 0 10px 0;
+  line-height: 1.3em;
+}
+
+h1 {
+  font-size: 3.4em;
+  letter-spacing: 1.2px;
+}
+
+h2 {
+  font-size: 2.3em;
+  color: #889438;
+}
+
+h4 {
+  font-size: 1.6em;
+  color: #889438;
+}
+
+h5 {
+  color: #555;
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*buttons*/
+
+a.button-link {
+  display: inline-block;
+  border: 1.5px solid #56b1bf;
+  background: #fff;
+  color: #56b1bf;
+  padding: 12px 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 1s;
+  line-height: 20px;
+  margin-top: 2em;
+}
+
+a.button-link:active,
+a.button-link:visited {
+  border: 1.5px solid #56b1bf;
+  background: #fff;
+  color: #56b1bf;
+  text-decoration: none;
+}
+
+a.button-link:hover {
+  border: 1.5px solid #56b1bf;
+  background: #56b1bf;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*********************
+ Header and Menu 
+*********************/
+
+/* CSS for menu-3. Desktop menu with logo and Sign up button. Mobile menu sliding in from right - covering whole screen. Sub menus. Made with Flexbox */
+
+#header-new {
+  margin-top: 0;
+  background-color: #f5f0eb;
+  width: 100%;
+  z-index: 5;
+}
+
+/*Desktop view*/
+
+.nav-desktop {
+  background-color: #f5f0eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.site-title {
+  padding: 0;
+  margin: 0;
+  padding-right: 25px;
+}
+
+.site-title a {
+  color: #778131;
+  letter-spacing: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+  font-family: "GeosansLight", Arial, sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.nav-desktop ul {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  list-style: none;
+  display: none;
+}
+
+.nav-desktop ul li {
+  position: relative;
+}
+
+.nav-desktop ul li a {
+  display: block;
+  color: #111;
+  padding: 16px 13px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 1.4em;
+  cursor: pointer;
+  letter-spacing: -0.2px;
+  font-family: "GeosansLight", Arial, sans-serif;
+}
+
+.nav-desktop ul li a:hover {
+  opacity: 0.8;
+}
+
+.nav-desktop ul li a:active,
+.nav-desktop ul li a:visited {
+  color: #111;
+}
+
+/*Wp:s klasser*/
+
+.nav-desktop ul li.current-menu-item > a {
+  color: #aab946;
+}
+
+.nav-desktop ul li.menu-item-has-children ul {
+  /*funkar!!*/
+  position: absolute;
+  z-index: 10;
+  background-color: #f5f0eb;
+  width: 170px;
+  padding-bottom: 3px;
+  margin-top: -10px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: none;
+}
+
+/*togglar med jquery*/
+
+.nav-desktop ul li.menu-item-has-children ul.sub-menu-open {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-desktop ul li.menu-item-has-children > a::after {
+  content: "\f107";
+  font-family: FontAwesome;
+  margin-left: 5px;
+}
+
+.nav-desktop ul li.menu-item-has-children li {
+  /*för att täcka med b-c - hover*/
+  width: 100%;
+}
+
+.nav-desktop ul li.menu-item-has-children li a {
+  padding: 2px 16px;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.nav-desktop ul li.menu-item-has-children li:hover a {
+  opacity: 0.8;
+}
+
+.booking-btn {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.booking-btn img {
+  width: 80%;
+  height: auto;
+
+  float: right;
+}
+
+.booking-btn ul li a {
+  padding: 0;
+}
+
+.nav-desktop > .toggle {
+  font-size: 26px;
+  color: #111;
+  cursor: pointer;
+}
+
+/*Mobile view*/
+
+.nav-mobile {
+  clear: both;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: #4e7425;
+  opacity: 0.9;
+  padding: 0 10%;
+  padding-top: 60px;
+  text-align: left;
+
+  transform: translateX(100%);
+  transition: transform 0.6s ease;
+}
+
+.nav-mobile ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-mobile ul li a {
+  padding: 15px;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  font-weight: 600;
+  font-family: "GeosansLight", Arial, sans-serif;
+}
+
+.nav-mobile ul li a:hover {
+  opacity: 0.7;
+}
+
+/*Wp:s klasser*/
+
+.nav-mobile ul li.menu-item-has-children ul {
+  position: static;
+  z-index: 10;
+  display: none;
+}
+
+/*togglar med jquery*/
+.nav-mobile ul li.menu-item-has-children ul.sub-menu-open {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-mobile ul li.menu-item-has-children > a::after {
+  content: "\f107";
+  font-family: FontAwesome;
+  margin-left: 5px;
+}
+
+.nav-mobile ul li.menu-item-has-children li {
+  /*för att täcka med b-c - hover*/
+  width: 100%;
+}
+
+.nav-mobile ul li.menu-item-has-children li a {
+  padding: 10px 16px 10px 16px;
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 1.4em;
+  text-align: left;
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.nav-mobile ul li.menu-item-has-children li:hover a {
+  opacity: 0.8;
+}
+
+.nav-mobile .signup ul li:last-of-type a {
+  margin-top: 0.5em;
+  text-align: left;
+}
+
+/*close button*/
+
+.nav-mobile > span.toggle {
+  position: absolute;
+  top: 10px;
+  right: 28px;
+  font-size: 46px;
+  margin-left: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*toggle class with jquery*/
+.nav-mobile-open {
+  overflow-x: auto;
+  transform: translateX(0);
+}
+
+/*Menu for larger screen*/
+@media only screen and (min-width: 960px) {
+  #header-new {
+    margin-top: 2em;
+  }
+
+  .nav-desktop {
+    padding: 0px 5px;
+    justify-content: flex-start;
+  }
+
+  .nav-links {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .nav-desktop ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .signup {
+    justify-content: flex-end;
+  }
+
+  .nav-desktop > span.toggle {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+}
+
+/*********************
+ Pages general layout
+**********************/
+
+.one-column {
+  max-width: 800px;
+  margin: 4em auto 0 auto;
+  padding: 0 2em 4em 2em;
+  background: #fff;
+}
+
+/*********************
+  Page Banner layout
+***********************/
+
+.page-layout-image.banner,
+.future-page-layout-image.banner {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-title-white {
+  color: #fff;
+  font-weight: 400;
+  font-size: 4.7em;
+  letter-spacing: 2px;
+}
+
+.page-layout-none {
+  background-color: #889438;
+  height: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.page-title-white.small {
+  font-size: 3.7em;
+}
+
+/*********************
+ Front-page  
+*********************/
+
+/*Front-page-layout with background picture and text and button to the left*/
+.front-page-layout.big {
+  height: 420px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10%;
+  padding-top: 80px;
+}
+
+.front-page-layout h1 {
+  color: #fff;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  line-height: 1;
+  font-size: 4em;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.front-page-layout p {
+  font-size: 28px;
+  margin-bottom: 50px;
+  color: #fff;
+  font-family: "GeosansLight", "Work Sans", sans-serif;
+}
+
+/*Front-page-layout with picture at the right and text at the left*/
+.front-page-layout {
+  height: 420px;
+  width: 100%;
+  background-color: #889438;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.front-container {
+  width: 100%;
+  background-color: #889438;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 0 2em;
+}
+
+.front-page-layout {
+  height: 720px;
+}
+
+.front-page-layout-text {
+  padding: 1em;
+  width: 100%;
+}
+
+.front-page-layout-image {
+  padding: 1em;
+  width: 100%;
+}
+
+.front-page-layout-image img {
+  max-width: 100%;
+}
+
+.bokadirekt {
+  border-radius: 0;
+}
+
+.intro-text {
+  width: 90%;
+  margin: 2em auto;
+  padding: 4em 1em 2em 1em;
+}
+/*
+* Widgets Image-text-boxes section
+*/
+
+.image-text-boxes {
+  width: 85%;
+  margin: 2em auto;
+  padding: 4em 1em;
+  margin: 1em auto 4em auto;
+}
+
+.container-boxes {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card-container {
+  padding-top: 3em;
+  padding-bottom: 0.5em;
+  margin: 10px 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container img {
+  width: 100%;
+  border-radius: 8px;
+  transition: 1s;
+  opacity: 1;
+}
+
+.card-container img:hover {
+  opacity: 0.8;
+}
+
+.image-box {
+  text-align: center;
+}
+
+.image-box .widgettitle {
+  font-size: 1.9em;
+  padding: 30px 0 10px 0;
+}
+
+.image-box .textwidget {
+  padding: 5px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/*
+* References section Widget
+*/
+
+.references-section {
+  background-color: #c8e5ea;
+  padding: 3em 0;
+}
+
+.references-section h2 {
+  text-align: center;
+  color: #2a656f;
+  padding-bottom: 1.5em;
+}
+
+.container-references {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.slides .slide::before {
+  font-family: FontAwesome;
+  content: "\f10e";
+}
+
+.references-box {
+  width: 100%;
+  background-color: #fff;
+  padding: 2em 3em;
+  border-radius: 8px;
+  margin-bottom: 4em;
+}
+
+.references-box::before {
+  font-family: FontAwesome;
+  content: "\f10e";
+}
+
+.references-box h4 {
+  color: #555;
+  font-weight: 400;
+  font-size: 1em;
+}
+
+.references-section .textwidget {
+  font-size: 1.1em;
+  font-style: italic;
+  font-family: serif;
+  line-height: 1.8em;
+  letter-spacing: 0.5px;
+}
+
+/*Front Page for larger screens*/
+@media only screen and (min-width: 768px) {
+  .front-page-layout.big,
+  .front-page-layout {
+    height: 620px;
+  }
+
+  .front-page-layout {
+    height: 420px;
+  }
+
+  .front-page-layout-text {
+    padding: 0 1em;
+    width: 50%;
+  }
+
+  .front-page-layout-image {
+    padding: 0 1em;
+    width: 45%;
+  }
+
+  .front-container {
+    flex-direction: row;
+  }
+
+  .front-page-layout h1 {
+    font-size: 5.5em;
+  }
+
+  .front-container h1 {
+    font-size: 4em;
+  }
+
+  .intro-text {
+    width: 70%;
+  }
+
+  .container-boxes {
+    flex-direction: row;
+  }
+
+  .image-box .textwidget {
+    justify-content: space-between;
+  }
+
+  .card-container {
+    width: 31%;
+    padding-top: 0;
+  }
+
+  .references-box {
+    width: 32%;
+  }
+}
+
+/*Front Page for larger screens*/
+@media only screen and (min-width: 960px) {
+  .front-page-layout {
+    height: 620px;
+  }
+
+  .front-container h1 {
+    font-size: 5.5em;
+  }
+}
+
+/*********************
+  Treatments page
+***********************/
+
+.content-container {
+  margin: 4em auto 0 auto;
+}
+
+.two-columns {
+  max-width: 1100px;
+  margin: 4em auto 0 auto;
+  padding: 0 1em 4em 1em;
+  background: #fff;
+}
+
+.img-text-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.img-text-part.text {
+  width: 100%;
+  padding: 1em;
+  order: 1;
+}
+
+.img-text-part.img {
+  width: 100%;
+  padding: 1em;
+  order: 2;
+}
+
+.img-text-part.img img {
+  margin-top: 3em;
+}
+
+.img-text-part ul li {
+  padding: 6px 0;
+}
+
+/*Treatments page for larger screen*/
+@media only screen and (min-width: 768px) {
+  .img-text-parent {
+    flex-direction: row;
+  }
+
+  .img-text-part.text {
+    width: 55%;
+    order: 1;
+  }
+
+  .img-text-part.img {
+    width: 40%;
+    order: 1;
+  }
+
+  .img-text-part.img img {
+    margin-top: 0;
+  }
+}
+
+/*********************
+  Enterprise page
+***********************/
+
+.enterprise-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.enterprise-text.text {
+  width: 100%;
+  padding: 1em;
+}
+
+.aside-box {
+  margin-top: 4em;
+  padding: 1em;
+  width: 100%;
+}
+
+.aside-box h3 {
+  font-size: 1.8em;
+  color: #f26d55;
+}
+
+.aside-box p {
+  color: #f26d55;
+}
+
+.aside h2.widgettitle {
+  display: none;
+}
+
+.aside a {
+  display: inline-block;
+  border: 1.5px solid #56b1bf;
+  background: #fff;
+  color: #56b1bf;
+  padding: 15px 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 1s;
+  line-height: 13px;
+  margin-top: 2em;
+}
+
+.aside a:active,
+.aside a:visited {
+  border: 1.5px solid #56b1bf;
+  background: #fff;
+  color: #56b1bf;
+  text-decoration: none;
+}
+
+.aside a:hover {
+  border: 1.5px solid #56b1bf;
+  background: #56b1bf;
+  color: #fff;
+  text-decoration: none;
+}
+
+.enterprise-text.image {
+  padding: 1em;
+}
+
+.pdf-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  padding-bottom: 3em;
+}
+
+/*Enterprise page for larger screen*/
+@media only screen and (min-width: 768px) {
+  .enterprise-parent {
+    flex-direction: row;
+  }
+
+  .enterprise-text.text {
+    width: 65%;
+  }
+
+  .aside-box {
+    width: 30%;
+  }
+}
+
+/*********************
+  About page
+***********************/
+
+.about-post-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 3em;
+}
+
+.about-post-about {
+  padding: 1em;
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+.about-post-products {
+  padding: 1em;
+  width: 100%;
+}
+
+.about-post-about img {
+  margin-top: 4em;
+}
+
+.about-post-products img {
+  margin-bottom: 2em;
+}
+
+.about-post-products a.button-link {
+  margin-top: 2em;
+  line-height: 20px;
+}
+
+/*About Page for larger screen*/
+@media only screen and (min-width: 768px) {
+  .about-post-parent {
+    flex-direction: row;
+  }
+
+  .about-post-about {
+    width: 55%;
+    margin-bottom: 0;
+  }
+
+  .about-post-products {
+    width: 40%;
+  }
+}
+/*********************
+  Contact page
+***********************/
+
+.contact-part-text,
+.contact-part-map {
+  width: 100%;
+  padding: 1em;
+}
+
+.contact-part-map iframe {
+  max-width: 100%;
+}
+
+.contact-social .social-list .fa {
+  background: #56b1bf;
+  border: 1.5px solid #56b1bf;
+  color: #fff;
+
+  font-size: 17px;
+  width: 36px;
+  margin-bottom: 1em;
+}
+
+.contact-social .social-list .fa:hover {
+  opacity: 0.7;
+  background: #fff;
+  color: #56b1bf;
+  border: 1.5px solid #56b1bf;
+}
+
+/*
+* Contact Form layout
+*/
+div.wpcf7 {
+  padding-top: 2em;
+}
+
+label {
+  width: 70%;
+  font-weight: 400;
+  font-size: 90%;
+
+  margin: 0.5em 0;
+}
+
+label input,
+label textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #567dbf;
+  color: #fff;
+  border: 1.5px solid #567dbf;
+  padding: 5px 12px;
+  transition: 1s;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"]:hover {
+  background-color: #fff;
+  color: #567dbf;
+  border: 1.5px solid #567dbf;
+}
+/*Contact page for larger screen*/
+@media only screen and (min-width: 768px) {
+  .contact-part-text,
+  .contact-part-map {
+    width: 50%;
+  }
+}
+
+/*
+* Widgets Link section
+*/
+
+.link-section {
+  padding: 1em 1em 3em 1em;
+}
+
+.link-box h2 {
+  margin-bottom: 0.5em;
+}
+
+.link-box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-box ul li {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+.link-box ul li a {
+  display: block;
+  border: 1.5px solid #56b1bf;
+  padding: 12px 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 1s;
+  margin-right: 12px;
+  line-height: 20px;
+}
+
+.link-box ul li a:active {
+  text-decoration: none;
+}
+
+.link-box ul li a:hover {
+  background: #56b1bf;
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Widgets Link section for larger screen*/
+@media only screen and (min-width: 768px) {
+  .link-box ul li {
+    display: inline-block;
+  }
+}
+
+/***********
+ Footer
+ ***********/
+
+.footer-container {
+  height: auto;
+  background-color: #333;
+  color: #fff;
+}
+
+/* .footer-parent-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+} */
+
+.footer-parent {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  text-align: center;
+}
+
+/* .footer-child {
+  padding: 0;
+  width: 100%;
+} */
+
+.footer-bottom .footer-copy {
+  font-size: 80%;
+  text-align: center;
+}
+
+/* Styles for Widgets in Footer*/
+
+.footer-list {
+  margin-bottom: 1em;
+}
+
+.footer-list .bokadirekt {
+  border-radius: 0;
+}
+
+/* .footer-list h4 {
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  color: #56b1bf;
+  font-size: 1.6em;
+} */
+
+/* .footer-list p {
+  font-size: 0.95em;
+  text-decoration: none;
+} */
+
+.footer-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-list ul li {
+  padding-bottom: 0.7em;
+  display: inline;
+}
+
+.footer-list ul li a {
+  color: #fff;
+  font-size: 90%;
+}
+
+.footer-list ul li a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+/*social list*/
+.social-list p {
+  font-size: 0.95em;
+}
+
+ul.social-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.social-list li {
+  padding-bottom: 0.7em;
+  display: inline;
+}
+
+.social-list ul li a {
+  color: #fff;
+  font-size: 90%;
+}
+
+.social-list ul li a:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.social-list .fa {
+  padding: 8px;
+  font-size: 23px;
+  width: 41px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 5px 2px;
+  margin-top: 1em;
+  transition: 1s;
+}
+
+.social-list .fa:hover {
+  background: /*#99a63f;*/ #333;
+  color: #fff;
+  border: 1.5px solid #fff;
+}
+
+.social-list .fa {
+  color: #333;
+  background: #fff;
+  border: 1.5px solid #333;
+}
+
+/*.social-list .fa-linkedin {
+}
+
+.social-list .fa-instagram {
+}*/
+
+/*Footer for larger screen*/
+@media only screen and (min-width: 768px) {
+  .footer-child {
+    width: 33%;
+    padding: 2em;
+  }
+  .footer-parent {
+    padding: 0 10% 1em 10%;
+  }
+  .to-top {
+    display: block;
+  }
+}
+
+/*********************************
+Media Queries for smallest screen
+**********************************/
+
+@media (max-width: 480px) {
+  .site-title a {
+    font-size: 1.6em;
+  }
+
+  .page-layout-image.banner,
+  .future-page-layout-image.banner {
+    height: 200px;
+    padding: 60px 0;
+  }
+
+  .page-title-white,
+  .page-title-white.small {
+    font-size: 2.8em;
+  }
+
+  .front-page-layout.big {
+    height: 360px;
+  }
+
+  .front-page-layout h1 {
+    font-size: 3.1em;
+    padding-bottom: 0;
+  }
+
+  .front-page-layout p {
+    margin-bottom: 40px;
+    font-size: 24px;
+  }
+
+  .front-page-layout {
+    height: 570px;
+  }
+
+  .front-container {
+    padding: 0;
+  }
+
+  .text-center {
+    text-align: left;
+  }
+
+  p {
+    font-size: 95%;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
+  .footer-list {
+    padding: 1em;
+  }
+
+  .to-top {
+    display: none;
+  }
+  label {
+    width: 90%;
+  }
+}
