@@ -1247,10 +1247,10 @@ input[type="submit"]:hover {
 } */
 
 .footer-parent {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   padding: 2em;
-  text-align: center;
+  text-align: center; */
 }
 
 /* .footer-child {
@@ -1305,7 +1305,7 @@ input[type="submit"]:hover {
   text-decoration: none;
 }
 
-/*social list*/
+/* social list
 .social-list p {
   font-size: 0.95em;
 }
@@ -1343,7 +1343,7 @@ ul.social-list {
 }
 
 .social-list .fa:hover {
-  background: /*#99a63f;*/ #333;
+  background: #333;
   color: #fff;
   border: 1.5px solid #fff;
 }
@@ -1352,7 +1352,7 @@ ul.social-list {
   color: #333;
   background: #fff;
   border: 1.5px solid #333;
-}
+}*/
 
 /*.social-list .fa-linkedin {
 }

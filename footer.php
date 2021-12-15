@@ -37,8 +37,8 @@
                 while (have_rows('footer_links', 'option')) {
                     the_row(); ?>
         <div class="footer-child">
-            <h5 class="footer-fields-heading"><?php the_sub_field('heading'); ?> </h5>
-            <p class="footer-fields-text"><?php the_sub_field('text'); ?> </p>
+            <h5 class="footer-fields-heading"><?php the_sub_field('heading'); ?></h5>
+            <p class="footer-fields-text"><?php the_sub_field('text'); ?></p>
         </div>
         <?php
                 }
@@ -51,7 +51,7 @@
     <?php
     if (function_exists('acf_add_options_page')) {
     ?>
-    <div class="footer-parent">
+    <div class="footer-parent booking">
         <div class="footer-child">
             <div class="footer-list">
                 <?php
@@ -62,7 +62,6 @@
                     ?>
                 <a href="<?php echo esc_url($book_button_url); ?>" target="_blank">
                     <img class=" bokadirekt" src="<?php echo esc_url($book_image_url); ?>" alt="Boka tid" border="0" />
-
                 </a>
                 <?php
                     }

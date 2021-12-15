@@ -55,49 +55,73 @@ body {
   width: 100%;
 }
 .footer-parent-social .social-icons ul.social li.social-item {
-  padding: 0 0.4rem;
+  padding-bottom: 0.7em;
+  display: inline;
 }
-.footer-parent-social .social-icons ul.social li.social-item:first-child {
-  padding-left: 0;
+.footer-parent-social .social-icons ul.social li.social-item a {
+  color: #fff;
+  font-size: 90%;
 }
-.footer-parent-social .social-icons ul.social li.social-item .fab,
-.footer-parent-social .social-icons ul.social li.social-item .fas {
-  font-size: 20px;
-  padding-right: 1rem;
+.footer-parent-social .social-icons ul.social li.social-item a .fab,
+.footer-parent-social .social-icons ul.social li.social-item a .fas {
+  padding: 8px;
+  font-size: 23px;
+  width: 41px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
+  margin: 5px 2px;
+  margin-top: 1em;
   transition: 1s;
-  color: #fff;
-  background-position: center;
-  cursor: pointer;
+  color: #333;
+  background: #fff;
+  border: 1.5px solid #333;
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.1);
   transition: all 0.25s ease;
 }
-.footer-parent-social .social-icons ul.social li.social-item .fab:hover,
-.footer-parent-social .social-icons ul.social li.social-item .fas:hover {
+.footer-parent-social .social-icons ul.social li.social-item a .fab:hover,
+.footer-parent-social .social-icons ul.social li.social-item a .fas:hover {
   transform: translateY(-2px);
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.2);
 }
 
-.footer-child {
+.footer-parent {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  text-align: center;
+}
+.footer-parent.booking {
+  justify-content: flex-end;
+}
+@media only screen and (min-width: 768px) {
+  .footer-parent.booking .footer-child {
+    padding: 0 2rem 2rem 2rem;
+  }
+}
+.footer-parent .footer-child {
   padding: 0;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  .footer-child {
+  .footer-parent .footer-child {
     width: 33%;
-    padding: 2em;
+    padding: 2rem 2rem 0 2rem;
   }
 }
-.footer-child h5 {
+.footer-parent .footer-child h5 {
   font-weight: 600;
   letter-spacing: 1.7px;
   color: #56b1bf;
   font-size: 1.6em;
 }
-.footer-child p {
+.footer-parent .footer-child p {
   font-size: 0.95em;
+}
+@media only screen and (min-width: 768px) {
+  .footer-parent {
+    padding: 0 10% 1em 10%;
+  }
 }
 
 .footer-bottom {
