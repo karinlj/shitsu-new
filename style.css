@@ -273,7 +273,7 @@ img {
 
 /*buttons*/
 
-a.button-link {
+/* a.button-link {
   display: inline-block;
   border: 1.5px solid #56b1bf;
   background: #fff;
@@ -301,7 +301,7 @@ a.button-link:hover {
   background: #56b1bf;
   color: #fff;
   text-decoration: none;
-}
+} */
 
 /*********************
  Header and Menu 
@@ -309,12 +309,12 @@ a.button-link:hover {
 
 /* CSS for menu-3. Desktop menu with logo and Sign up button. Mobile menu sliding in from right - covering whole screen. Sub menus. Made with Flexbox */
 
-#header-new {
+/* #header-new {
   margin-top: 0;
   background-color: #f5f0eb;
   width: 100%;
   z-index: 5;
-}
+} */
 
 /*Desktop view*/
 
@@ -555,9 +555,9 @@ a.button-link:hover {
 
 /*Menu for larger screen*/
 @media only screen and (min-width: 960px) {
-  #header-new {
+  /* #header-new {
     margin-top: 2em;
-  }
+  } */
 
   .nav-desktop {
     padding: 0px 5px;
@@ -708,11 +708,11 @@ a.button-link:hover {
   border-radius: 0;
 }
 
-.intro-text {
+/* .intro-text {
   width: 90%;
   margin: 2em auto;
   padding: 4em 1em 2em 1em;
-}
+} */
 /*
 * Widgets Image-text-boxes section
 */
@@ -732,16 +732,16 @@ a.button-link:hover {
 }
 
 .card-container {
-  padding-top: 3em;
+  /* padding-top: 3em;
   padding-bottom: 0.5em;
   margin: 10px 0;
   width: 100%;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
-.card-container img {
+/* .card-container img {
   width: 100%;
   border-radius: 8px;
   transition: 1s;
@@ -750,7 +750,7 @@ a.button-link:hover {
 
 .card-container img:hover {
   opacity: 0.8;
-}
+} */
 
 .image-box {
   text-align: center;
@@ -857,9 +857,9 @@ a.button-link:hover {
     font-size: 4em;
   }
 
-  .intro-text {
+  /* .intro-text {
     width: 70%;
-  }
+  } */
 
   .container-boxes {
     flex-direction: row;

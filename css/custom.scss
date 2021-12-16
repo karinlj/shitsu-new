@@ -28,6 +28,226 @@ body {
   background: #fff;
 }
 
+.container {
+  max-width: 1200px;
+}
+
+.section_spacing_top_big {
+  padding: 5rem calc(1.5rem - 15px);
+  @media all and (min-width: $sm-min) {
+    padding: 5rem calc(2.25rem - 15px);
+  }
+  @media all and (min-width: $md-min) {
+    padding: 6rem calc(3rem - 15px);
+  }
+  @media all and (min-width: $xl-min) {
+    padding: 10rem calc(3.75rem - 15px);
+  }
+}
+.section_spacing_top_medium {
+  padding: 4rem calc(1.5rem - 15px);
+  @media all and (min-width: $sm-min) {
+    padding: 4rem calc(2.25rem - 15px);
+  }
+  @media all and (min-width: $md-min) {
+    padding: 4rem calc(3rem - 15px);
+  }
+  @media all and (min-width: $xl-min) {
+    padding: 7rem calc(3.75rem - 15px);
+  }
+}
+.section_spacing_top_small {
+  padding: 3rem calc(1.5rem - 15px);
+  @media all and (min-width: $sm-min) {
+    padding: 3rem calc(2.25rem - 15px);
+  }
+  @media all and (min-width: $md-min) {
+    padding: 3rem calc(3rem - 15px);
+  }
+  @media all and (min-width: $xl-min) {
+    padding: 4rem calc(3.75rem - 15px);
+  }
+}
+.section_spacing_top_mini {
+  padding: 1.5rem calc(1.5rem - 15px);
+  @media all and (min-width: $sm-min) {
+    padding: 1rem calc(2.25rem - 15px);
+  }
+  @media all and (min-width: $md-min) {
+    padding: 1.8rem calc(3rem - 15px);
+  }
+  @media all and (min-width: $xl-min) {
+    padding: 2rem calc(3.75rem - 15px);
+  }
+}
+
+/*********************
+   buttons 
+*********************/
+a.button-link {
+  display: inline-block;
+  border: 1.5px solid #56b1bf;
+  background: #fff;
+  color: #56b1bf;
+  padding: 12px 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 1s;
+  line-height: 20px;
+  margin-top: 2em;
+  &:hover {
+    border: 1.5px solid #56b1bf;
+    background: #56b1bf;
+    color: #fff;
+    text-decoration: none;
+  }
+  &:active,
+  :visited {
+    border: 1.5px solid #56b1bf;
+    background: #fff;
+    color: #56b1bf;
+    text-decoration: none;
+  }
+}
+
+/*********************
+   header 
+*********************/
+.header_wrapper {
+  padding-top: 4rem;
+  /*header big*/
+  .header-big {
+    min-height: 600px;
+    @include d-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  /*header small*/
+  .header-small {
+    height: 280px;
+    @include d-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-big,
+  .header-small {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &.overlay-dark::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.3);
+      content: "";
+      display: block;
+    }
+  }
+  .header-items-section {
+    .header_front {
+      color: #fff;
+      margin-bottom: 1.4rem;
+      font-size: 4rem;
+    }
+    .header_page {
+      color: #fff;
+      margin-bottom: 1.4rem;
+    }
+    .header-text {
+      font-size: 1.4em;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      margin-top: 1.4rem;
+      margin-bottom: 2.8rem;
+      font-size: 1.2em;
+    }
+  }
+}
+
+/*********************
+fullwidth_editor
+*********************/
+
+.text_block {
+  width: 90%;
+  margin: 2em auto;
+  padding: 4em 1em 2em 1em;
+  @media only screen and (min-width: $md-min) {
+    width: 70%;
+  }
+}
+
+/*********************
+three_sections
+*********************/
+.three_sections {
+  height: auto;
+  overflow: hidden;
+  @media all and (min-width: $xl-min) {
+    min-height: 600px;
+  }
+}
+.item {
+  padding-top: 3em;
+  padding-bottom: 0.5em;
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+
+  // min-height: 380px;
+  // margin-bottom: 2rem;
+  // background: #fff;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // border-radius: $themeBorder_radius;
+  // padding: 2.5rem 1.5rem;
+  // box-shadow: $themeBox_shadow_more;
+  @media all and (min-width: $md-min) {
+    //width: 31%;
+    padding-top: 0;
+  }
+  // @media all and (min-width: $lg-min) {
+  //   margin-bottom: 0;
+  //   min-height: 380px;
+  // }
+  img {
+    width: 100%;
+    border-radius: 8px;
+    transition: 1s;
+    opacity: 1;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .heading {
+    font-size: 1.9em;
+    padding: 30px 0 10px 0;
+  }
+  .text_part {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .text {
+      color: $themecolor;
+    }
+  }
+}
+
 /*********************
    footer 
 *********************/
@@ -173,5 +393,22 @@ body {
     &:hover {
       opacity: 0.7;
     }
+  }
+}
+
+//kolla denna
+/********************
+  404-page
+*********************/
+
+.nopage {
+  background: $lightgrey;
+  border: 1px solid $themeBorderColor;
+  padding: 3rem;
+  min-height: 300px;
+  margin-top: -170px;
+
+  .nopage-heading {
+    margin-bottom: 2rem;
   }
 }
