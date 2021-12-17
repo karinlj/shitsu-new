@@ -638,7 +638,7 @@ a.button-link:hover {
 *********************/
 
 /*Front-page-layout with background picture and text and button to the left*/
-.front-page-layout.big {
+/* .front-page-layout.big {
   height: 420px;
   width: 100%;
   display: flex;
@@ -663,7 +663,7 @@ a.button-link:hover {
   margin-bottom: 50px;
   color: #fff;
   font-family: "GeosansLight", "Work Sans", sans-serif;
-}
+} */
 
 /*Front-page-layout with picture at the right and text at the left*/
 .front-page-layout {
@@ -781,7 +781,7 @@ a.button-link:hover {
   text-align: center;
   color: #2a656f;
   padding-bottom: 1.5em;
-} */
+} 
 
 .container-references {
   display: flex;
@@ -797,13 +797,13 @@ a.button-link:hover {
   content: "\f10e";
 }
 
-/* .references-box {
+.references-box {
   width: 100%;
   background-color: #fff;
   padding: 2em 3em;
   border-radius: 8px;
   margin-bottom: 4em;
-} */
+}
 
 .references-box::before {
   font-family: FontAwesome;
@@ -817,12 +817,12 @@ a.button-link:hover {
 }
 
 .references-section .textwidget {
-  /* font-size: 1.1em;
+   font-size: 1.1em;
   font-style: italic;
   font-family: serif;
   line-height: 1.8em;
-  letter-spacing: 0.5px; */
-}
+  letter-spacing: 0.5px; 
+} */
 
 /*Front Page for larger screens*/
 @media only screen and (min-width: 768px) {

@@ -77,15 +77,7 @@ add_filter('excerpt_length', 'set_excerpt_length');
 //Widget locations
 function sh_init_widgets($id)
 {
-    /*references widgets*/
-    register_sidebar(array(
-        'name' => 'references',
-        'id'   => 'references',
-        'before_widget' => '<div class="references-box">',
-        'after_widget'  => '</i></div>',
-        'before_title'  => '',
-        'after_title'   => ''
-    ));
+
 
     /*footer widgets*/
     register_sidebar(array(
@@ -119,42 +111,6 @@ add_action('widgets_init', 'sh_init_widgets');
 //Custom Post Types
 function sh_custom_post_types()
 {
-    $labels = array(
-        'name' => 'Front Page Posts',
-        'singular_name' => 'Front Page Post',
-        'add_new' => 'Add Front Page Posts Item',
-        'all_items' => 'All Items',
-        'add_new_item' => 'Add Item',
-        'edit_item' => 'Edit Item',
-        'new_item' => 'New Item',
-        'view_item' => 'View Item',
-        'search_item' => 'Search Front Page Posts',
-        'not_found' => 'No Items Found',
-        'not_found_in_trash' => 'No Items found in trash',
-        'parent_item_colon' => 'Parent Item'
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'has_archive' => true,
-        'publicly_queryable' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capability_type' => 'post',
-        'hierarchial' => false,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail',
-            'revisions'
-        ),
-        //'taxonomies' => array('category', 'post_tag'),
-        'menu_position' => 4,
-        'exclude_from_search' => true
-    );
-    register_post_type('front-page-posts', $args);
-
     $labels = array(
         'name' => 'Contact Posts',
         'singular_name' => 'Contact Post',

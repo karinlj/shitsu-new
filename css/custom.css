@@ -151,17 +151,19 @@ a.button-link :visited {
   /*header big*/
   /*header small*/
 }
-.header_wrapper .header-big {
+.header_wrapper .header_big {
   min-height: 600px;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 10%;
+  padding-top: 7rem;
   position: relative;
 }
-.header_wrapper .header-small {
+.header_wrapper .header_small {
   height: 280px;
   display: -webkit-box !important;
   display: -webkit-flex !important;
@@ -170,15 +172,15 @@ a.button-link :visited {
   justify-content: center;
   align-items: center;
 }
-.header_wrapper .header-big,
-.header_wrapper .header-small {
+.header_wrapper .header_big,
+.header_wrapper .header_small {
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
 }
-.header_wrapper .header-big.overlay-dark::before,
-.header_wrapper .header-small.overlay-dark::before {
+.header_wrapper .header_big.overlay-dark::before,
+.header_wrapper .header_small.overlay-dark::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -196,6 +198,7 @@ a.button-link :visited {
 .header_wrapper .header-items-section .header_page {
   color: #fff;
   margin-bottom: 1.4rem;
+  text-align: center;
 }
 .header_wrapper .header-items-section .header-text {
   font-size: 1.4em;

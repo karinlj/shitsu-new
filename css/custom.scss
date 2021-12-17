@@ -118,22 +118,26 @@ a.button-link {
 .header_wrapper {
   padding-top: 4rem;
   /*header big*/
-  .header-big {
+  .header_big {
     min-height: 600px;
     @include d-flex;
-    justify-content: center;
-    align-items: center;
+    // justify-content: center;
+    // align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-left: 10%;
+    padding-top: 7rem;
     position: relative;
   }
   /*header small*/
-  .header-small {
+  .header_small {
     height: 280px;
     @include d-flex;
     justify-content: center;
     align-items: center;
   }
-  .header-big,
-  .header-small {
+  .header_big,
+  .header_small {
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -159,6 +163,7 @@ a.button-link {
     .header_page {
       color: #fff;
       margin-bottom: 1.4rem;
+      text-align: center;
     }
     .header-text {
       font-size: 1.4em;

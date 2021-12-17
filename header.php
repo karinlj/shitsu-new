@@ -25,20 +25,18 @@
     $overlay_color = '';
 
     if (is_front_page()) {
-        $header_class = 'header-big';
+        $header_class = 'header_big';
     } else {
-        $header_class = 'header-small';
+        $header_class = 'header_small';
     }
     if ($header_image) {
         $style = 'style="background-image:url(\'' . wp_get_attachment_url($header_image, 'full') . '\')"';
         $overlay_color = get_field('overlay_color');
     }
     ?>
-
     <div class="header_wrapper">
         <div class="container">
             <div class="row">
-
                 <div class="col-12">
                     <!-- get menu -->
                     <?php get_template_part('parts/main-menu'); ?>
@@ -51,7 +49,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-12">
-                                        <div class="header-text-section text-center">
+                                        <div class="header-text-section">
 
                                             <?php //loop ACF flex Content for layouts of header_items
                                             if (have_rows('header_items')) {
