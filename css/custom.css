@@ -211,21 +211,15 @@ a.button-link :visited {
 /*********************
 fullwidth_editor
 *********************/
-.text_block {
-  width: 90%;
-  margin: 2em auto;
-  padding: 4em 1em 2em 1em;
-}
-@media only screen and (min-width: 768px) {
-  .text_block {
-    width: 70%;
-  }
+.fullwidth_editor {
+  background: #fff;
 }
 
 /*********************
 three_sections
 *********************/
 .three_sections {
+  background: #fff;
   height: auto;
   overflow: hidden;
 }
@@ -234,8 +228,7 @@ three_sections
     min-height: 600px;
   }
 }
-
-.item {
+.three_sections .item {
   padding-top: 3em;
   padding-bottom: 0.5em;
   margin: 10px 0;
@@ -246,46 +239,106 @@ three_sections
   text-align: center;
 }
 @media all and (min-width: 768px) {
-  .item {
+  .three_sections .item {
     padding-top: 0;
   }
 }
-.item img {
+.three_sections .item img {
   width: 100%;
   border-radius: 8px;
   transition: 1s;
   opacity: 1;
 }
-.item img:hover {
+.three_sections .item img:hover {
   opacity: 0.8;
 }
-.item .heading {
+.three_sections .item .heading {
   font-size: 1.9em;
   padding: 30px 0 10px 0;
 }
-.item .text_part {
+.three_sections .item .text_part {
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.item .text_part .text {
+.three_sections .item .text_part .text {
   color: #4a5669;
+}
+
+/**********************
+   testimonials
+***********************/
+.testimonials_section {
+  background: #c8e5ea;
+}
+.testimonials_section h2 {
+  text-align: center;
+  color: #2a656f;
+  padding-bottom: 1.5em;
+}
+
+.testimonials_inner {
+  height: auto;
+  overflow: hidden;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (min-width: 992px) {
+  .testimonials_inner {
+    min-height: 500px;
+  }
+}
+.testimonials_inner > .container > .row {
+  padding: 0.75rem 0;
+}
+.testimonials_inner .item {
+  width: 100%;
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  margin-bottom: 4rem;
+}
+.testimonials_inner .item .icon {
+  margin-bottom: 1rem;
+}
+.testimonials_inner .item .icon i.fab,
+.testimonials_inner .item .icon i.fas {
+  font-size: 1rem;
+  color: inherit;
+  font-weight: 600;
+}
+.testimonials_inner .item .text {
+  font-size: 1rem;
+  font-style: italic;
+  font-family: serif;
+  line-height: 1.8rem;
+  letter-spacing: 0.5px;
+}
+.testimonials_inner .item .signature {
+  text-transform: uppercase;
+  opacity: 0.7;
 }
 
 /*********************
    footer 
 *********************/
-.footer-parent-social {
+.footer_container {
+  background: #333;
+}
+.footer_container .footer-parent-social {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 1em;
 }
-.footer-parent-social .social-icons {
-  padding: 1.5rem 0;
+.footer_container .footer-parent-social .social-icons {
+  padding: 2rem 0;
 }
-.footer-parent-social .social-icons ul.social {
+.footer_container .footer-parent-social .social-icons ul.social {
   display: -webkit-inline-box !important;
   display: -webkit-inline-flex !important;
   display: -ms-inline-flexbox !important;
@@ -295,16 +348,16 @@ three_sections
   padding: 0;
   width: 100%;
 }
-.footer-parent-social .social-icons ul.social li.social-item {
+.footer_container .footer-parent-social .social-icons ul.social li.social-item {
   padding-bottom: 0.7em;
   display: inline;
 }
-.footer-parent-social .social-icons ul.social li.social-item a {
+.footer_container .footer-parent-social .social-icons ul.social li.social-item a {
   color: #fff;
   font-size: 90%;
 }
-.footer-parent-social .social-icons ul.social li.social-item a .fab,
-.footer-parent-social .social-icons ul.social li.social-item a .fas {
+.footer_container .footer-parent-social .social-icons ul.social li.social-item a .fab,
+.footer_container .footer-parent-social .social-icons ul.social li.social-item a .fas {
   padding: 8px;
   font-size: 23px;
   width: 41px;
@@ -320,79 +373,78 @@ three_sections
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.1);
   transition: all 0.25s ease;
 }
-.footer-parent-social .social-icons ul.social li.social-item a .fab:hover,
-.footer-parent-social .social-icons ul.social li.social-item a .fas:hover {
+.footer_container .footer-parent-social .social-icons ul.social li.social-item a .fab:hover,
+.footer_container .footer-parent-social .social-icons ul.social li.social-item a .fas:hover {
   transform: translateY(-2px);
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.2);
 }
-
-.footer-parent {
+.footer_container .footer-parent {
   display: flex;
   flex-wrap: wrap;
   padding: 2em;
   text-align: center;
 }
-.footer-parent.booking {
+.footer_container .footer-parent.booking {
   justify-content: flex-end;
 }
 @media only screen and (min-width: 768px) {
-  .footer-parent.booking .footer-child {
+  .footer_container .footer-parent.booking .footer-child {
     padding: 0 2rem 2rem 2rem;
   }
 }
-.footer-parent .footer-child {
+.footer_container .footer-parent .footer-child {
   padding: 0;
   width: 100%;
 }
 @media only screen and (min-width: 768px) {
-  .footer-parent .footer-child {
+  .footer_container .footer-parent .footer-child {
     width: 33%;
     padding: 2rem 2rem 0 2rem;
   }
 }
-.footer-parent .footer-child h5 {
+.footer_container .footer-parent .footer-child h5 {
   font-weight: 600;
   letter-spacing: 1.7px;
   color: #56b1bf;
   font-size: 1.6em;
 }
-.footer-parent .footer-child p {
+.footer_container .footer-parent .footer-child p {
+  color: #fff;
   font-size: 0.95em;
 }
 @media only screen and (min-width: 768px) {
-  .footer-parent {
+  .footer_container .footer-parent {
     padding: 0 10% 1em 10%;
   }
 }
-
-.footer-bottom {
+.footer_container .footer-bottom {
   padding: 3em 10%;
   background-color: #262626;
   color: #999;
   position: relative;
 }
-.footer-bottom p {
+.footer_container .footer-bottom p {
   margin: 0;
 }
-.footer-bottom .to-top {
+.footer_container .footer-bottom .to-top {
   position: absolute;
   right: 70px;
   bottom: 50px;
   display: none;
 }
 @media only screen and (min-width: 768px) {
-  .footer-bottom .to-top {
+  .footer_container .footer-bottom .to-top {
     display: block;
   }
 }
-.footer-bottom .to-top::before {
+.footer_container .footer-bottom .to-top::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "";
   font-size: 1.7rem;
   color: #56b1bf;
 }
-.footer-bottom .to-top:hover {
+.footer_container .footer-bottom .to-top:hover {
   opacity: 0.7;
 }
 

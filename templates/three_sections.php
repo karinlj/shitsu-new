@@ -8,7 +8,7 @@ if (get_row_layout() == 'three_sections') {
         <div class="row align-items-start justify-content-around">
 
             <?php
-                // check if the repeater field has rows
+                // check if repeater field has rows
                 if (have_rows('three_sections_content')) {
                     while (have_rows('three_sections_content')) {
                         the_row();

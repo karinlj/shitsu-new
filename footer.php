@@ -1,4 +1,4 @@
-<footer class="footer-container">
+<footer class="footer_container">
     <div class="footer-parent-social">
         <div class="social-icons">
             <?php
@@ -80,7 +80,6 @@
         </a>
     </div>
 </footer>
-</div>
 
 <?php wp_footer(); ?>
 

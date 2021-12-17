@@ -2,11 +2,11 @@
 
 if (get_row_layout() == 'fullwidth_editor') { ?>
 
-<section class="text_block">
+<section class="fullwidth_editor section_spacing_top_small">
 
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-md-8">
 
                 <div class="text text-center">
                     <?php the_sub_field('text'); ?>

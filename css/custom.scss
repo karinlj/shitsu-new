@@ -177,73 +177,124 @@ a.button-link {
 fullwidth_editor
 *********************/
 
-.text_block {
-  width: 90%;
-  margin: 2em auto;
-  padding: 4em 1em 2em 1em;
-  @media only screen and (min-width: $md-min) {
-    width: 70%;
-  }
+.fullwidth_editor {
+  background: #fff;
 }
 
 /*********************
 three_sections
 *********************/
 .three_sections {
+  background: #fff;
   height: auto;
   overflow: hidden;
   @media all and (min-width: $xl-min) {
     min-height: 600px;
   }
-}
-.item {
-  padding-top: 3em;
-  padding-bottom: 0.5em;
-  margin: 10px 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
 
-  // min-height: 380px;
-  // margin-bottom: 2rem;
-  // background: #fff;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: space-between;
-  // border-radius: $themeBorder_radius;
-  // padding: 2.5rem 1.5rem;
-  // box-shadow: $themeBox_shadow_more;
-  @media all and (min-width: $md-min) {
-    //width: 31%;
-    padding-top: 0;
-  }
-  // @media all and (min-width: $lg-min) {
-  //   margin-bottom: 0;
-  //   min-height: 380px;
-  // }
-  img {
+  .item {
+    padding-top: 3em;
+    padding-bottom: 0.5em;
+    margin: 10px 0;
     width: 100%;
-    border-radius: 8px;
-    transition: 1s;
-    opacity: 1;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  .heading {
-    font-size: 1.9em;
-    padding: 30px 0 10px 0;
-  }
-  .text_part {
-    height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
 
+    // min-height: 380px;
+    // margin-bottom: 2rem;
+    // background: #fff;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // border-radius: $themeBorder_radius;
+    // padding: 2.5rem 1.5rem;
+    // box-shadow: $themeBox_shadow_more;
+    @media all and (min-width: $md-min) {
+      //width: 31%;
+      padding-top: 0;
+    }
+    // @media all and (min-width: $lg-min) {
+    //   margin-bottom: 0;
+    //   min-height: 380px;
+    // }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      transition: 1s;
+      opacity: 1;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .heading {
+      font-size: 1.9em;
+      padding: 30px 0 10px 0;
+    }
+    .text_part {
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .text {
+        color: $themecolor;
+      }
+    }
+  }
+}
+
+/**********************
+   testimonials
+***********************/
+.testimonials_section {
+  background: #c8e5ea;
+  //padding: 3em 0;
+
+  h2 {
+    text-align: center;
+    color: #2a656f;
+    padding-bottom: 1.5em;
+  }
+}
+.testimonials_inner {
+  height: auto;
+  overflow: hidden;
+  @include d-flex;
+  justify-content: center;
+  align-items: center;
+  @media all and (min-width: $lg-min) {
+    min-height: 500px;
+  }
+  > .container > .row {
+    padding: 0.75rem 0;
+  }
+  .item {
+    width: 100%;
+    background-color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+    margin-bottom: 4rem;
+    .icon {
+      margin-bottom: 1rem;
+      i.fab,
+      i.fas {
+        font-size: 1rem;
+        color: inherit;
+        font-weight: 600;
+      }
+    }
     .text {
-      color: $themecolor;
+      font-size: 1rem;
+      font-style: italic;
+      font-family: serif;
+      line-height: 1.8rem;
+      letter-spacing: 0.5px;
+    }
+    .signature {
+      text-transform: uppercase;
+      opacity: 0.7;
     }
   }
 }
@@ -251,151 +302,153 @@ three_sections
 /*********************
    footer 
 *********************/
-.footer-parent-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 1em;
-  .social-icons {
-    padding: 1.5rem 0;
-    ul.social {
-      @include d-inline-flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      li.social-item {
-        padding-bottom: 0.7em;
-        display: inline;
-        a {
-          color: #fff;
-          font-size: 90%;
-          .fab,
-          .fas {
-            padding: 8px;
-            font-size: 23px;
-            width: 41px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-            margin: 5px 2px;
-            margin-top: 1em;
-            transition: 1s;
-            color: #333;
-            background: #fff;
-            border: 1.5px solid #333;
-            box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
-            transition: all 0.25s ease;
-            &:hover {
-              transform: translateY(-2px);
-              box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
+.footer_container {
+  background: #333;
+  .footer-parent-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .social-icons {
+      padding: 2rem 0;
+      ul.social {
+        @include d-inline-flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        li.social-item {
+          padding-bottom: 0.7em;
+          display: inline;
+          a {
+            color: #fff;
+            font-size: 90%;
+            .fab,
+            .fas {
+              padding: 8px;
+              font-size: 23px;
+              width: 41px;
+              text-align: center;
+              text-decoration: none;
+              border-radius: 50%;
+              margin: 5px 2px;
+              margin-top: 1em;
+              transition: 1s;
+              color: #333;
+              background: #fff;
+              border: 1.5px solid #333;
+              box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
+              transition: all 0.25s ease;
+              &:hover {
+                transform: translateY(-2px);
+                box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
+              }
             }
           }
+          //Boozang icons
+          //   padding: 0 0.4rem;
+          //   &:first-child {
+          //     padding-left: 0;
+          //   }
+          //   .fab,
+          //   .fas {
+          //     font-size: 20px;
+          //     padding-right: 1rem;
+          //     text-align: center;
+          //     text-decoration: none;
+          //     border-radius: 50%;
+          //     transition: 1s;
+          //     color: #fff;
+          //     background-position: center;
+          //     cursor: pointer;
+          //     box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
+          //     transition: all 0.25s ease;
+          //     &:hover {
+          //       transform: translateY(-2px);
+          //       box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
+          //     }
+          //   }
         }
 
-        //   padding: 0 0.4rem;
-        //   &:first-child {
-        //     padding-left: 0;
-        //   }
-        //   .fab,
-        //   .fas {
-        //     font-size: 20px;
-        //     padding-right: 1rem;
-        //     text-align: center;
-        //     text-decoration: none;
-        //     border-radius: 50%;
-        //     transition: 1s;
-        //     color: #fff;
-        //     background-position: center;
-        //     cursor: pointer;
-        //     box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
-        //     transition: all 0.25s ease;
-        //     &:hover {
-        //       transform: translateY(-2px);
-        //       box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
-        //     }
-        //   }
+        // .social-list .fa:hover {
+        //   background: /*#99a63f;*/ #333;
+        //   color: #fff;
+        //   border: 1.5px solid #fff;
+        // }
+
+        // .social-list .fa {
+        //   color: #333;
+        //   background: #fff;
+        //   border: 1.5px solid #333;
+        // }
       }
-
-      // .social-list .fa:hover {
-      //   background: /*#99a63f;*/ #333;
-      //   color: #fff;
-      //   border: 1.5px solid #fff;
-      // }
-
-      // .social-list .fa {
-      //   color: #333;
-      //   background: #fff;
-      //   border: 1.5px solid #333;
-      // }
     }
   }
-}
 
-.footer-parent {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2em;
-  text-align: center;
-  &.booking {
-    justify-content: flex-end;
+  .footer-parent {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    text-align: center;
+    &.booking {
+      justify-content: flex-end;
+      .footer-child {
+        @media only screen and (min-width: $md-min) {
+          padding: 0 2rem 2rem 2rem;
+        }
+      }
+    }
     .footer-child {
+      padding: 0;
+      width: 100%;
       @media only screen and (min-width: $md-min) {
-        padding: 0 2rem 2rem 2rem;
+        width: 33%;
+        padding: 2rem 2rem 0 2rem;
+      }
+      h5 {
+        font-weight: 600;
+        letter-spacing: 1.7px;
+        color: #56b1bf;
+        font-size: 1.6em;
+      }
+      p {
+        color: #fff;
+        font-size: 0.95em;
+      }
+    }
+    @media only screen and (min-width: $md-min) {
+      padding: 0 10% 1em 10%;
+    }
+  }
+
+  .footer-bottom {
+    padding: 3em 10%;
+    background-color: #262626;
+    color: #999;
+    position: relative;
+    p {
+      margin: 0;
+    }
+    .to-top {
+      position: absolute;
+      right: 70px;
+      bottom: 50px;
+      display: none;
+      @media only screen and (min-width: $md-min) {
+        display: block;
+      }
+      &::before {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f077";
+        font-size: 1.7rem;
+        color: #56b1bf;
+      }
+      &:hover {
+        opacity: 0.7;
       }
     }
   }
-  .footer-child {
-    padding: 0;
-    width: 100%;
-    @media only screen and (min-width: $md-min) {
-      width: 33%;
-      padding: 2rem 2rem 0 2rem;
-    }
-    h5 {
-      font-weight: 600;
-      letter-spacing: 1.7px;
-      color: #56b1bf;
-      font-size: 1.6em;
-    }
-    p {
-      font-size: 0.95em;
-    }
-  }
-  @media only screen and (min-width: $md-min) {
-    padding: 0 10% 1em 10%;
-  }
 }
-
-.footer-bottom {
-  padding: 3em 10%;
-  background-color: #262626;
-  color: #999;
-  position: relative;
-  p {
-    margin: 0;
-  }
-  .to-top {
-    position: absolute;
-    right: 70px;
-    bottom: 50px;
-    display: none;
-    @media only screen and (min-width: $md-min) {
-      display: block;
-    }
-    &::before {
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      content: "\f077";
-      font-size: 1.7rem;
-      color: #56b1bf;
-    }
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-}
-
 //kolla denna
 /********************
   404-page

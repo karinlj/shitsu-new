@@ -772,7 +772,7 @@ a.button-link:hover {
 * References section Widget
 */
 
-.references-section {
+/* .references-section {
   background-color: #c8e5ea;
   padding: 3em 0;
 }
@@ -781,7 +781,7 @@ a.button-link:hover {
   text-align: center;
   color: #2a656f;
   padding-bottom: 1.5em;
-}
+} */
 
 .container-references {
   display: flex;
@@ -797,13 +797,13 @@ a.button-link:hover {
   content: "\f10e";
 }
 
-.references-box {
+/* .references-box {
   width: 100%;
   background-color: #fff;
   padding: 2em 3em;
   border-radius: 8px;
   margin-bottom: 4em;
-}
+} */
 
 .references-box::before {
   font-family: FontAwesome;
@@ -817,11 +817,11 @@ a.button-link:hover {
 }
 
 .references-section .textwidget {
-  font-size: 1.1em;
+  /* font-size: 1.1em;
   font-style: italic;
   font-family: serif;
   line-height: 1.8em;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.5px; */
 }
 
 /*Front Page for larger screens*/

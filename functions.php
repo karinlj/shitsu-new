@@ -66,10 +66,6 @@ function sh_theme_setup()
 add_action('after_setup_theme', 'sh_theme_setup');
 
 
-//New file for customizing big landing page
-require get_template_directory() . '/inc/customizer.php';
-
-
 //Excerpt lenght control
 function set_excerpt_length()
 {
@@ -81,28 +77,6 @@ add_filter('excerpt_length', 'set_excerpt_length');
 //Widget locations
 function sh_init_widgets($id)
 {
-
-
-    /*Three-Image-Box widgets*/
-    register_sidebar(array(
-        'name' => 'Image-Box1',
-        'id'   => 'image-box1',
-        'before_widget' => '<div class="image-box">',
-        'after_widget'  => '</div>'
-    ));
-    register_sidebar(array(
-        'name' => 'Image-Box2',
-        'id'   => 'image-box2',
-        'before_widget' => '<div class="image-box">',
-        'after_widget'  => '</div>'
-    ));
-    register_sidebar(array(
-        'name' => 'Image-Box3',
-        'id'   => 'image-box3',
-        'before_widget' => '<div class="image-box">',
-        'after_widget'  => '</div>'
-    ));
-
     /*references widgets*/
     register_sidebar(array(
         'name' => 'references',
