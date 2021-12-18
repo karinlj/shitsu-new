@@ -389,6 +389,48 @@ three_sections
 }
 
 /*********************
+   links 
+*********************/
+.link_section {
+  background: #fff;
+  width: 100%;
+}
+.link_section a {
+  display: block;
+  border: 1.5px solid #56b1bf;
+  padding: 12px 20px;
+  font-size: 14px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 1s;
+  margin-right: 12px;
+  line-height: 20px;
+}
+@media only screen and (min-width: 768px) {
+  .link_section a {
+    display: inline-block;
+  }
+}
+.link_section a:active {
+  text-decoration: none;
+}
+.link_section a:hover {
+  background: #56b1bf;
+  color: #fff;
+  text-decoration: none;
+}
+.link_section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.link_section ul li {
+  display: block;
+  margin-bottom: 1.5em;
+}
+
+/*********************
    footer 
 *********************/
 .footer_container {
