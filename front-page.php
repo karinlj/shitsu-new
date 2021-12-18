@@ -10,8 +10,9 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <?php
-                //Loopa ACF Front Page Blocks -flexible content
+                <?php //layouts of front_page_blocks - Flex content
+
+                //Loopa ACF flex Content
                 if (function_exists('have_rows')) { ?>
 
                 <?php
@@ -22,7 +23,7 @@
 
                 <?php $layout = get_row_layout(); ?>
 
-                <?php // load the layout from the templates folder
+                <?php // load layout from the templates folder
                             get_template_part('templates/' . $layout); ?>
 
                 <?php }

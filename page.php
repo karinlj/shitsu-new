@@ -16,7 +16,6 @@ Description:  Page
         if (function_exists('have_rows')) {
 
           if (have_rows('page_blocks')) {
-
             while (have_rows('page_blocks')) {
               the_row();
 

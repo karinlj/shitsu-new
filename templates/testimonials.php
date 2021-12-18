@@ -36,5 +36,4 @@ if (get_row_layout() == 'testimonials') { ?>
     </div>
 </section>
 <?php
-
 } ?>

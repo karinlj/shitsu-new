@@ -148,42 +148,6 @@ function sh_custom_post_types()
     register_post_type('contact-posts', $args);
 
     $labels = array(
-        'name' => 'Treatment Posts',
-        'singular_name' => 'Treatment Post',
-        'add_new' => 'Add Treatment Posts Item',
-        'all_items' => 'All Items',
-        'add_new_item' => 'Add Item',
-        'edit_item' => 'Edit Item',
-        'new_item' => 'New Item',
-        'view_item' => 'View Item',
-        'search_item' => 'Search Treatment Posts',
-        'not_found' => 'No Items Found',
-        'not_found_in_trash' => 'No Items found in trash',
-        'parent_item_colon' => 'Parent Item'
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => true,
-        'has_archive' => true,
-        'publicly_queryable' => true,
-        'query_var' => true,
-        'rewrite' => true,
-        'capability_type' => 'post',
-        'hierarchial' => false,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail',
-            'revisions'
-        ),
-        //'taxonomies' => array('category', 'post_tag'),
-        'menu_position' => 4,
-        'exclude_from_search' => true
-    );
-    register_post_type('treatment-posts', $args);
-
-    $labels = array(
         'name' => 'Enterprise Posts',
         'singular_name' => 'Enterprise Post',
         'add_new' => 'Add Enterprise Posts Item',
@@ -293,38 +257,6 @@ function sh_custom_post_types()
 }
 add_action('init', 'sh_custom_post_types');
 
-
-
-//Custom Taxonomies
-function sh_custom_taxonomies()
-{
-
-    //new custom taxonomy hierarchical for video-posts
-    $labels = array(
-        'name' => 'Treatment Categories',
-        'singular_name' => 'Treatment Category',
-        'search_items' => 'Search Treatment Category',
-        'all_items' => 'All Treatment Categories',
-        'parent_item' => 'Parent Treatment Category',
-        'parent_item_colon' => 'Parent Treatment Category:',
-        'edit_item' => 'Edit Treatment Category',
-        'update_item' => 'Update Treatment Category',
-        'add_new_item' => 'Add New Treatment Category',
-        'new_item_name' => 'New Treatment Category Name',
-        'menu_name' => ' Treatment Categories',
-    );
-
-    $args = array(
-        'labels' => $labels,
-        'hierarchical' => true,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'query_var' => true,
-        'rewrite' => array('slug' => 'featured-image-sections'),
-    );
-    register_taxonomy('treatment-category', array('treatment-posts'), $args);
-}
-add_action('init', 'sh_custom_taxonomies');
 
 //ACF options page
 if (function_exists('acf_add_options_page')) {

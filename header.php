@@ -57,7 +57,7 @@
                                                     the_row();
 
                                                     $layout = get_row_layout();
-                                                    get_template_part('templates/' . $layout); ?>
+                                                    get_template_part('templates/header/' . $layout); ?>
                                             <?php
                                                 }
                                             } ?>

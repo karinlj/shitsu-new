@@ -33,7 +33,6 @@ if (get_row_layout() == 'three_sections') {
                     <?php } ?>
 
                     <h2 class="heading"><?php echo $heading; ?></h2>
-
                     <div class="text_part">
                         <p class="text"><?php echo $text; ?></p>
 

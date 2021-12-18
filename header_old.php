@@ -48,9 +48,7 @@
 
     <div class="content-container-full-width">
 
-
         <header id="header-new">
-
             <!--get main-menu.php-->
             <?php get_template_part('parts/main-menu'); ?>
 

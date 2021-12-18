@@ -113,6 +113,49 @@ body {
 }
 
 /*********************
+   fonts 
+*********************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #555;
+  letter-spacing: 0.8px;
+  padding: 5px 0 10px 0;
+  line-height: 1.3em;
+}
+
+h1 {
+  font-size: 3.4em;
+  letter-spacing: 1.2px;
+}
+
+h2 {
+  font-size: 2.3em;
+  color: #889438 !important;
+}
+
+h4 {
+  font-size: 1.6em;
+  color: #889438;
+}
+
+h5 {
+  color: #555;
+  font-size: 18px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*********************
    buttons 
 *********************/
 a.button-link {
@@ -325,6 +368,24 @@ three_sections
 .testimonials_inner .item .signature {
   text-transform: uppercase;
   opacity: 0.7;
+}
+
+/*********************
+   text_and_or_image 
+*********************/
+.text_and_or_image {
+  background: #fff;
+}
+.text_and_or_image .text_part {
+  margin-bottom: 3rem;
+}
+@media all and (min-width: 768px) {
+  .text_and_or_image .text_part {
+    margin-bottom: 0;
+  }
+}
+.text_and_or_image .text_part ul li {
+  padding: 0.5rem 0;
 }
 
 /*********************
