@@ -207,7 +207,7 @@ a.button-link :visited {
   position: relative;
 }
 .header_wrapper .header_small {
-  height: 280px;
+  height: 400px;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -233,22 +233,30 @@ a.button-link :visited {
   content: "";
   display: block;
 }
-.header_wrapper .header-items-section .header_front {
+.header_wrapper .header_big .text_container h1,
+.header_wrapper .header_small .text_container h1 {
+  font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica, Arial;
+}
+.header_wrapper .header_big .text_container .header_front_heading,
+.header_wrapper .header_small .text_container .header_front_heading {
   color: #fff;
   margin-bottom: 1.4rem;
   font-size: 4rem;
 }
-.header_wrapper .header-items-section .header_page {
+.header_wrapper .header_big .text_container .header_page_heading,
+.header_wrapper .header_small .text_container .header_page_heading {
   color: #fff;
   margin-bottom: 1.4rem;
   text-align: center;
 }
-.header_wrapper .header-items-section .header-text {
+.header_wrapper .header_big .text_container .header_text,
+.header_wrapper .header_small .text_container .header_text {
   font-size: 1.4em;
   color: #fff;
   margin-bottom: 1rem;
 }
-.header_wrapper .header-items-section .btn {
+.header_wrapper .header_big .text_container .btn,
+.header_wrapper .header_small .text_container .btn {
   margin-top: 1.4rem;
   margin-bottom: 2.8rem;
   font-size: 1.2em;
@@ -395,7 +403,21 @@ three_sections
   background: #fff;
   width: 100%;
 }
-.link_section a {
+.link_section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.link_section ul li {
+  display: block;
+  margin-bottom: 1.5em;
+}
+@media only screen and (min-width: 768px) {
+  .link_section ul li {
+    display: inline-block;
+  }
+}
+.link_section ul li a {
   display: block;
   border: 1.5px solid #56b1bf;
   padding: 12px 20px;
@@ -407,27 +429,13 @@ three_sections
   margin-right: 12px;
   line-height: 20px;
 }
-@media only screen and (min-width: 768px) {
-  .link_section a {
-    display: inline-block;
-  }
-}
-.link_section a:active {
+.link_section ul li a:active {
   text-decoration: none;
 }
-.link_section a:hover {
+.link_section ul li a:hover {
   background: #56b1bf;
   color: #fff;
   text-decoration: none;
-}
-.link_section ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.link_section ul li {
-  display: block;
-  margin-bottom: 1.5em;
 }
 
 /*********************

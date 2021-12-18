@@ -95,27 +95,22 @@ h6 {
   padding: 5px 0 10px 0;
   line-height: 1.3em;
 }
-
 h1 {
   font-size: 3.4em;
   letter-spacing: 1.2px;
 }
-
 h2 {
   font-size: 2.3em;
   color: #889438 !important;
 }
-
 h4 {
   font-size: 1.6em;
   color: #889438;
 }
-
 h5 {
   color: #555;
   font-size: 18px;
 }
-
 img {
   max-width: 100%;
   height: auto;
@@ -171,7 +166,7 @@ a.button-link {
   }
   /*header small*/
   .header_small {
-    height: 280px;
+    height: 400px;
     @include d-flex;
     justify-content: center;
     align-items: center;
@@ -193,27 +188,31 @@ a.button-link {
       content: "";
       display: block;
     }
-  }
-  .header-items-section {
-    .header_front {
-      color: #fff;
-      margin-bottom: 1.4rem;
-      font-size: 4rem;
-    }
-    .header_page {
-      color: #fff;
-      margin-bottom: 1.4rem;
-      text-align: center;
-    }
-    .header-text {
-      font-size: 1.4em;
-      color: #fff;
-      margin-bottom: 1rem;
-    }
-    .btn {
-      margin-top: 1.4rem;
-      margin-bottom: 2.8rem;
-      font-size: 1.2em;
+    .text_container {
+      h1 {
+        font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica,
+          Arial;
+      }
+      .header_front_heading {
+        color: #fff;
+        margin-bottom: 1.4rem;
+        font-size: 4rem;
+      }
+      .header_page_heading {
+        color: #fff;
+        margin-bottom: 1.4rem;
+        text-align: center;
+      }
+      .header_text {
+        font-size: 1.4em;
+        color: #fff;
+        margin-bottom: 1rem;
+      }
+      .btn {
+        margin-top: 1.4rem;
+        margin-bottom: 2.8rem;
+        font-size: 1.2em;
+      }
     }
   }
 }
@@ -372,29 +371,6 @@ three_sections
   background: #fff;
   width: 100%;
 
-  a {
-    display: block;
-    border: 1.5px solid #56b1bf;
-    padding: 12px 20px;
-    font-size: 14px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: 1s;
-    margin-right: 12px;
-    line-height: 20px;
-    @media only screen and (min-width: $md-min) {
-      display: inline-block;
-    }
-    &:active {
-      text-decoration: none;
-    }
-    &:hover {
-      background: #56b1bf;
-      color: #fff;
-      text-decoration: none;
-    }
-  }
   ul {
     list-style: none;
     margin: 0;
@@ -402,26 +378,29 @@ three_sections
     li {
       display: block;
       margin-bottom: 1.5em;
-      // a {
-      //   display: block;
-      //   border: 1.5px solid #56b1bf;
-      //   padding: 12px 20px;
-      //   font-size: 14px;
-      //   letter-spacing: 2px;
-      //   font-weight: 600;
-      //   text-transform: uppercase;
-      //   transition: 1s;
-      //   margin-right: 12px;
-      //   line-height: 20px;
-      //   &:active {
-      //     text-decoration: none;
-      //   }
-      //   &:hover {
-      //     background: #56b1bf;
-      //     color: #fff;
-      //     text-decoration: none;
-      //   }
-      // }
+      @media only screen and (min-width: $md-min) {
+        display: inline-block;
+      }
+      a {
+        display: block;
+        border: 1.5px solid #56b1bf;
+        padding: 12px 20px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        text-transform: uppercase;
+        transition: 1s;
+        margin-right: 12px;
+        line-height: 20px;
+        &:active {
+          text-decoration: none;
+        }
+        &:hover {
+          background: #56b1bf;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
     }
   }
 }

@@ -2,9 +2,9 @@
 //template in header_items
 
 if (is_front_page()) {
-  $heading_class = 'header_front';
+  $heading_class = 'header_front_heading';
 } else {
-  $heading_class = 'header_page';
+  $heading_class = 'header_page_heading';
 }
 
 if (get_row_layout() == 'header_heading') {

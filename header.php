@@ -45,28 +45,27 @@
                         class="<?php echo $header_class; ?> <?php echo $color; ?> <?php echo $overlay_color; ?>"
                         <?php echo $style; ?>>
 
-                        <div class="header-items-section">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="header-text-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="text_container">>
+                                        <?php //loop ACF flex Content for layouts of header_items
+                                        if (have_rows('header_items')) {
+                                            while (have_rows('header_items')) {
+                                                the_row();
 
-                                            <?php //loop ACF flex Content for layouts of header_items
-                                            if (have_rows('header_items')) {
-                                                while (have_rows('header_items')) {
-                                                    the_row();
-
-                                                    $layout = get_row_layout();
-                                                    get_template_part('templates/header/' . $layout); ?>
-                                            <?php
-                                                }
+                                                $layout = get_row_layout();
+                                                get_template_part('templates/header/' . $layout); ?>
+                                        <?php
                                             } ?>
-                                        </div>
                                     </div>
-                                </div>
 
+                                    <?php } ?>
+                                </div>
                             </div>
+
                         </div>
+
                     </header>
                 </div>
             </div>
