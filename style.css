@@ -361,17 +361,25 @@ a.button-link:hover {
 .nav-desktop ul li a {
   display: block;
   color: #111;
-  padding: 16px 13px;
+  /* padding: 16px 13px; */
+  padding: 3px 3px;
   text-decoration: none;
-  transition: 0.3s;
-  font-size: 1.4em;
+  /* transition: 0.3s; */
+  /* font-size: 1.4em; */
+  font-size: 1.3rem;
   cursor: pointer;
   letter-spacing: -0.2px;
   font-family: "GeosansLight", Arial, sans-serif;
+
+  transition: all 0.5s ease;
+  border-bottom: 1px solid transparent;
+  margin: 0 0.5rem -1px 0.5rem;
 }
 
 .nav-desktop ul li a:hover {
   opacity: 0.8;
+  border-bottom: 1px solid #111;
+  opacity: 1;
 }
 
 .nav-desktop ul li a:active,
@@ -382,7 +390,8 @@ a.button-link:hover {
 /*Wp:s klasser*/
 
 .nav-desktop ul li.current-menu-item > a {
-  color: #aab946;
+  /* color: #aab946; */
+  border-bottom: 1px solid #111;
 }
 
 .nav-desktop ul li.menu-item-has-children ul {
@@ -560,12 +569,13 @@ a.button-link:hover {
   } */
 
   .nav-desktop {
-    padding: 0px 5px;
+    padding: 0 0 1rem 0;
     justify-content: flex-start;
   }
 
   .nav-links {
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
     flex-direction: row;
   }
 

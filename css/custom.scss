@@ -15,19 +15,26 @@ License: GNU General Public License v2 or later
 
 body {
   font-family: "Open Sans", arial, sans-serif;
-  color: #555;
-  font-size: 14px;
+  color: #333; //#555;
+  font-size: 15px;
   width: 100%;
   background-color: /*#f5f0e6;*/ #f5f0eb; /* - ving*/ /*#ece6df;*/ /*#ededed;*/ /*#EEF1EF; isabelline */ /*#fcfcfc;*/
+  background: #fff;
+}
+
+.nav-desktop {
+  background: #fff;
 }
 .content-container-full-width {
-  max-width: 1200px;
+  // max-width: 1200px;
+  max-width: 1300px;
   /*margin: 0 auto 3em auto;*/
   margin: 0 auto;
   background: #fff;
 }
 .container {
-  max-width: 1200px;
+  // max-width: 1200px;
+  max-width: 1400px;
 }
 .section_spacing_top_big {
   padding: 5rem calc(1.5rem - 15px);
@@ -75,6 +82,12 @@ body {
   }
   @media all and (min-width: $xl-min) {
     padding: 2rem calc(3.75rem - 15px);
+  }
+}
+.section_spacing_only_top_small {
+  padding: 3rem 0;
+  @media all and (min-width: $xl-min) {
+    padding: 4rem 0;
   }
 }
 /*********************
@@ -151,10 +164,10 @@ a.button-link {
    header 
 *********************/
 .header_wrapper {
-  padding-top: 4rem;
+  padding-top: 2rem;
   /*header big*/
   .header_big {
-    min-height: 600px;
+    min-height: 800px;
     @include d-flex;
     // justify-content: center;
     // align-items: center;
@@ -167,6 +180,7 @@ a.button-link {
   /*header small*/
   .header_small {
     height: 400px;
+    min-height: 600px;
     @include d-flex;
     justify-content: center;
     align-items: center;
@@ -184,7 +198,7 @@ a.button-link {
       right: 0;
       bottom: 0;
       left: 0;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.1);
       content: "";
       display: block;
     }
@@ -192,19 +206,19 @@ a.button-link {
       h1 {
         font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica,
           Arial;
+        color: #fff;
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
       }
       .header_front_heading {
-        color: #fff;
-        margin-bottom: 1.4rem;
-        font-size: 4rem;
+        font-size: 4.3rem;
       }
       .header_page_heading {
-        color: #fff;
-        margin-bottom: 1.4rem;
         text-align: center;
+        font-size: 3.4rem;
       }
       .header_text {
-        font-size: 1.4em;
+        font-size: 1.3rem;
         color: #fff;
         margin-bottom: 1rem;
       }
@@ -298,7 +312,7 @@ three_sections
 
   h2 {
     text-align: center;
-    color: #2a656f;
+    color: #2a656f !important;
     padding-bottom: 1.5em;
   }
 }
@@ -357,7 +371,17 @@ three_sections
     ul {
       li {
         padding: 0.5rem 0;
+        font-weight: 600;
       }
+    }
+  }
+
+  .row {
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
     }
   }
 }
@@ -370,7 +394,6 @@ three_sections
   //padding: 1em 1em 3em 1em;
   background: #fff;
   width: 100%;
-
   ul {
     list-style: none;
     margin: 0;
@@ -383,9 +406,9 @@ three_sections
       }
       a {
         display: block;
-        border: 1.5px solid #56b1bf;
+        border: 2px solid #56b1bf;
         padding: 12px 20px;
-        font-size: 14px;
+        font-size: 1rem;
         letter-spacing: 2px;
         font-weight: 600;
         text-transform: uppercase;
@@ -405,10 +428,56 @@ three_sections
   }
 }
 
+/*************************
+    Hero background image
+  ***********************/
+
+.hero_section {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.1);
+    content: "";
+    display: block;
+  }
+  @media all and (min-width: $lg-min) {
+    height: 600px;
+  }
+  a {
+    text-decoration: none !important;
+  }
+  .hero_heading {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff !important;
+  }
+  .hero_text {
+    text-align: center;
+    max-width: 90%;
+    color: #fff;
+    margin: 1rem auto;
+    @media all and (min-width: $lg-min) {
+      max-width: 80%;
+    }
+  }
+}
+
 /*********************
    footer 
 *********************/
 .footer_container {
+  margin-bottom: 2rem;
   background: #333;
   .footer-parent-social {
     display: flex;

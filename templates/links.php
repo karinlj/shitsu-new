@@ -1,7 +1,7 @@
 <?php
 if (get_row_layout() == 'links') { ?>
 
-<section class="link_section section_spacing_top_small">
+<section class="link_section section_spacing_only_top_small">
     <div class="container">
         <div class="row">
             <div class="col-12">

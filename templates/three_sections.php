@@ -3,7 +3,7 @@ if (get_row_layout() == 'three_sections') {
 
     $color = get_sub_field('color_theme'); ?>
 
-<section class="three_sections <?php echo $color; ?> section_spacing_top_small">
+<section class="three_sections <?php echo $color; ?> section_spacing_top_medium">
     <div class="container">
         <div class="row align-items-start justify-content-around">
 

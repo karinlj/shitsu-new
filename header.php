@@ -48,7 +48,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="text_container">>
+                                    <div class="text_container">
                                         <?php //loop ACF flex Content for layouts of header_items
                                         if (have_rows('header_items')) {
                                             while (have_rows('header_items')) {

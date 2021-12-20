@@ -14,8 +14,8 @@ License: GNU General Public License v2 or later
 /* colors */
 body {
   font-family: "Open Sans", arial, sans-serif;
-  color: #555;
-  font-size: 14px;
+  color: #333;
+  font-size: 15px;
   width: 100%;
   background-color: #f5f0eb;
   /* - ving*/
@@ -23,17 +23,22 @@ body {
   /*#ededed;*/
   /*#EEF1EF; isabelline */
   /*#fcfcfc;*/
+  background: #fff;
+}
+
+.nav-desktop {
+  background: #fff;
 }
 
 .content-container-full-width {
-  max-width: 1200px;
+  max-width: 1300px;
   /*margin: 0 auto 3em auto;*/
   margin: 0 auto;
   background: #fff;
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .section_spacing_top_big {
@@ -109,6 +114,15 @@ body {
 @media all and (min-width: 1200px) {
   .section_spacing_top_mini {
     padding: 2rem calc(3.75rem - 15px);
+  }
+}
+
+.section_spacing_only_top_small {
+  padding: 3rem 0;
+}
+@media all and (min-width: 1200px) {
+  .section_spacing_only_top_small {
+    padding: 4rem 0;
   }
 }
 
@@ -190,12 +204,12 @@ a.button-link :visited {
    header 
 *********************/
 .header_wrapper {
-  padding-top: 4rem;
+  padding-top: 2rem;
   /*header big*/
   /*header small*/
 }
 .header_wrapper .header_big {
-  min-height: 600px;
+  min-height: 800px;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -208,6 +222,7 @@ a.button-link :visited {
 }
 .header_wrapper .header_small {
   height: 400px;
+  min-height: 600px;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -229,29 +244,29 @@ a.button-link :visited {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
   content: "";
   display: block;
 }
 .header_wrapper .header_big .text_container h1,
 .header_wrapper .header_small .text_container h1 {
   font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica, Arial;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
 }
 .header_wrapper .header_big .text_container .header_front_heading,
 .header_wrapper .header_small .text_container .header_front_heading {
-  color: #fff;
-  margin-bottom: 1.4rem;
-  font-size: 4rem;
+  font-size: 4.3rem;
 }
 .header_wrapper .header_big .text_container .header_page_heading,
 .header_wrapper .header_small .text_container .header_page_heading {
-  color: #fff;
-  margin-bottom: 1.4rem;
   text-align: center;
+  font-size: 3.4rem;
 }
 .header_wrapper .header_big .text_container .header_text,
 .header_wrapper .header_small .text_container .header_text {
-  font-size: 1.4em;
+  font-size: 1.3rem;
   color: #fff;
   margin-bottom: 1rem;
 }
@@ -328,7 +343,7 @@ three_sections
 }
 .testimonials_section h2 {
   text-align: center;
-  color: #2a656f;
+  color: #2a656f !important;
   padding-bottom: 1.5em;
 }
 
@@ -394,6 +409,13 @@ three_sections
 }
 .text_and_or_image .text_part ul li {
   padding: 0.5rem 0;
+  font-weight: 600;
+}
+.text_and_or_image .row::before {
+  display: none;
+}
+.text_and_or_image .row::after {
+  display: none;
 }
 
 /*********************
@@ -419,9 +441,9 @@ three_sections
 }
 .link_section ul li a {
   display: block;
-  border: 1.5px solid #56b1bf;
+  border: 2px solid #56b1bf;
   padding: 12px 20px;
-  font-size: 14px;
+  font-size: 1rem;
   letter-spacing: 2px;
   font-weight: 600;
   text-transform: uppercase;
@@ -438,10 +460,59 @@ three_sections
   text-decoration: none;
 }
 
+/*************************
+    Hero background image
+  ***********************/
+.hero_section {
+  position: relative;
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero_section::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  content: "";
+  display: block;
+}
+@media all and (min-width: 992px) {
+  .hero_section {
+    height: 600px;
+  }
+}
+.hero_section a {
+  text-decoration: none !important;
+}
+.hero_section .hero_heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #fff !important;
+}
+.hero_section .hero_text {
+  text-align: center;
+  max-width: 90%;
+  color: #fff;
+  margin: 1rem auto;
+}
+@media all and (min-width: 992px) {
+  .hero_section .hero_text {
+    max-width: 80%;
+  }
+}
+
 /*********************
    footer 
 *********************/
 .footer_container {
+  margin-bottom: 2rem;
   background: #333;
 }
 .footer_container .footer-parent-social {
