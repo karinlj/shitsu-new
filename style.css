@@ -318,29 +318,29 @@ a.button-link:hover {
 
 /*Desktop view*/
 
-.nav-desktop {
+/* .nav_desktop {
   background-color: #f5f0eb;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 20px;
-}
+} */
 
-.site-title {
+/* .site_title {
   padding: 0;
   margin: 0;
   padding-right: 25px;
-}
+} */
 
-.site-title a {
+/* .site-title a {
   color: #778131;
   letter-spacing: 0;
   font-size: 1.4em;
   font-weight: 600;
   font-family: "GeosansLight", Arial, sans-serif;
-}
+} */
 
-.nav-links {
+/* .nav_links {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -361,11 +361,9 @@ a.button-link:hover {
 .nav-desktop ul li a {
   display: block;
   color: #111;
-  /* padding: 16px 13px; */
   padding: 3px 3px;
   text-decoration: none;
-  /* transition: 0.3s; */
-  /* font-size: 1.4em; */
+ 
   font-size: 1.3rem;
   cursor: pointer;
   letter-spacing: -0.2px;
@@ -380,22 +378,22 @@ a.button-link:hover {
   opacity: 0.8;
   border-bottom: 1px solid #111;
   opacity: 1;
-}
+} */
 
-.nav-desktop ul li a:active,
+/* .nav-desktop ul li a:active,
 .nav-desktop ul li a:visited {
   color: #111;
-}
+} */
 
 /*Wp:s klasser*/
 
-.nav-desktop ul li.current-menu-item > a {
-  /* color: #aab946; */
-  border-bottom: 1px solid #111;
-}
+/* .nav-desktop ul li.current-menu-item > a { */
+/* color: #aab946; */
+/* border-bottom: 1px solid #111;
+} */
 
-.nav-desktop ul li.menu-item-has-children ul {
-  /*funkar!!*/
+/*funkar!!*/
+/* .nav-desktop ul li.menu-item-has-children ul {
   position: absolute;
   z-index: 10;
   background-color: #f5f0eb;
@@ -406,11 +404,11 @@ a.button-link:hover {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   display: none;
-}
+} */
 
 /*togglar med jquery*/
 
-.nav-desktop ul li.menu-item-has-children ul.sub-menu-open {
+/* .nav-desktop ul li.menu-item-has-children ul.sub-menu-open {
   display: flex;
   flex-direction: column;
 }
@@ -419,10 +417,10 @@ a.button-link:hover {
   content: "\f107";
   font-family: FontAwesome;
   margin-left: 5px;
-}
+} */
 
-.nav-desktop ul li.menu-item-has-children li {
-  /*för att täcka med b-c - hover*/
+/*för att täcka med b-c - hover*/
+/* .nav-desktop ul li.menu-item-has-children li {
   width: 100%;
 }
 
@@ -434,9 +432,9 @@ a.button-link:hover {
 
 .nav-desktop ul li.menu-item-has-children li:hover a {
   opacity: 0.8;
-}
+} */
 
-.booking-btn {
+/* .booking-btn {
   display: flex;
   justify-content: flex-start;
 }
@@ -450,16 +448,16 @@ a.button-link:hover {
 
 .booking-btn ul li a {
   padding: 0;
-}
+} */
 
-.nav-desktop > .toggle {
+/* .nav-desktop > .toggle {
   font-size: 26px;
   color: #111;
   cursor: pointer;
-}
+} */
 
 /*Mobile view*/
-
+/* 
 .nav-mobile {
   clear: both;
   position: fixed;
@@ -473,7 +471,6 @@ a.button-link:hover {
   padding: 0 10%;
   padding-top: 60px;
   text-align: left;
-
   transform: translateX(100%);
   transition: transform 0.6s ease;
 }
@@ -498,17 +495,16 @@ a.button-link:hover {
 
 .nav-mobile ul li a:hover {
   opacity: 0.7;
-}
+} */
 
 /*Wp:s klasser*/
 
-.nav-mobile ul li.menu-item-has-children ul {
+/* .nav-mobile ul li.menu-item-has-children ul {
   position: static;
   z-index: 10;
   display: none;
 }
 
-/*togglar med jquery*/
 .nav-mobile ul li.menu-item-has-children ul.sub-menu-open {
   display: flex;
   flex-direction: column;
@@ -521,7 +517,6 @@ a.button-link:hover {
 }
 
 .nav-mobile ul li.menu-item-has-children li {
-  /*för att täcka med b-c - hover*/
   width: 100%;
 }
 
@@ -544,8 +539,6 @@ a.button-link:hover {
   text-align: left;
 }
 
-/*close button*/
-
 .nav-mobile > span.toggle {
   position: absolute;
   top: 10px;
@@ -554,27 +547,22 @@ a.button-link:hover {
   margin-left: 50px;
   color: #fff;
   cursor: pointer;
-}
+} */
 
 /*toggle class with jquery*/
-.nav-mobile-open {
+/* .nav-mobile-open {
   overflow-x: auto;
   transform: translateX(0);
-}
+} */
 
 /*Menu for larger screen*/
-@media only screen and (min-width: 960px) {
-  /* #header-new {
-    margin-top: 2em;
-  } */
-
+/* @media only screen and (min-width: 960px) {
   .nav-desktop {
     padding: 0 0 1rem 0;
     justify-content: flex-start;
   }
 
   .nav-links {
-    /* justify-content: space-between; */
     justify-content: flex-end;
     flex-direction: row;
   }
@@ -595,7 +583,7 @@ a.button-link:hover {
   .nav-mobile {
     display: none;
   }
-}
+} */
 
 /*********************
  Pages general layout

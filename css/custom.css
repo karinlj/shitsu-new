@@ -26,6 +26,10 @@ body {
   background: #fff;
 }
 
+body.no_scroll {
+  overflow: hidden;
+}
+
 .nav-desktop {
   background: #fff;
 }
@@ -204,7 +208,7 @@ a.button-link :visited {
    header 
 *********************/
 .header_wrapper {
-  padding-top: 2rem;
+  padding-top: 1.4rem;
   /*header big*/
   /*header small*/
 }
@@ -220,8 +224,15 @@ a.button-link :visited {
   padding-top: 7rem;
   position: relative;
 }
+@media all and (max-width: 480px) {
+  .header_wrapper .header_big {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 360px;
+  }
+}
 .header_wrapper .header_small {
-  height: 400px;
   min-height: 600px;
   display: -webkit-box !important;
   display: -webkit-flex !important;
@@ -229,6 +240,11 @@ a.button-link :visited {
   display: flex !important;
   justify-content: center;
   align-items: center;
+}
+@media all and (max-width: 480px) {
+  .header_wrapper .header_small {
+    min-height: 360px;
+  }
 }
 .header_wrapper .header_big,
 .header_wrapper .header_small {
@@ -259,10 +275,23 @@ a.button-link :visited {
 .header_wrapper .header_small .text_container .header_front_heading {
   font-size: 4.3rem;
 }
+@media all and (max-width: 480px) {
+  .header_wrapper .header_big .text_container .header_front_heading,
+.header_wrapper .header_small .text_container .header_front_heading {
+    font-size: 3rem;
+    padding-bottom: 0;
+  }
+}
 .header_wrapper .header_big .text_container .header_page_heading,
 .header_wrapper .header_small .text_container .header_page_heading {
   text-align: center;
   font-size: 3.4rem;
+}
+@media all and (max-width: 480px) {
+  .header_wrapper .header_big .text_container .header_page_heading,
+.header_wrapper .header_small .text_container .header_page_heading {
+    font-size: 2.5rem;
+  }
 }
 .header_wrapper .header_big .text_container .header_text,
 .header_wrapper .header_small .text_container .header_text {
@@ -646,5 +675,300 @@ three_sections
 .nopage .nopage-heading {
   margin-bottom: 2rem;
 }
+
+/*********************
+ Menu 
+*********************/
+.nav_desktop {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+@media only screen and (min-width: 992px) {
+  .nav_desktop {
+    padding: 0 0 1.4rem 0;
+    justify-content: flex-start;
+  }
+}
+.nav_desktop .site_title {
+  padding: 0;
+  margin: 0;
+  padding-right: 25px;
+}
+.nav_desktop .site_title a {
+  color: #778131;
+  letter-spacing: 0;
+  font-size: 1.3em;
+  font-weight: 600;
+  font-family: "GeosansLight", Arial, sans-serif;
+}
+.nav_desktop .nav_links {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media only screen and (min-width: 992px) {
+  .nav_desktop .nav_links {
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+}
+.nav_desktop .nav_links ul {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  list-style: none;
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .nav_desktop .nav_links ul {
+    display: flex;
+    align-items: center;
+  }
+}
+.nav_desktop .nav_links ul li {
+  position: relative;
+  /*Wp:s klasser*/
+}
+.nav_desktop .nav_links ul li a {
+  display: block;
+  color: #111;
+  padding: 3px 3px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  letter-spacing: -0.2px;
+  font-family: "GeosansLight", Arial, sans-serif;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid transparent;
+  margin: 0 0.5rem -1px 0.5rem;
+}
+.nav_desktop .nav_links ul li a:hover {
+  opacity: 0.8;
+  border-bottom: 1px solid #111;
+  opacity: 1;
+}
+.nav_desktop .nav_links ul li a:active, .nav_desktop .nav_links ul li a:visited {
+  color: #111;
+}
+.nav_desktop .nav_links ul li.current-menu-item > a {
+  /* color: #aab946; */
+  border-bottom: 1px solid #111;
+}
+.nav_desktop .nav_links ul li.menu-item-has-children > a::after {
+  content: "";
+  font-family: FontAwesome;
+  margin-left: 5px;
+}
+.nav_desktop .nav_links ul li.menu-item-has-children ul {
+  position: absolute;
+  z-index: 10;
+  background-color: #fff;
+  width: 170px;
+  padding-bottom: 3px;
+  margin-top: -3px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  display: none;
+}
+.nav_desktop .nav_links ul li.menu-item-has-children ul.sub_menu_open {
+  display: flex;
+  flex-direction: column;
+}
+.nav_desktop .nav_links ul li.menu-item-has-children ul li {
+  /*för att täcka med b-c - hover*/
+  width: 100%;
+}
+.nav_desktop .nav_links ul li.menu-item-has-children ul li a {
+  padding: 2px 16px;
+  background-color: transparent;
+  border-radius: 0;
+}
+.nav_desktop .nav_links ul li.menu-item-has-children ul li::hover a {
+  opacity: 0.8;
+}
+.nav_desktop .nav_links .booking_btn {
+  display: none;
+}
+@media only screen and (min-width: 992px) {
+  .nav_desktop .nav_links .booking_btn {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.nav_desktop .nav_links .booking_btn img {
+  width: 80%;
+  height: auto;
+  float: right;
+}
+.nav_desktop > .toggle_btn {
+  position: absolute;
+  top: 0.8rem;
+  right: 0;
+  z-index: 10000;
+  width: 60px;
+  height: 60px;
+  padding: 1rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Hamburger Line */
+}
+.nav_desktop > .toggle_btn > div {
+  position: relative;
+  flex: none;
+  width: 100%;
+  height: 2px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s ease;
+  /* Hamburger Lines - Top & Bottom */
+  /* Moves Line Down */
+}
+.nav_desktop > .toggle_btn > div::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+}
+.nav_desktop > .toggle_btn > div::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  width: 100%;
+  height: 2px;
+  background: inherit;
+  top: 10px;
+}
+@media all and (min-width: 992px) {
+  .nav_desktop > .toggle_btn {
+    display: none;
+  }
+}
+.nav_desktop > .toggle_btn.clicked > div {
+  transform: rotate(135deg);
+  /* Turns Lines Into X */
+}
+.nav_desktop > .toggle_btn.clicked > div:before {
+  top: 0;
+  transform: rotate(90deg);
+}
+.nav_desktop > .toggle_btn.clicked > div:after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.nav_desktop > .toggle_btn.clicked:hover > div {
+  transform: rotate(225deg);
+}
+
+.nav_mobile {
+  clear: both;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: #f9f9f9;
+  padding: 0 10%;
+  padding-top: 60px;
+  text-align: left;
+  transform: translateX(100%);
+  transition: transform 0.6s ease;
+  /*toggle open*/
+}
+@media only screen and (min-width: 992px) {
+  .nav_mobile {
+    display: none;
+  }
+}
+.nav_mobile ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.nav_mobile ul li a {
+  padding: 1rem 1rem 1rem 0;
+  color: #555;
+  text-decoration: none;
+  display: block;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  font-weight: 600;
+  font-family: "GeosansLight", Arial, sans-serif;
+}
+.nav_mobile ul li a:hover {
+  opacity: 0.7;
+}
+.nav_mobile ul li.menu-item-has-children > a::after {
+  content: "";
+  font-family: FontAwesome;
+  margin-left: 5px;
+}
+.nav_mobile ul li.menu-item-has-children ul {
+  margin-bottom: 0;
+  position: static;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+.nav_mobile ul li.menu-item-has-children ul li {
+  /*för att täcka med b-c - hover*/
+  width: 100%;
+}
+.nav_mobile ul li.menu-item-has-children ul li:hover a {
+  opacity: 0.8;
+}
+.nav_mobile ul li.menu-item-has-children ul li a {
+  padding: 0.75rem;
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 1.2rem;
+  text-align: left;
+  margin-top: 0;
+  margin-left: 1rem;
+}
+.nav_mobile ul li.menu-item-has-children ul.sub_menu_open {
+  max-height: 200px;
+}
+@media only screen and (min-width: 992px) {
+  .nav_mobile .booking_btn {
+    justify-content: flex-end;
+  }
+}
+.nav_mobile .booking_btn a {
+  margin-top: 0.5em;
+  text-align: left;
+}
+.nav_mobile .booking_btn > span.toggle {
+  position: absolute;
+  top: 10px;
+  right: 28px;
+  font-size: 46px;
+  margin-left: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+.nav_mobile.open {
+  overflow-x: auto;
+  transform: translateX(0);
+}
+
+/*toggle class with jquery*/
 
 /*# sourceMappingURL=custom.css.map */
