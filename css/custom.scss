@@ -166,7 +166,9 @@ a.button-link {
    header 
 *********************/
 .header_wrapper {
-  padding-top: 1.4rem;
+  @media only screen and (min-width: $lg-min) {
+    padding-top: 1.4rem;
+  }
   /*header big*/
   .header_big {
     min-height: 800px;
@@ -378,13 +380,35 @@ three_sections
 *********************/
 .text_and_or_image {
   background: #fff;
+  &.lightgrey {
+    background: $lightgrey;
+  }
+  .part_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @media all and (min-width: $md-min) {
+      flex-direction: row;
+    }
+  }
   .image_part {
+    width: 100%;
+    @media all and (min-width: $md-min) {
+      width: 45%;
+    }
   }
   .text_part {
+    width: 100%;
     margin-bottom: 3rem;
+    @media all and (max-width: $sm-max) {
+      order: -1;
+    }
     @media all and (min-width: $md-min) {
+      width: 45%;
       margin-bottom: 0;
     }
+
     ul {
       li {
         padding: 0.5rem 0;
@@ -392,15 +416,14 @@ three_sections
       }
     }
   }
-
-  .row {
-    &::before {
-      display: none;
-    }
-    &::after {
-      display: none;
-    }
-  }
+  // .row {
+  //   &::before {
+  //     display: none;
+  //   }
+  //   &::after {
+  //     display: none;
+  //   }
+  // }
 }
 
 /*********************
@@ -408,7 +431,6 @@ three_sections
 *********************/
 
 .link_section {
-  //padding: 1em 1em 3em 1em;
   background: #fff;
   width: 100%;
   ul {
@@ -423,7 +445,7 @@ three_sections
       }
       a {
         display: block;
-        border: 2px solid #56b1bf;
+        border: 1.5px solid #56b1bf;
         padding: 12px 20px;
         font-size: 1rem;
         letter-spacing: 2px;
@@ -707,9 +729,9 @@ three_sections
         a {
           display: block;
           color: #111;
-          padding: 3px 3px;
+          padding: 3px 3px 1px 3px;
           text-decoration: none;
-          font-size: 1.3rem;
+          font-size: 1.2rem;
           cursor: pointer;
           letter-spacing: -0.2px;
           font-family: "GeosansLight", Arial, sans-serif;
@@ -717,9 +739,7 @@ three_sections
           border-bottom: 1px solid transparent;
           margin: 0 0.5rem -1px 0.5rem;
           &:hover {
-            opacity: 0.8;
-            border-bottom: 1px solid #111;
-            opacity: 1;
+            opacity: 0.7;
           }
           &:active,
           &:visited {
@@ -744,24 +764,22 @@ three_sections
             width: 170px;
             padding-bottom: 3px;
             margin-top: -3px;
-            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
-            border-bottom-left-radius: 3px;
-            border-bottom-right-radius: 3px;
+            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
             display: none;
             &.sub_menu_open {
               display: flex;
               flex-direction: column;
             }
             li {
-              /*för att täcka med b-c - hover*/
               width: 100%;
+              &.current-menu-item > a {
+                border: none;
+              }
               a {
                 padding: 2px 16px;
                 background-color: transparent;
                 border-radius: 0;
-              }
-              &::hover a {
-                opacity: 0.8;
+                font-size: 1.1rem;
               }
             }
           }
@@ -863,7 +881,6 @@ three_sections
   left: 0;
   // background: #4e7425;
   background: #f9f9f9;
-  // opacity: 0.95;
   padding: 0 10%;
   padding-top: 60px;
   text-align: left;
@@ -908,7 +925,6 @@ three_sections
           overflow: hidden;
           transition: max-height 0.5s ease-in-out;
           li {
-            /*för att täcka med b-c - hover*/
             width: 100%;
             &:hover a {
               opacity: 0.8;
@@ -924,8 +940,6 @@ three_sections
             }
           }
           &.sub_menu_open {
-            // display: flex;
-            // flex-direction: column;
             max-height: 200px;
           }
         }
@@ -956,8 +970,3 @@ three_sections
     transform: translateX(0);
   }
 }
-/*toggle class with jquery*/
-// .nav_mobile_open {
-//   overflow-x: auto;
-//   transform: translateX(0);
-// }

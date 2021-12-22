@@ -208,9 +208,13 @@ a.button-link :visited {
    header 
 *********************/
 .header_wrapper {
-  padding-top: 1.4rem;
   /*header big*/
   /*header small*/
+}
+@media only screen and (min-width: 992px) {
+  .header_wrapper {
+    padding-top: 1.4rem;
+  }
 }
 .header_wrapper .header_big {
   min-height: 800px;
@@ -428,23 +432,46 @@ three_sections
 .text_and_or_image {
   background: #fff;
 }
+.text_and_or_image.lightgrey {
+  background: #fafafb;
+}
+.text_and_or_image .part_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+@media all and (min-width: 768px) {
+  .text_and_or_image .part_container {
+    flex-direction: row;
+  }
+}
+.text_and_or_image .image_part {
+  width: 100%;
+}
+@media all and (min-width: 768px) {
+  .text_and_or_image .image_part {
+    width: 45%;
+  }
+}
 .text_and_or_image .text_part {
+  width: 100%;
   margin-bottom: 3rem;
+}
+@media all and (max-width: 767.9px) {
+  .text_and_or_image .text_part {
+    order: -1;
+  }
 }
 @media all and (min-width: 768px) {
   .text_and_or_image .text_part {
+    width: 45%;
     margin-bottom: 0;
   }
 }
 .text_and_or_image .text_part ul li {
   padding: 0.5rem 0;
   font-weight: 600;
-}
-.text_and_or_image .row::before {
-  display: none;
-}
-.text_and_or_image .row::after {
-  display: none;
 }
 
 /*********************
@@ -470,7 +497,7 @@ three_sections
 }
 .link_section ul li a {
   display: block;
-  border: 2px solid #56b1bf;
+  border: 1.5px solid #56b1bf;
   padding: 12px 20px;
   font-size: 1rem;
   letter-spacing: 2px;
@@ -666,7 +693,7 @@ three_sections
   404-page
 *********************/
 .nopage {
-  background: #f5f6f9;
+  background: #fafafb;
   border: 1px solid #ebebeb;
   padding: 3rem;
   min-height: 300px;
@@ -735,9 +762,9 @@ three_sections
 .nav_desktop .nav_links ul li a {
   display: block;
   color: #111;
-  padding: 3px 3px;
+  padding: 3px 3px 1px 3px;
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   cursor: pointer;
   letter-spacing: -0.2px;
   font-family: "GeosansLight", Arial, sans-serif;
@@ -746,9 +773,7 @@ three_sections
   margin: 0 0.5rem -1px 0.5rem;
 }
 .nav_desktop .nav_links ul li a:hover {
-  opacity: 0.8;
-  border-bottom: 1px solid #111;
-  opacity: 1;
+  opacity: 0.7;
 }
 .nav_desktop .nav_links ul li a:active, .nav_desktop .nav_links ul li a:visited {
   color: #111;
@@ -769,9 +794,7 @@ three_sections
   width: 170px;
   padding-bottom: 3px;
   margin-top: -3px;
-  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.175);
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
   display: none;
 }
 .nav_desktop .nav_links ul li.menu-item-has-children ul.sub_menu_open {
@@ -779,16 +802,16 @@ three_sections
   flex-direction: column;
 }
 .nav_desktop .nav_links ul li.menu-item-has-children ul li {
-  /*för att täcka med b-c - hover*/
   width: 100%;
+}
+.nav_desktop .nav_links ul li.menu-item-has-children ul li.current-menu-item > a {
+  border: none;
 }
 .nav_desktop .nav_links ul li.menu-item-has-children ul li a {
   padding: 2px 16px;
   background-color: transparent;
   border-radius: 0;
-}
-.nav_desktop .nav_links ul li.menu-item-has-children ul li::hover a {
-  opacity: 0.8;
+  font-size: 1.1rem;
 }
 .nav_desktop .nav_links .booking_btn {
   display: none;
@@ -928,7 +951,6 @@ three_sections
   transition: max-height 0.5s ease-in-out;
 }
 .nav_mobile ul li.menu-item-has-children ul li {
-  /*för att täcka med b-c - hover*/
   width: 100%;
 }
 .nav_mobile ul li.menu-item-has-children ul li:hover a {
@@ -968,7 +990,5 @@ three_sections
   overflow-x: auto;
   transform: translateX(0);
 }
-
-/*toggle class with jquery*/
 
 /*# sourceMappingURL=custom.css.map */

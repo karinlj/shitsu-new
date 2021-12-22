@@ -55,9 +55,8 @@
         <div class="footer-child">
             <div class="footer-list">
                 <?php
-                    $book_button_url = get_field('book_button_url', 'option');
-                    $book_image_url = get_field('book_button_image', 'option');
-
+                    $book_button_url = get_field('footer_booking_button_url', 'option');
+                    $book_image_url = get_field('footer_booking_button_image', 'option');
                     if ($book_button_url) {
                     ?>
                 <a href="<?php echo esc_url($book_button_url); ?>" target="_blank">
