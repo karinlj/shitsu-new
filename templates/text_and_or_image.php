@@ -2,6 +2,7 @@
 if (get_row_layout() == 'text_and_or_image') {
 
     $color = get_sub_field('color_theme');
+
 ?>
 <section class="text_and_or_image <?php echo $color; ?> section_spacing_top_small">
     <div class="container">
@@ -37,7 +38,6 @@ if (get_row_layout() == 'text_and_or_image') {
                     <div class="text_part">
 
                         <h2 class="heading"><?php echo $heading; ?></h2>
-
                         <?php if (get_sub_field('preamble')) { ?>
                         <h5>
                             <?php the_sub_field('preamble'); ?>

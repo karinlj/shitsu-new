@@ -15,7 +15,7 @@ if (get_row_layout() == 'links') { ?>
                             $link_url = $link['url'];
                             $link_title = $link['title'];
                         ?>
-            <a href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
+            <a class="button_link" href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
 
             <?php } ?>
         </li>
