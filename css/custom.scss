@@ -88,9 +88,11 @@ body.no_scroll {
 }
 .section_spacing_only_top_small {
   padding: 3rem 0;
-  margin: 0 -15px;
   @media all and (min-width: $xl-min) {
     padding: 4rem 0;
+  }
+  .col {
+    margin: 0 -15px;
   }
 }
 /*********************
@@ -395,29 +397,22 @@ three_sections
   &.lightgrey {
     background: $lightgrey;
   }
-  .part_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    @media all and (min-width: $md-min) {
-      flex-direction: row;
-    }
-  }
   .image_part {
-    width: 100%;
-    @media all and (min-width: $md-min) {
-      width: 35%;
+    img {
+      border-radius: $themeBorder_radius;
+    }
+    @media all and (min-width: $xl-min) {
+      img {
+        max-width: 85%;
+      }
     }
   }
   .text_part {
-    width: 100%;
     margin-bottom: 3rem;
     @media all and (max-width: $sm-max) {
       order: -1;
     }
     @media all and (min-width: $md-min) {
-      width: 55%;
       margin-bottom: 0;
     }
 
@@ -428,17 +423,13 @@ three_sections
       }
     }
   }
-}
-
-/*********************
-   text_and_or_image_more_text 
-*********************/
-.row {
-  &::before {
-    display: none;
-  }
-  &::after {
-    display: none;
+  .row {
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -450,6 +441,7 @@ three_sections
   background: #fff;
   width: 100%;
   ul {
+    text-align: center;
     list-style: none;
     margin: 0;
     padding: 0;
