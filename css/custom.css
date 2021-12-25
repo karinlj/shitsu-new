@@ -232,40 +232,6 @@ a.button_link.dark:hover {
     padding-top: 1.4rem;
   }
 }
-.header_wrapper .header_big {
-  min-height: 800px;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding-left: 10%;
-  padding-top: 7rem;
-  position: relative;
-}
-@media all and (max-width: 480px) {
-  .header_wrapper .header_big {
-    padding: 0;
-    justify-content: center;
-    align-items: center;
-    min-height: 360px;
-  }
-}
-.header_wrapper .header_small {
-  min-height: 600px;
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-}
-@media all and (max-width: 480px) {
-  .header_wrapper .header_small {
-    min-height: 360px;
-  }
-}
 .header_wrapper .header_big,
 .header_wrapper .header_small {
   position: relative;
@@ -284,46 +250,81 @@ a.button_link.dark:hover {
   content: "";
   display: block;
 }
-.header_wrapper .header_big .text_container h1,
-.header_wrapper .header_small .text_container h1 {
+.header_wrapper .header_big h1,
+.header_wrapper .header_small h1 {
   font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica, Arial;
   color: #fff;
   margin-bottom: 1rem;
   letter-spacing: 2px;
 }
-.header_wrapper .header_big .text_container .header_front_heading,
-.header_wrapper .header_small .text_container .header_front_heading {
-  font-size: 4.3rem;
-}
-@media all and (max-width: 480px) {
-  .header_wrapper .header_big .text_container .header_front_heading,
-.header_wrapper .header_small .text_container .header_front_heading {
-    font-size: 3rem;
-    padding-bottom: 0;
-  }
-}
-.header_wrapper .header_big .text_container .header_page_heading,
-.header_wrapper .header_small .text_container .header_page_heading {
-  text-align: center;
-  font-size: 3.4rem;
-}
-@media all and (max-width: 480px) {
-  .header_wrapper .header_big .text_container .header_page_heading,
-.header_wrapper .header_small .text_container .header_page_heading {
-    font-size: 2.5rem;
-  }
-}
-.header_wrapper .header_big .text_container .header_text,
-.header_wrapper .header_small .text_container .header_text {
+.header_wrapper .header_big .header_text,
+.header_wrapper .header_small .header_text {
   font-size: 1.3rem;
   color: #fff;
   margin-bottom: 1rem;
 }
-.header_wrapper .header_big .text_container .btn,
-.header_wrapper .header_small .text_container .btn {
+.header_wrapper .header_big .btn,
+.header_wrapper .header_small .btn {
   margin-top: 1.4rem;
   margin-bottom: 2.8rem;
   font-size: 1.2em;
+}
+.header_wrapper .header_big {
+  min-height: 800px;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  align-items: center;
+  position: relative;
+}
+@media all and (max-width: 480px) {
+  .header_wrapper .header_big {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 360px;
+  }
+}
+.header_wrapper .header_big .header_heading {
+  font-size: 4.3rem;
+}
+@media all and (max-width: 480px) {
+  .header_wrapper .header_big .header_heading {
+    font-size: 3rem;
+  }
+}
+.header_wrapper .header_big .header_text {
+  margin-bottom: 2rem;
+}
+.header_wrapper .header_small {
+  min-height: 600px;
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 480px) {
+  .header_wrapper .header_small {
+    min-height: 360px;
+  }
+}
+.header_wrapper .header_small .header_heading {
+  text-align: center;
+  font-size: 3.4rem;
+}
+@media all and (max-width: 480px) {
+  .header_wrapper .header_small .header_heading {
+    font-size: 2.5rem;
+  }
+}
+.header_wrapper .header_small .header_text {
+  text-align: center;
+}
+.header_wrapper .header_small .btn_wrapper {
+  text-align: center;
 }
 
 /*********************

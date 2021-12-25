@@ -185,34 +185,7 @@ a.button_link {
   @media only screen and (min-width: $lg-min) {
     padding-top: 1.4rem;
   }
-  /*header big*/
-  .header_big {
-    min-height: 800px;
-    @include d-flex;
-    // justify-content: center;
-    // align-items: center;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 10%;
-    padding-top: 7rem;
-    position: relative;
-    @media all and (max-width: $xs-max) {
-      padding: 0;
-      justify-content: center;
-      align-items: center;
-      min-height: 360px;
-    }
-  }
-  /*header small*/
-  .header_small {
-    min-height: 600px;
-    @include d-flex;
-    justify-content: center;
-    align-items: center;
-    @media all and (max-width: $xs-max) {
-      min-height: 360px;
-    }
-  }
+
   .header_big,
   .header_small {
     position: relative;
@@ -229,41 +202,130 @@ a.button_link {
       content: "";
       display: block;
     }
-    .text_container {
-      h1 {
-        font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica,
-          Arial;
-        color: #fff;
-        margin-bottom: 1rem;
-        letter-spacing: 2px;
-        //font-weight: 400;
-      }
-      .header_front_heading {
-        font-size: 4.3rem;
-        @media all and (max-width: $xs-max) {
-          font-size: 3rem;
-          padding-bottom: 0;
-        }
-      }
-      .header_page_heading {
-        text-align: center;
-        font-size: 3.4rem;
-        @media all and (max-width: $xs-max) {
-          font-size: 2.5rem;
-        }
-      }
-      .header_text {
-        font-size: 1.3rem;
-        color: #fff;
-        margin-bottom: 1rem;
-      }
-      .btn {
-        margin-top: 1.4rem;
-        margin-bottom: 2.8rem;
-        font-size: 1.2em;
-      }
+
+    h1 {
+      font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica,
+        Arial;
+      color: #fff;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      //font-weight: 400;
+    }
+    .header_text {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      margin-top: 1.4rem;
+      margin-bottom: 2.8rem;
+      font-size: 1.2em;
     }
   }
+  /*header big*/
+  .header_big {
+    min-height: 800px;
+    @include d-flex;
+    align-items: center;
+    position: relative;
+    @media all and (max-width: $xs-max) {
+      padding: 0;
+      justify-content: center;
+      align-items: center;
+      min-height: 360px;
+    }
+    .header_heading {
+      font-size: 4.3rem;
+      @media all and (max-width: $xs-max) {
+        font-size: 3rem;
+        //padding-bottom: 0;
+      }
+    }
+    .header_text {
+      margin-bottom: 2rem;
+    }
+  }
+  /*header small*/
+  .header_small {
+    min-height: 600px;
+    @include d-flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (max-width: $xs-max) {
+      min-height: 360px;
+    }
+    .header_heading {
+      text-align: center;
+      font-size: 3.4rem;
+      @media all and (max-width: $xs-max) {
+        font-size: 2.5rem;
+      }
+    }
+    .header_text {
+      text-align: center;
+    }
+    .btn_wrapper {
+      text-align: center;
+    }
+  }
+
+  // .header_items_section {
+  //   padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);
+  //   @media all and (min-width: $sm-min) {
+  //     padding: 0 calc(2.25rem - 15px) 4rem calc(2.25rem - 15px);
+  //   }
+  //   @media all and (min-width: $md-min) {
+  //     padding: 0 calc(3rem - 15px) 4rem calc(3rem - 15px);
+  //   }
+  //   @media all and (min-width: $xl-min) {
+  //     padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
+  //   }
+  //   .header_heading {
+  //     color: #fff;
+  //     margin-bottom: 1.5rem;
+  //     text-align: center;
+  //     @media all and (max-width: $xs-max) {
+  //       text-align: center;
+  //     }
+  //     &.front {
+  //       text-align: center;
+  //       @media all and (min-width: $sm-min) {
+  //         text-align: left;
+  //       }
+  //     }
+  //   }
+
+  //   .header_text {
+  //     font-size: 1.3rem;
+  //     color: #fff;
+  //     margin-bottom: 1.5rem;
+  //     text-align: center;
+  //     @media all and (min-width: $md-min) {
+  //       font-size: 1.4rem;
+  //     }
+  //     @media all and (min-width: $xl-min) {
+  //       font-size: 1.5rem;
+  //     }
+  //     &.front {
+  //       text-align: center;
+
+  //       @media all and (min-width: $sm-min) {
+  //         text-align: left;
+  //       }
+  //     }
+  //   }
+  //   .btn_wrapper {
+  //     text-align: center;
+  //     a.button_link {
+  //       transition: 1s all ease-in-out;
+  //       color: #fff;
+  //       &:hover {
+  //         background: #fff;
+  //         border: 1px solid #fff;
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 /*********************

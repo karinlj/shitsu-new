@@ -19,6 +19,7 @@
 
     <?php //header field variables
     $header_class = '';
+    $col_class = 'col-md-8 offset-md-2 col-lg-6 offset-lg-3';
     $style = '';
     $color = get_field('color_theme');
     $header_image = get_field('header_image');
@@ -26,6 +27,7 @@
 
     if (is_front_page()) {
         $header_class = 'header_big';
+        $col_class = 'col 12 col-md-8 offset-md-1';
     } else {
         $header_class = 'header_small';
     }
@@ -49,23 +51,46 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="text_container">
-                                        <?php //loop ACF flex Content for layouts of header_items
-                                        if (have_rows('header_items')) {
-                                            while (have_rows('header_items')) {
-                                                the_row();
+                                        <div class="<?php echo $col_class; ?>">
+                                            <?php
+                                            $header_heading = get_field('header_heading');
+                                            $header_text = get_field('header_text');
+                                            $button_link_url = get_field('button_link_url');
+                                            $button_link_text = get_field('button_link_text');
+                                            $button_image_url = get_field('button_image_url'); ?>
 
-                                                $layout = get_row_layout();
-                                                get_template_part('templates/header/' . $layout); ?>
-                                        <?php
-                                            } ?>
+                                            <?php if ($header_heading) { ?>
+                                            <h1 class="header_heading">
+                                                <?php echo $header_heading; ?>
+                                            </h1>
+                                            <?php } ?>
+
+                                            <?php if ($header_text) { ?>
+                                            <p class="header_text">
+                                                <?php echo $header_text; ?>
+                                            </p>
+                                            <?php } ?>
+
+                                            <?php if ($button_link_url && $button_link_text) { ?>
+                                            <div class="btn_wrapper">
+                                                <a class="button_link dark" href="<?php echo $button_link_url; ?>">
+                                                    <?php echo $button_link_text; ?></a>
+                                            </div>
+                                            <?php } ?>
+
+                                            <?php if ($button_link_url && $button_image_url) { ?>
+                                            <div class="booking_btn">
+                                                <a href="<?php echo esc_url($button_link_url); ?>" target="_blank">
+                                                    <img class=" bokadirekt"
+                                                        src="<?php echo esc_url($button_image_url); ?>" alt="Boka tid"
+                                                        border="0" />
+                                                </a>
+                                                <?php } ?>
+                                            </div>
+                                        </div>
                                     </div>
-
-                                    <?php } ?>
                                 </div>
                             </div>
-
-                        </div>
-
                     </header>
                 </div>
             </div>
