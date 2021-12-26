@@ -133,6 +133,80 @@ body.no_scroll {
   margin: 0 -15px;
 }
 
+/*********************************************
+    overlay and background - header and sections
+ *********************************************/
+.header_big,
+.header_small,
+.info_banner,
+.hero_section {
+  position: relative;
+}
+.header_big.overlay-dark::before,
+.header_small.overlay-dark::before,
+.info_banner.overlay-dark::before,
+.hero_section.overlay-dark::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+  content: "";
+  display: block;
+}
+
+/*radio button-background colors for content fields and infoboxes*/
+.dark {
+  background: #4a5669;
+}
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #fff !important;
+}
+.dark p {
+  color: #fff;
+}
+
+.lightblue {
+  background: #c8e5ea;
+}
+
+.lightgrey {
+  background: #fafafb;
+}
+
+.lightgrey h1,
+.lightgrey h2,
+.lightgrey h3,
+.lightgrey h4,
+.lightgrey h5,
+.lightgrey h6,
+.lightblue h1,
+.lightblue h2,
+.lightblue h3,
+.lightblue h4,
+.lightblue h5,
+.lightblue h6 {
+  color: #212735;
+}
+.lightgrey p,
+.lightblue p {
+  color: #4a5669;
+}
+.lightgrey .banner_link,
+.lightblue .banner_link {
+  color: #4a5669;
+}
+.lightgrey .banner_link:before,
+.lightblue .banner_link:before {
+  background: #4a5669;
+}
+
 /*********************
    fonts 
 *********************/
@@ -173,10 +247,7 @@ h4 {
 
 h5 {
   color: #555;
-  font-size: 18px;
-}
-
-img {
+  font-size: 1.2rem;
   max-width: 100%;
   height: auto;
 }
@@ -474,8 +545,8 @@ three_sections
   }
 }
 .text_and_or_image .text_part ul li {
-  padding: 0.5rem 0;
-  font-weight: 600;
+  padding: 0.2rem 0;
+  line-height: 1.5;
 }
 .text_and_or_image .row::before {
   display: none;
@@ -492,7 +563,6 @@ three_sections
   width: 100%;
 }
 .link_section ul {
-  text-align: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1001,6 +1071,16 @@ three_sections
 .focus_text .heading,
 .focus_text .text {
   color: #f26d55;
+}
+
+/*********************
+   info banner
+*********************/
+.info_banner {
+  text-align: center;
+}
+.info_banner .btn_wrapper {
+  padding-top: 1rem;
 }
 
 /*# sourceMappingURL=custom.css.map */

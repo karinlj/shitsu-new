@@ -73,7 +73,7 @@
 
                                             <?php if ($button_link_url && $button_link_text) { ?>
                                             <div class="btn_wrapper">
-                                                <a class="button_link dark" href="<?php echo $button_link_url; ?>">
+                                                <a class="button_link" href="<?php echo $button_link_url; ?>">
                                                     <?php echo $button_link_text; ?></a>
                                             </div>
                                             <?php } ?>

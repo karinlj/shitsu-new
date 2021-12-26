@@ -95,6 +95,69 @@ body.no_scroll {
     margin: 0 -15px;
   }
 }
+/*********************************************
+    overlay and background - header and sections
+ *********************************************/
+.header_big,
+.header_small,
+.info_banner,
+.hero_section {
+  position: relative;
+
+  &.overlay-dark::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: $themecolorDarkGreyOverlay;
+    content: "";
+    display: block;
+  }
+}
+/*radio button-background colors for content fields and infoboxes*/
+.dark {
+  background: $themecolor;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff !important;
+  }
+  p {
+    color: #fff;
+  }
+}
+.lightblue {
+  background: $lightblue;
+}
+.lightgrey {
+  background: $lightgrey;
+}
+.lightgrey,
+.lightblue {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $themeHeadingcolor;
+  }
+  p {
+    color: $themecolor;
+  }
+  .banner_link {
+    color: $themecolor;
+
+    &:before {
+      background: $themecolor;
+    }
+  }
+}
+
 /*********************
    fonts 
 *********************/
@@ -131,9 +194,7 @@ h4 {
 }
 h5 {
   color: #555;
-  font-size: 18px;
-}
-img {
+  font-size: 1.2rem;
   max-width: 100%;
   height: auto;
 }
@@ -185,7 +246,6 @@ a.button_link {
   @media only screen and (min-width: $lg-min) {
     padding-top: 1.4rem;
   }
-
   .header_big,
   .header_small {
     position: relative;
@@ -202,7 +262,6 @@ a.button_link {
       content: "";
       display: block;
     }
-
     h1 {
       font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica,
         Arial;
@@ -477,11 +536,11 @@ three_sections
     @media all and (min-width: $md-min) {
       margin-bottom: 0;
     }
-
     ul {
       li {
-        padding: 0.5rem 0;
-        font-weight: 600;
+        padding: 0.2rem 0;
+        //font-weight: initial;
+        line-height: 1.5;
       }
     }
   }
@@ -503,7 +562,7 @@ three_sections
   background: #fff;
   width: 100%;
   ul {
-    text-align: center;
+    //text-align: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -1043,5 +1102,15 @@ three_sections
   .heading,
   .text {
     color: $colorOrange;
+  }
+}
+/*********************
+   info banner
+*********************/
+.info_banner {
+  //background and overlay: see scss section
+  text-align: center;
+  .btn_wrapper {
+    padding-top: 1rem;
   }
 }
