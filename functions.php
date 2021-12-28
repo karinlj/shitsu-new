@@ -4,7 +4,7 @@
 function sh_script_resourses()
 {
     //name, absolute path, dependencies, version, in_footer
-    wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '#', true);
+    // wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '#', true);
 
     wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js', array(), '1.12.4', true);
 }
@@ -87,14 +87,6 @@ function sh_init_widgets($id)
         'after_widget'  => '</div>',
         'before_title'  => '<h4>',
         'after_title'   => '</h4>'
-    ));
-
-    /*Link-Box widgets*/
-    register_sidebar(array(
-        'name' => 'Link-Box',
-        'id'   => 'link-box',
-        'before_widget' => '<div class="link-box">',
-        'after_widget'  => '</div>'
     ));
 
     /*Aside-Box widgets*/

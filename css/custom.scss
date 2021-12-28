@@ -27,16 +27,19 @@ body.no_scroll {
 .nav-desktop {
   background: #fff;
 }
-.content-container-full-width {
-  // max-width: 1200px;
-  max-width: 1300px;
-  /*margin: 0 auto 3em auto;*/
-  margin: 0 auto;
-  background: #fff;
-}
+// .content-container-full-width {
+//   // max-width: 1200px;
+//   max-width: 1300px;
+//   /*margin: 0 auto 3em auto;*/
+//   margin: 0 auto;
+//   background: #fff;
+// }
 .container {
   // max-width: 1200px;
   max-width: 1400px;
+  @media all and (min-width: $xl-min) {
+    max-width: 85vw;
+  }
 }
 .section_spacing_top_big {
   padding: 5rem calc(1.5rem - 15px);
@@ -96,12 +99,13 @@ body.no_scroll {
   }
 }
 /*********************************************
-    overlay and background - header and sections
+     and background - header and sections
  *********************************************/
 .header_big,
 .header_small,
 .info_banner,
-.hero_section {
+.hero_section,
+.contact_form {
   position: relative;
 
   &.overlay-dark::before {
@@ -182,15 +186,15 @@ h1 {
 }
 h2 {
   font-size: 2.3em;
-  color: #889438 !important;
+  color: $themecolorGreen !important;
 }
 h3 {
   font-size: 1.4rem;
-  color: #889438;
+  color: $themecolorGreen;
 }
 h4 {
   font-size: 1.6em;
-  color: #889438;
+  color: $themecolorGreen;
 }
 h5 {
   color: #555;
@@ -244,7 +248,7 @@ a.button_link {
 *********************/
 .header_wrapper {
   @media only screen and (min-width: $lg-min) {
-    padding-top: 1.4rem;
+    padding-top: 1.5rem;
   }
   .header_big,
   .header_small {
@@ -561,8 +565,11 @@ three_sections
 .link_section {
   background: #fff;
   width: 100%;
+  text-align: center;
+  .heading {
+    margin-bottom: 2rem;
+  }
   ul {
-    //text-align: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -628,7 +635,7 @@ three_sections
    footer 
 *********************/
 .footer_container {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   background: #333;
   .footer-parent-social {
     display: flex;
@@ -803,7 +810,7 @@ three_sections
   justify-content: space-between;
   padding: 15px 20px;
   @media only screen and (min-width: $lg-min) {
-    padding: 0 0 1.4rem 0;
+    padding: 0 0 0.5rem 0;
     justify-content: flex-start;
   }
   .site_title {
@@ -811,7 +818,7 @@ three_sections
     margin: 0;
     padding-right: 25px;
     a {
-      color: #778131;
+      color: $themecolorGreen;
       letter-spacing: 0;
       font-size: 1.3em;
       font-weight: 600;
@@ -851,7 +858,7 @@ three_sections
           border-bottom: 1px solid transparent;
           margin: 0 0.5rem -1px 0.5rem;
           &:hover {
-            opacity: 0.7;
+            opacity: 0.9;
           }
           &:active,
           &:visited {
@@ -1112,5 +1119,68 @@ three_sections
   text-align: center;
   .btn_wrapper {
     padding-top: 1rem;
+  }
+}
+/**********************
+contact_form_block
+***********************/
+.contact_form_block {
+  .col-md-8 {
+    background: $themecolorLightOverlay;
+  }
+  .text-header {
+    .preamble {
+      padding: 1.5rem 0;
+    }
+  }
+  // Contact Form layout
+  div.wpcf7 {
+    max-width: 100%;
+  }
+  p {
+    margin-bottom: 0;
+  }
+  label {
+    width: 100%;
+    max-width: 100%;
+    font-weight: 500;
+    font-size: 90%;
+    margin: 0.5em 0;
+    span {
+      color: #aaa;
+      margin-left: 0;
+      font-weight: 400;
+    }
+  }
+  label input,
+  label textarea {
+    max-width: 100%;
+    // border: 1px solid #ccc;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem;
+  }
+  input[text] {
+    width: 50%;
+    max-width: 100%;
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+  }
+  button,
+  html input[type="button"],
+  input[type="reset"],
+  input[type="submit"] {
+    border-radius: 3px;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: 1s all ease-in-out;
+    //border: 1.5px solid transparent;
+    color: #fff;
+    line-height: 1.3;
+    &:hover {
+      background-color: transparent;
+    }
   }
 }

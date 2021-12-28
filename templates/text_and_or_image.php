@@ -3,7 +3,7 @@ if (get_row_layout() == 'text_and_or_image') {
 
     $color = get_sub_field('color_theme');
     $width_class = 'section_spacing_top_small';
-    $col_class = 'col-md-10 offset-md-1';
+    $col_class = 'col-xl-10 offset-xl-1';
 
     if (get_sub_field('fullwidth_section') == 'large') {
         $col_class = 'col-md-12';

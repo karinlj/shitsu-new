@@ -2,6 +2,13 @@
 if (get_row_layout() == 'links') { ?>
 
 <section class="link_section section_spacing_only_top_small">
+    <?php
+        $heading = get_sub_field('heading');
+        if ($heading) {
+        ?>
+    <h2 class="heading"><?php echo $heading; ?></h2>
+    <?php } ?>
+
     <ul>
         <?php
             // check if repeater field has rows
