@@ -1,6 +1,6 @@
 <footer class="footer_container">
-    <div class="footer-parent-social">
-        <div class="social-icons">
+    <div class="social_container">
+        <div class="social_icons">
             <?php
             if (function_exists('acf_add_options_page')) {
             ?>

@@ -137,21 +137,19 @@ body.no_scroll {
 .header_big,
 .header_small,
 .info_banner,
-.hero_section,
-.contact_form {
+.hero_section {
   position: relative;
 }
 .header_big.overlay-dark::before,
 .header_small.overlay-dark::before,
 .info_banner.overlay-dark::before,
-.hero_section.overlay-dark::before,
-.contact_form.overlay-dark::before {
+.hero_section.overlay-dark::before {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
   content: "";
   display: block;
 }
@@ -639,54 +637,6 @@ three_sections
   margin-bottom: 1.5rem;
   background: #333;
 }
-.footer_container .footer-parent-social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.footer_container .footer-parent-social .social-icons {
-  padding: 2rem 0;
-}
-.footer_container .footer-parent-social .social-icons ul.social {
-  display: -webkit-inline-box !important;
-  display: -webkit-inline-flex !important;
-  display: -ms-inline-flexbox !important;
-  display: inline-flex !important;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-.footer_container .footer-parent-social .social-icons ul.social li.social-item {
-  padding-bottom: 0.7em;
-  display: inline;
-}
-.footer_container .footer-parent-social .social-icons ul.social li.social-item a {
-  color: #fff;
-  font-size: 90%;
-}
-.footer_container .footer-parent-social .social-icons ul.social li.social-item a .fab,
-.footer_container .footer-parent-social .social-icons ul.social li.social-item a .fas {
-  padding: 8px;
-  font-size: 23px;
-  width: 41px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 50%;
-  margin: 5px 2px;
-  margin-top: 1em;
-  transition: 1s;
-  color: #333;
-  background: #fff;
-  border: 1.5px solid #333;
-  box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.1);
-  transition: all 0.25s ease;
-}
-.footer_container .footer-parent-social .social-icons ul.social li.social-item a .fab:hover,
-.footer_container .footer-parent-social .social-icons ul.social li.social-item a .fas:hover {
-  transform: translateY(-2px);
-  box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.2);
-}
 .footer_container .footer-parent {
   display: flex;
   flex-wrap: wrap;
@@ -1090,8 +1040,15 @@ three_sections
 /**********************
 contact_form_block
 ***********************/
-.contact_form_block .col-md-8 {
+.contact_form_block.overlay-dark::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background: rgba(255, 255, 255, 0.3);
+  content: "";
+  display: block;
 }
 .contact_form_block .text-header .preamble {
   padding: 1.5rem 0;
@@ -1117,7 +1074,7 @@ contact_form_block
 .contact_form_block label input,
 .contact_form_block label textarea {
   max-width: 100%;
-  border: none;
+  border: 1px solid #ccc;
   border-radius: 3px;
   padding: 0.5rem;
 }
@@ -1145,6 +1102,69 @@ contact_form_block
 .contact_form_block input[type=reset]:hover,
 .contact_form_block input[type=submit]:hover {
   background-color: transparent;
+}
+.contact_form_block input[type=submit] {
+  background-color: #56b1bf;
+  border: 1.5px solid #56b1bf;
+}
+.contact_form_block .social_container {
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.contact_form_block .social_container .social_icons {
+  padding: 0;
+}
+
+/**********************
+social icons
+***********************/
+.social_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social_container .social_icons {
+  padding: 2rem 0;
+}
+.social_container .social_icons ul.social {
+  display: -webkit-inline-box !important;
+  display: -webkit-inline-flex !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.social_container .social_icons ul.social li.social-item {
+  padding-bottom: 0.7em;
+  display: inline;
+}
+.social_container .social_icons ul.social li.social-item a {
+  color: #fff;
+  font-size: 90%;
+}
+.social_container .social_icons ul.social li.social-item a .fab,
+.social_container .social_icons ul.social li.social-item a .fas {
+  padding: 8px;
+  font-size: 23px;
+  width: 41px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 5px 2px;
+  margin-top: 1em;
+  transition: 1s;
+  color: #333;
+  background: #fff;
+  border: 1.5px solid #333;
+  box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.1);
+  transition: all 0.25s ease;
+}
+.social_container .social_icons ul.social li.social-item a .fab:hover,
+.social_container .social_icons ul.social li.social-item a .fas:hover {
+  transform: translateY(-2px);
+  box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.2);
 }
 
 /*# sourceMappingURL=custom.css.map */

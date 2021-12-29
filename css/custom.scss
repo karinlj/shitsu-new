@@ -104,8 +104,7 @@ body.no_scroll {
 .header_big,
 .header_small,
 .info_banner,
-.hero_section,
-.contact_form {
+.hero_section {
   position: relative;
 
   &.overlay-dark::before {
@@ -637,85 +636,6 @@ three_sections
 .footer_container {
   margin-bottom: 1.5rem;
   background: #333;
-  .footer-parent-social {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    .social-icons {
-      padding: 2rem 0;
-      ul.social {
-        @include d-inline-flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        li.social-item {
-          padding-bottom: 0.7em;
-          display: inline;
-          a {
-            color: #fff;
-            font-size: 90%;
-            .fab,
-            .fas {
-              padding: 8px;
-              font-size: 23px;
-              width: 41px;
-              text-align: center;
-              text-decoration: none;
-              border-radius: 50%;
-              margin: 5px 2px;
-              margin-top: 1em;
-              transition: 1s;
-              color: #333;
-              background: #fff;
-              border: 1.5px solid #333;
-              box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
-              transition: all 0.25s ease;
-              &:hover {
-                transform: translateY(-2px);
-                box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
-              }
-            }
-          }
-          //Boozang icons
-          //   padding: 0 0.4rem;
-          //   &:first-child {
-          //     padding-left: 0;
-          //   }
-          //   .fab,
-          //   .fas {
-          //     font-size: 20px;
-          //     padding-right: 1rem;
-          //     text-align: center;
-          //     text-decoration: none;
-          //     border-radius: 50%;
-          //     transition: 1s;
-          //     color: #fff;
-          //     background-position: center;
-          //     cursor: pointer;
-          //     box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
-          //     transition: all 0.25s ease;
-          //     &:hover {
-          //       transform: translateY(-2px);
-          //       box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
-          //     }
-          //   }
-        }
-
-        // .social-list .fa:hover {
-        //   background: /*#99a63f;*/ #333;
-        //   color: #fff;
-        //   border: 1.5px solid #fff;
-        // }
-
-        // .social-list .fa {
-        //   color: #333;
-        //   background: #fff;
-        //   border: 1.5px solid #333;
-        // }
-      }
-    }
-  }
 
   .footer-parent {
     display: flex;
@@ -1125,9 +1045,18 @@ three_sections
 contact_form_block
 ***********************/
 .contact_form_block {
-  .col-md-8 {
+  //fixa detta
+  &.overlay-dark::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: $themecolorLightOverlay;
+    content: "";
+    display: block;
   }
+
   .text-header {
     .preamble {
       padding: 1.5rem 0;
@@ -1155,8 +1084,7 @@ contact_form_block
   label input,
   label textarea {
     max-width: 100%;
-    // border: 1px solid #ccc;
-    border: none;
+    border: 1px solid #ccc;
     border-radius: 3px;
     padding: 0.5rem;
   }
@@ -1181,6 +1109,100 @@ contact_form_block
     line-height: 1.3;
     &:hover {
       background-color: transparent;
+    }
+  }
+  input[type="submit"] {
+    background-color: $turqoise;
+    border: 1.5px solid $turqoise;
+  }
+  .social_container {
+    justify-content: flex-start;
+    align-items: flex-start;
+    .social_icons {
+      padding: 0;
+    }
+  }
+}
+
+/**********************
+social icons
+***********************/
+.social_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .social_icons {
+    padding: 2rem 0;
+    ul.social {
+      @include d-inline-flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      li.social-item {
+        padding-bottom: 0.7em;
+        display: inline;
+        a {
+          color: #fff;
+          font-size: 90%;
+          .fab,
+          .fas {
+            padding: 8px;
+            font-size: 23px;
+            width: 41px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%;
+            margin: 5px 2px;
+            margin-top: 1em;
+            transition: 1s;
+            color: #333;
+            background: #fff;
+            border: 1.5px solid #333;
+            box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
+            transition: all 0.25s ease;
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
+            }
+          }
+        }
+        //Boozang icons
+        //   padding: 0 0.4rem;
+        //   &:first-child {
+        //     padding-left: 0;
+        //   }
+        //   .fab,
+        //   .fas {
+        //     font-size: 20px;
+        //     padding-right: 1rem;
+        //     text-align: center;
+        //     text-decoration: none;
+        //     border-radius: 50%;
+        //     transition: 1s;
+        //     color: #fff;
+        //     background-position: center;
+        //     cursor: pointer;
+        //     box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
+        //     transition: all 0.25s ease;
+        //     &:hover {
+        //       transform: translateY(-2px);
+        //       box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
+        //     }
+        //   }
+      }
+
+      // .social-list .fa:hover {
+      //   background: /*#99a63f;*/ #333;
+      //   color: #fff;
+      //   border: 1.5px solid #fff;
+      // }
+
+      // .social-list .fa {
+      //   color: #333;
+      //   background: #fff;
+      //   border: 1.5px solid #333;
+      // }
     }
   }
 }
