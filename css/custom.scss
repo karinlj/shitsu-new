@@ -348,64 +348,6 @@ a.button_link {
       text-align: center;
     }
   }
-
-  // .header_items_section {
-  //   padding: 0 calc(1.5rem - 15px) 4rem calc(1.5rem - 15px);
-  //   @media all and (min-width: $sm-min) {
-  //     padding: 0 calc(2.25rem - 15px) 4rem calc(2.25rem - 15px);
-  //   }
-  //   @media all and (min-width: $md-min) {
-  //     padding: 0 calc(3rem - 15px) 4rem calc(3rem - 15px);
-  //   }
-  //   @media all and (min-width: $xl-min) {
-  //     padding: 0 calc(3.75rem - 15px) 4rem calc(3.75rem - 15px);
-  //   }
-  //   .header_heading {
-  //     color: #fff;
-  //     margin-bottom: 1.5rem;
-  //     text-align: center;
-  //     @media all and (max-width: $xs-max) {
-  //       text-align: center;
-  //     }
-  //     &.front {
-  //       text-align: center;
-  //       @media all and (min-width: $sm-min) {
-  //         text-align: left;
-  //       }
-  //     }
-  //   }
-
-  //   .header_text {
-  //     font-size: 1.3rem;
-  //     color: #fff;
-  //     margin-bottom: 1.5rem;
-  //     text-align: center;
-  //     @media all and (min-width: $md-min) {
-  //       font-size: 1.4rem;
-  //     }
-  //     @media all and (min-width: $xl-min) {
-  //       font-size: 1.5rem;
-  //     }
-  //     &.front {
-  //       text-align: center;
-
-  //       @media all and (min-width: $sm-min) {
-  //         text-align: left;
-  //       }
-  //     }
-  //   }
-  //   .btn_wrapper {
-  //     text-align: center;
-  //     a.button_link {
-  //       transition: 1s all ease-in-out;
-  //       color: #fff;
-  //       &:hover {
-  //         background: #fff;
-  //         border: 1px solid #fff;
-  //       }
-  //     }
-  //   }
-  // }
 }
 
 /*********************
@@ -417,15 +359,13 @@ fullwidth_editor
 }
 
 /*********************
-three_sections
+three_sections & image_sections
 *********************/
-.three_sections {
+.three_sections,
+.image_sections {
   background: #fff;
   height: auto;
   overflow: hidden;
-  @media all and (min-width: $xl-min) {
-    min-height: 600px;
-  }
   .item {
     padding-top: 3em;
     padding-bottom: 0.5em;
@@ -435,24 +375,9 @@ three_sections
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-
-    // min-height: 380px;
-    // margin-bottom: 2rem;
-    // background: #fff;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // border-radius: $themeBorder_radius;
-    // padding: 2.5rem 1.5rem;
-    // box-shadow: $themeBox_shadow_more;
     @media all and (min-width: $md-min) {
-      //width: 31%;
       padding-top: 0;
     }
-    // @media all and (min-width: $lg-min) {
-    //   margin-bottom: 0;
-    //   min-height: 380px;
-    // }
     img {
       width: 100%;
       border-radius: 8px;
@@ -475,6 +400,11 @@ three_sections
         color: $themecolor;
       }
     }
+  }
+}
+.three_sections {
+  @media all and (min-width: $xl-min) {
+    min-height: 600px;
   }
 }
 

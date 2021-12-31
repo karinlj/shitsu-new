@@ -422,19 +422,16 @@ fullwidth_editor
 }
 
 /*********************
-three_sections
+three_sections & image_sections
 *********************/
-.three_sections {
+.three_sections,
+.image_sections {
   background: #fff;
   height: auto;
   overflow: hidden;
 }
-@media all and (min-width: 1200px) {
-  .three_sections {
-    min-height: 600px;
-  }
-}
-.three_sections .item {
+.three_sections .item,
+.image_sections .item {
   padding-top: 3em;
   padding-bottom: 0.5em;
   margin: 10px 0;
@@ -445,31 +442,43 @@ three_sections
   text-align: center;
 }
 @media all and (min-width: 768px) {
-  .three_sections .item {
+  .three_sections .item,
+.image_sections .item {
     padding-top: 0;
   }
 }
-.three_sections .item img {
+.three_sections .item img,
+.image_sections .item img {
   width: 100%;
   border-radius: 8px;
   transition: 1s;
   opacity: 1;
 }
-.three_sections .item img:hover {
+.three_sections .item img:hover,
+.image_sections .item img:hover {
   opacity: 0.8;
 }
-.three_sections .item .heading {
+.three_sections .item .heading,
+.image_sections .item .heading {
   font-size: 1.9em;
   padding: 30px 0 10px 0;
 }
-.three_sections .item .text_part {
+.three_sections .item .text_part,
+.image_sections .item .text_part {
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.three_sections .item .text_part .text {
+.three_sections .item .text_part .text,
+.image_sections .item .text_part .text {
   color: #4a5669;
+}
+
+@media all and (min-width: 1200px) {
+  .three_sections {
+    min-height: 600px;
+  }
 }
 
 /**********************
