@@ -229,18 +229,18 @@ h1 {
 }
 
 h2 {
-  font-size: 2.3em;
-  color: #666f2a !important;
+  font-size: 2.5rem;
+  color: #55763f !important;
 }
 
 h3 {
   font-size: 1.4rem;
-  color: #666f2a;
+  color: #55763f;
 }
 
 h4 {
   font-size: 1.6em;
-  color: #666f2a;
+  color: #55763f;
 }
 
 h5 {
@@ -250,9 +250,27 @@ h5 {
   height: auto;
 }
 
+a {
+  color: #009ccc;
+  font-size: 1.2rem;
+}
+a:hover,
+a :focus {
+  color: #0089b3;
+  text-decoration: none;
+}
+
 /*********************
    buttons 
 *********************/
+.bokadirekt {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: 0.3s all ease-in;
+}
+.bokadirekt:hover {
+  opacity: 0.8;
+}
+
 a.button_link {
   display: inline-block;
   border: 1.5px solid #56b1bf;
@@ -460,10 +478,38 @@ three_sections
 .testimonials_section {
   background: #c8e5ea;
 }
-.testimonials_section h2 {
+.testimonials_section .header {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+}
+.testimonials_section .header h2 {
   text-align: center;
   color: #2a656f !important;
-  padding-bottom: 1.5em;
+  padding-top: 0;
+  line-height: 1;
+}
+.testimonials_section .header .reviews {
+  padding: 0.5rem;
+}
+.testimonials_section .header .reviews .logo {
+  max-width: 200px;
+  margin-bottom: 0.5rem;
+}
+.testimonials_section .header .reviews .stars,
+.testimonials_section .header .reviews .text,
+.testimonials_section .header .reviews .link {
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+.testimonials_section .header .reviews .stars .fas,
+.testimonials_section .header .reviews .text .fas,
+.testimonials_section .header .reviews .link .fas {
+  color: #ffd11a;
+}
+.testimonials_section .header .reviews .link {
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .testimonials_inner {
@@ -637,44 +683,24 @@ three_sections
   margin-bottom: 1.5rem;
   background: #333;
 }
-.footer_container .footer-parent {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2em;
-  text-align: center;
+.footer_container .footer_parent {
+  padding-bottom: 1.5rem;
 }
-.footer_container .footer-parent.booking {
-  justify-content: flex-end;
-}
-@media only screen and (min-width: 768px) {
-  .footer_container .footer-parent.booking .footer-child {
-    padding: 0 2rem 2rem 2rem;
-  }
-}
-.footer_container .footer-parent .footer-child {
-  padding: 0;
-  width: 100%;
-}
-@media only screen and (min-width: 768px) {
-  .footer_container .footer-parent .footer-child {
-    width: 33%;
-    padding: 2rem 2rem 0 2rem;
-  }
-}
-.footer_container .footer-parent .footer-child h5 {
+.footer_container h5 {
   font-weight: 600;
   letter-spacing: 1.7px;
   color: #56b1bf;
   font-size: 1.6em;
 }
-.footer_container .footer-parent .footer-child p {
+.footer_container p {
   color: #fff;
   font-size: 0.95em;
 }
-@media only screen and (min-width: 768px) {
-  .footer_container .footer-parent {
-    padding: 0 10% 1em 10%;
-  }
+.footer_container .logo {
+  max-width: 80px;
+}
+.footer_container .social_icons {
+  padding: 0;
 }
 .footer_container .footer-bottom {
   padding: 3em 10%;
@@ -743,7 +769,7 @@ three_sections
   padding-right: 25px;
 }
 .nav_desktop .site_title a {
-  color: #666f2a;
+  color: #55763f;
   letter-spacing: 0;
   font-size: 1.3em;
   font-weight: 600;
@@ -1107,26 +1133,17 @@ contact_form_block
   background-color: #56b1bf;
   border: 1.5px solid #56b1bf;
 }
-.contact_form_block .social_container {
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.contact_form_block .social_container .social_icons {
+.contact_form_block .social_icons {
   padding: 0;
 }
 
 /**********************
 social icons
 ***********************/
-.social_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.social_container .social_icons {
+.social_icons {
   padding: 2rem 0;
 }
-.social_container .social_icons ul.social {
+.social_icons ul.social {
   display: -webkit-inline-box !important;
   display: -webkit-inline-flex !important;
   display: -ms-inline-flexbox !important;
@@ -1136,16 +1153,16 @@ social icons
   padding: 0;
   width: 100%;
 }
-.social_container .social_icons ul.social li.social-item {
+.social_icons ul.social li.social-item {
   padding-bottom: 0.7em;
   display: inline;
 }
-.social_container .social_icons ul.social li.social-item a {
+.social_icons ul.social li.social-item a {
   color: #fff;
   font-size: 90%;
 }
-.social_container .social_icons ul.social li.social-item a .fab,
-.social_container .social_icons ul.social li.social-item a .fas {
+.social_icons ul.social li.social-item a .fab,
+.social_icons ul.social li.social-item a .fas {
   padding: 8px;
   font-size: 23px;
   width: 41px;
@@ -1161,8 +1178,8 @@ social icons
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.1);
   transition: all 0.25s ease;
 }
-.social_container .social_icons ul.social li.social-item a .fab:hover,
-.social_container .social_icons ul.social li.social-item a .fas:hover {
+.social_icons ul.social li.social-item a .fab:hover,
+.social_icons ul.social li.social-item a .fas:hover {
   transform: translateY(-2px);
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.2);
 }

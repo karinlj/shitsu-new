@@ -78,7 +78,6 @@ if (get_row_layout() == 'contact_form_block') {
                 <div class="text">
                     <?php $text = get_sub_field('text'); ?>
                     <?php echo $text; ?>
-
                 </div>
             </div>
             <?php }

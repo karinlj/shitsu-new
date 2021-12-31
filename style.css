@@ -188,9 +188,8 @@ p {
   letter-spacing: 0.4px;
 }
 
-a {
-  color: /* #4aa3df; */
-    /*#0099ff ;*/ #46aab9;
+/* a {
+#46aab9;
 
   font-size: 1em;
 }
@@ -203,7 +202,7 @@ a:hover {
 a:focus {
   color: #009ccc;
   text-decoration: none;
-}
+} */
 
 .clearfix {
   clear: both;

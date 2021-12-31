@@ -184,7 +184,8 @@ h1 {
   letter-spacing: 1.2px;
 }
 h2 {
-  font-size: 2.3em;
+  // font-size: 2.3em;
+  font-size: 2.5rem;
   color: $themecolorGreen !important;
 }
 h3 {
@@ -202,9 +203,26 @@ h5 {
   height: auto;
 }
 
+a {
+  color: #009ccc;
+  font-size: 1.2rem;
+  &:hover,
+  :focus {
+    color: #0089b3;
+    text-decoration: none;
+  }
+}
+
 /*********************
    buttons 
 *********************/
+.bokadirekt {
+  box-shadow: $themeBox_shadow_images;
+  transition: 0.3s all ease-in;
+  &:hover {
+    opacity: 0.8;
+  }
+}
 a.button_link {
   display: inline-block;
   border: 1.5px solid #56b1bf;
@@ -464,13 +482,37 @@ three_sections
    testimonials
 ***********************/
 .testimonials_section {
-  background: #c8e5ea;
-  //padding: 3em 0;
-
-  h2 {
-    text-align: center;
-    color: #2a656f !important;
-    padding-bottom: 1.5em;
+  background: $lightblue;
+  .header {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+    h2 {
+      text-align: center;
+      color: $turqoiseDark !important;
+      padding-top: 0;
+      line-height: 1;
+    }
+    .reviews {
+      padding: 0.5rem;
+      .logo {
+        max-width: 200px;
+        margin-bottom: 0.5rem;
+      }
+      .stars,
+      .text,
+      .link {
+        padding-left: 2rem;
+        margin-bottom: 0.5rem;
+        .fas {
+          color: #ffd11a;
+        }
+      }
+      .link {
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+    }
   }
 }
 .testimonials_inner {
@@ -636,43 +678,25 @@ three_sections
 .footer_container {
   margin-bottom: 1.5rem;
   background: #333;
-
-  .footer-parent {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2em;
-    text-align: center;
-    &.booking {
-      justify-content: flex-end;
-      .footer-child {
-        @media only screen and (min-width: $md-min) {
-          padding: 0 2rem 2rem 2rem;
-        }
-      }
-    }
-    .footer-child {
-      padding: 0;
-      width: 100%;
-      @media only screen and (min-width: $md-min) {
-        width: 33%;
-        padding: 2rem 2rem 0 2rem;
-      }
-      h5 {
-        font-weight: 600;
-        letter-spacing: 1.7px;
-        color: #56b1bf;
-        font-size: 1.6em;
-      }
-      p {
-        color: #fff;
-        font-size: 0.95em;
-      }
-    }
-    @media only screen and (min-width: $md-min) {
-      padding: 0 10% 1em 10%;
-    }
+  .footer_parent {
+    padding-bottom: 1.5rem;
   }
-
+  h5 {
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    color: $turqoise;
+    font-size: 1.6em;
+  }
+  p {
+    color: #fff;
+    font-size: 0.95em;
+  }
+  .logo {
+    max-width: 80px;
+  }
+  .social_icons {
+    padding: 0;
+  }
   .footer-bottom {
     padding: 3em 10%;
     background-color: #262626;
@@ -1115,94 +1139,94 @@ contact_form_block
     background-color: $turqoise;
     border: 1.5px solid $turqoise;
   }
-  .social_container {
-    justify-content: flex-start;
-    align-items: flex-start;
-    .social_icons {
-      padding: 0;
-    }
+  // .social_container {
+  //   justify-content: flex-start;
+  //   align-items: flex-start;
+  .social_icons {
+    padding: 0;
   }
+  //}
 }
 
 /**********************
 social icons
 ***********************/
-.social_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .social_icons {
-    padding: 2rem 0;
-    ul.social {
-      @include d-inline-flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      li.social-item {
-        padding-bottom: 0.7em;
-        display: inline;
-        a {
-          color: #fff;
-          font-size: 90%;
-          .fab,
-          .fas {
-            padding: 8px;
-            font-size: 23px;
-            width: 41px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 50%;
-            margin: 5px 2px;
-            margin-top: 1em;
-            transition: 1s;
-            color: #333;
-            background: #fff;
-            border: 1.5px solid #333;
-            box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
-            transition: all 0.25s ease;
-            &:hover {
-              transform: translateY(-2px);
-              box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
-            }
+// .social_container {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+.social_icons {
+  padding: 2rem 0;
+  ul.social {
+    @include d-inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    li.social-item {
+      padding-bottom: 0.7em;
+      display: inline;
+      a {
+        color: #fff;
+        font-size: 90%;
+        .fab,
+        .fas {
+          padding: 8px;
+          font-size: 23px;
+          width: 41px;
+          text-align: center;
+          text-decoration: none;
+          border-radius: 50%;
+          margin: 5px 2px;
+          margin-top: 1em;
+          transition: 1s;
+          color: #333;
+          background: #fff;
+          border: 1.5px solid #333;
+          box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
+          transition: all 0.25s ease;
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
           }
         }
-        //Boozang icons
-        //   padding: 0 0.4rem;
-        //   &:first-child {
-        //     padding-left: 0;
-        //   }
-        //   .fab,
-        //   .fas {
-        //     font-size: 20px;
-        //     padding-right: 1rem;
-        //     text-align: center;
-        //     text-decoration: none;
-        //     border-radius: 50%;
-        //     transition: 1s;
-        //     color: #fff;
-        //     background-position: center;
-        //     cursor: pointer;
-        //     box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
-        //     transition: all 0.25s ease;
-        //     &:hover {
-        //       transform: translateY(-2px);
-        //       box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
-        //     }
-        //   }
       }
-
-      // .social-list .fa:hover {
-      //   background: /*#99a63f;*/ #333;
-      //   color: #fff;
-      //   border: 1.5px solid #fff;
-      // }
-
-      // .social-list .fa {
-      //   color: #333;
-      //   background: #fff;
-      //   border: 1.5px solid #333;
-      // }
+      //Boozang icons
+      //   padding: 0 0.4rem;
+      //   &:first-child {
+      //     padding-left: 0;
+      //   }
+      //   .fab,
+      //   .fas {
+      //     font-size: 20px;
+      //     padding-right: 1rem;
+      //     text-align: center;
+      //     text-decoration: none;
+      //     border-radius: 50%;
+      //     transition: 1s;
+      //     color: #fff;
+      //     background-position: center;
+      //     cursor: pointer;
+      //     box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 10%);
+      //     transition: all 0.25s ease;
+      //     &:hover {
+      //       transform: translateY(-2px);
+      //       box-shadow: -1px 3px 5px 0 rgb(7 42 68 / 20%);
+      //     }
+      //   }
     }
+
+    // .social-list .fa:hover {
+    //   background: /*#99a63f;*/ #333;
+    //   color: #fff;
+    //   border: 1.5px solid #fff;
+    // }
+
+    // .social-list .fa {
+    //   color: #333;
+    //   background: #fff;
+    //   border: 1.5px solid #333;
+    // }
   }
+  //}
 }
