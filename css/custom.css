@@ -39,7 +39,7 @@ body.no_scroll {
 }
 @media all and (min-width: 1200px) {
   .container {
-    max-width: 85vw;
+    max-width: 88vw;
   }
 }
 
@@ -686,6 +686,20 @@ three_sections
 .footer_container .footer_parent {
   padding-bottom: 1.5rem;
 }
+.footer_container h5,
+.footer_container p,
+.footer_container .logo,
+.footer_container .bokadirekt {
+  padding-bottom: 1rem;
+}
+@media all and (min-width: 992px) {
+  .footer_container h5,
+.footer_container p,
+.footer_container .logo,
+.footer_container .bokadirekt {
+    padding-bottom: 0;
+  }
+}
 .footer_container h5 {
   font-weight: 600;
   letter-spacing: 1.7px;
@@ -694,10 +708,15 @@ three_sections
 }
 .footer_container p {
   color: #fff;
-  font-size: 0.95em;
+  font-size: 0.95rem;
 }
 .footer_container .logo {
   max-width: 80px;
+}
+@media all and (min-width: 992px) {
+  .footer_container .bokadirekt {
+    float: right;
+  }
 }
 .footer_container .social_icons {
   padding: 0;
