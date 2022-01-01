@@ -7,11 +7,142 @@ Description:  Theme for Shiatsurummet.
 Version: 1.0.1
 License: GNU General Public License v2 or later
 */
+/* colors */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-/* colors */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 body {
   font-family: "Open Sans", arial, sans-serif;
   color: #333;
@@ -41,6 +172,10 @@ body.no_scroll {
   .container {
     max-width: 88vw;
   }
+}
+
+img {
+  max-width: 100%;
 }
 
 .section_spacing_top_big {
@@ -138,14 +273,16 @@ body.no_scroll {
 .header_small,
 .info_banner,
 .hero_section,
-.pdf_section {
+.pdf_section,
+.boka_direkt_banner {
   position: relative;
 }
 .header_big.overlay-dark::before,
 .header_small.overlay-dark::before,
 .info_banner.overlay-dark::before,
 .hero_section.overlay-dark::before,
-.pdf_section.overlay-dark::before {
+.pdf_section.overlay-dark::before,
+.boka_direkt_banner.overlay-dark::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -158,7 +295,7 @@ body.no_scroll {
 
 /*radio button-background colors for content fields and infoboxes*/
 .dark {
-  background: #4a5669;
+  background: #555;
 }
 .dark h1,
 .dark h2,
@@ -196,20 +333,25 @@ body.no_scroll {
 }
 .lightgrey p,
 .lightblue p {
-  color: #4a5669;
+  color: #555;
 }
 .lightgrey .banner_link,
 .lightblue .banner_link {
-  color: #4a5669;
+  color: #555;
 }
 .lightgrey .banner_link:before,
 .lightblue .banner_link:before {
-  background: #4a5669;
+  background: #555;
 }
 
 /*********************
    fonts 
 *********************/
+p {
+  line-height: 1.7em;
+  letter-spacing: 0.4px;
+}
+
 h1,
 h2,
 h3,
@@ -226,28 +368,25 @@ h6 {
 }
 
 h1 {
-  font-size: 3.4em;
+  font-size: 3.3rem;
   letter-spacing: 1.2px;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: #55763f !important;
 }
 
 h3 {
-  font-size: 1.4rem;
-  color: #55763f;
+  font-size: 1.7rem;
 }
 
 h4 {
-  font-size: 1.6em;
-  color: #55763f;
+  font-size: 1.5rem;
 }
 
 h5 {
-  color: #555;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   max-width: 100%;
   height: auto;
 }
@@ -462,7 +601,7 @@ three_sections & image_sections
 }
 .three_sections .item .heading,
 .image_sections .item .heading {
-  font-size: 1.9em;
+  color: #55763f;
   padding: 30px 0 10px 0;
 }
 .three_sections .item .text_part,
@@ -474,7 +613,7 @@ three_sections & image_sections
 }
 .three_sections .item .text_part .text,
 .image_sections .item .text_part .text {
-  color: #4a5669;
+  color: #555;
 }
 
 @media all and (min-width: 1200px) {
@@ -495,28 +634,6 @@ three_sections & image_sections
   padding-top: 0;
   padding-bottom: 2rem;
   line-height: 1;
-}
-.testimonials_section .reviews {
-  padding: 0.5rem;
-}
-.testimonials_section .reviews .logo {
-  max-width: 200px;
-  margin-bottom: 0.5rem;
-}
-.testimonials_section .reviews .stars,
-.testimonials_section .reviews .text {
-  padding-left: 2rem;
-  margin-bottom: 0.5rem;
-}
-.testimonials_section .reviews .stars .fas,
-.testimonials_section .reviews .text .fas {
-  color: #ffd11a;
-}
-.testimonials_section .link {
-  font-weight: 600;
-  letter-spacing: 1px;
-  padding: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 .testimonials_section .testimonials_inner {
   height: auto;
@@ -718,7 +835,7 @@ three_sections & image_sections
   font-size: 0.95rem;
 }
 .footer_container .logo {
-  max-width: 80px;
+  max-width: 90px;
 }
 @media all and (min-width: 992px) {
   .footer_container .bokadirekt {
@@ -1090,6 +1207,41 @@ three_sections & image_sections
 }
 
 /*********************
+   boka_direkt_banner
+*********************/
+.boka_direkt_banner {
+  text-align: center;
+}
+.boka_direkt_banner .heading {
+  position: relative;
+  z-index: 1000;
+}
+.boka_direkt_banner .reviews {
+  padding: 0.5rem;
+  text-align: center;
+}
+.boka_direkt_banner .reviews .logo {
+  margin-bottom: 0.8rem;
+}
+.boka_direkt_banner .reviews .logo img {
+  max-width: 250px;
+}
+.boka_direkt_banner .reviews .stars,
+.boka_direkt_banner .reviews .text {
+  margin-bottom: 0.8rem;
+}
+.boka_direkt_banner .reviews .stars .fas,
+.boka_direkt_banner .reviews .text .fas {
+  color: #ffd11a;
+}
+.boka_direkt_banner .link {
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*********************
    pdf_section
 *********************/
 /**********************
@@ -1130,7 +1282,7 @@ contact_form_block
 .contact_form_block label textarea {
   max-width: 100%;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 4px;
   padding: 0.5rem;
 }
 .contact_form_block input[text] {
@@ -1145,7 +1297,7 @@ contact_form_block
 .contact_form_block html input[type=button],
 .contact_form_block input[type=reset],
 .contact_form_block input[type=submit] {
-  border-radius: 3px;
+  border-radius: 4px;
   text-decoration: none;
   padding: 10px 20px;
   transition: 1s all ease-in-out;

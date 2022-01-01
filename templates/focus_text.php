@@ -7,7 +7,7 @@ if (get_row_layout() == 'focus_text') {
 
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-8">
                 <header class="header">
                     <?php if (get_sub_field('heading')) { ?>
                     <h3 class="heading">

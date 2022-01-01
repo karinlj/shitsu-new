@@ -5,48 +5,6 @@ if (get_row_layout() == 'testimonials') { ?>
 <section class="testimonials_section section_spacing_top_small">
     <h2 class="heading"><?php the_sub_field('heading'); ?></h2>
 
-    <div class="container">
-        <div class="row align-items-start">
-            <div class="col">
-                <?php
-                    $img_id = get_sub_field('image');
-                    $image = wp_get_attachment_image_src($img_id, 'full');
-                    $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true); ?>
-
-                <?php if ($img_id) {
-                        $text = get_sub_field('text');
-                        $link = get_sub_field('link');
-                    ?>
-
-                <div class="reviews">
-                    <div class="logo">
-                        <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
-                    </div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="text"><?php echo $text; ?></p>
-                </div>
-                <?php } ?>
-
-                <?php if ($link) {
-                        $link_url = $link['url'];
-                        $link_title = $link['title'];
-                    ?>
-
-                <!-- <a class="link" -->
-                <a class="button_link dark"
-                    href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
-
-                <?php } ?>
-            </div>
-        </div>
-    </div>
-
     <div class="testimonials_inner">
         <div class="container">
             <div class="row align-items-start">

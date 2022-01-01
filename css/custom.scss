@@ -6,12 +6,137 @@ Description:  Theme for Shiatsurummet.
 Version: 1.0.1
 License: GNU General Public License v2 or later
 */
+@import "_mixins.scss";
+@import "variables.scss";
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-@import "_mixins.scss";
-@import "variables.scss";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
 
 body {
   font-family: "Open Sans", arial, sans-serif;
@@ -27,13 +152,6 @@ body.no_scroll {
 .nav-desktop {
   background: #fff;
 }
-// .content-container-full-width {
-//   // max-width: 1200px;
-//   max-width: 1300px;
-//   /*margin: 0 auto 3em auto;*/
-//   margin: 0 auto;
-//   background: #fff;
-// }
 .container {
   // max-width: 1200px;
   max-width: 1400px;
@@ -41,6 +159,10 @@ body.no_scroll {
     max-width: 88vw;
   }
 }
+img {
+  max-width: 100%;
+}
+//section padding
 .section_spacing_top_big {
   padding: 5rem calc(1.5rem - 15px);
   @media all and (min-width: $sm-min) {
@@ -105,7 +227,8 @@ body.no_scroll {
 .header_small,
 .info_banner,
 .hero_section,
-.pdf_section {
+.pdf_section,
+.boka_direkt_banner {
   position: relative;
 
   &.overlay-dark::before {
@@ -165,6 +288,10 @@ body.no_scroll {
 /*********************
    fonts 
 *********************/
+p {
+  line-height: 1.7em;
+  letter-spacing: 0.4px;
+}
 h1,
 h2,
 h3,
@@ -175,41 +302,36 @@ h6 {
   font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   font-weight: 600;
-  color: #555;
+  color: $themecolor;
   letter-spacing: 0.8px;
   padding: 5px 0 10px 0;
   line-height: 1.3em;
 }
 h1 {
-  font-size: 3.4em;
+  font-size: 3.3rem;
   letter-spacing: 1.2px;
 }
 h2 {
-  // font-size: 2.3em;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   color: $themecolorGreen !important;
 }
 h3 {
-  font-size: 1.4rem;
-  color: $themecolorGreen;
+  font-size: 1.7rem;
 }
 h4 {
-  font-size: 1.6em;
-  color: $themecolorGreen;
+  font-size: 1.5rem;
 }
 h5 {
-  color: #555;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   max-width: 100%;
   height: auto;
 }
-
 a {
-  color: #009ccc;
+  color: $linkcolor;
   font-size: 1.2rem;
   &:hover,
   :focus {
-    color: #0089b3;
+    color: $linkcolor_hover;
     text-decoration: none;
   }
 }
@@ -226,9 +348,9 @@ a {
 }
 a.button_link {
   display: inline-block;
-  border: 1.5px solid #56b1bf;
+  border: 1.5px solid $turqoise;
   background: #fff;
-  color: #56b1bf;
+  color: $turqoise;
   padding: 12px 20px;
   font-size: 14px;
   letter-spacing: 2px;
@@ -238,24 +360,24 @@ a.button_link {
   line-height: 20px;
   // margin-top: 1rem;
   &:hover {
-    background: #56b1bf;
+    background: $turqoise;
     color: #fff;
     text-decoration: none;
   }
   &:active,
   :visited {
-    border: 1.5px solid #56b1bf;
+    border: 1.5px solid $turqoise;
     background: #fff;
-    color: #56b1bf;
+    color: $turqoise;
     text-decoration: none;
   }
   &.dark {
-    background: #56b1bf;
+    background: $turqoise;
     color: #fff;
     &:hover {
-      border: 1.5px solid #56b1bf;
+      border: 1.5px solid $turqoise;
       background: #fff;
-      color: #56b1bf;
+      color: $turqoise;
       text-decoration: none;
     }
   }
@@ -290,7 +412,6 @@ a.button_link {
       color: #fff;
       margin-bottom: 1rem;
       letter-spacing: 2px;
-      //font-weight: 400;
     }
     .header_text {
       font-size: 1.3rem;
@@ -354,7 +475,6 @@ a.button_link {
 /*********************
 fullwidth_editor
 *********************/
-
 .fullwidth_editor {
   background: #fff;
 }
@@ -381,7 +501,7 @@ three_sections & image_sections
     }
     img {
       width: 100%;
-      border-radius: 8px;
+      border-radius: $themeBorder_radius;
       transition: 1s;
       opacity: 1;
       &:hover {
@@ -389,7 +509,7 @@ three_sections & image_sections
       }
     }
     .heading {
-      font-size: 1.9em;
+      color: $themecolorGreen;
       padding: 30px 0 10px 0;
     }
     .text_part {
@@ -421,28 +541,6 @@ three_sections & image_sections
     padding-bottom: 2rem;
     line-height: 1;
   }
-  .reviews {
-    padding: 0.5rem;
-    // margin-right: 2rem;
-    .logo {
-      max-width: 200px;
-      margin-bottom: 0.5rem;
-    }
-    .stars,
-    .text {
-      padding-left: 2rem;
-      margin-bottom: 0.5rem;
-      .fas {
-        color: #ffd11a;
-      }
-    }
-  }
-  .link {
-    font-weight: 600;
-    letter-spacing: 1px;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
 
   .testimonials_inner {
     height: auto;
@@ -461,7 +559,7 @@ three_sections & image_sections
       width: 100%;
       background-color: #fff;
       padding: 2rem 3rem;
-      border-radius: 8px;
+      border-radius: $themeBorder_radius;
       margin-bottom: 4rem;
       .icon {
         margin-bottom: 1rem;
@@ -608,7 +706,7 @@ three_sections & image_sections
 *********************/
 .footer_container {
   margin-bottom: 1.5rem;
-  background: #333;
+  background: $backgroundDarkest;
   .footer_parent {
     padding-bottom: 1.5rem;
   }
@@ -632,7 +730,7 @@ three_sections & image_sections
     font-size: 0.95rem;
   }
   .logo {
-    max-width: 80px;
+    max-width: 90px;
   }
   .bokadirekt {
     @media all and (min-width: $lg-min) {
@@ -644,8 +742,8 @@ three_sections & image_sections
   }
   .footer-bottom {
     padding: 3em 10%;
-    background-color: #262626;
-    color: #999;
+    background-color: $backgroundDark;
+    color: $themecolorLightest;
     position: relative;
     p {
       margin: 0;
@@ -663,7 +761,7 @@ three_sections & image_sections
         font-weight: 900;
         content: "\f077";
         font-size: 1.7rem;
-        color: #56b1bf;
+        color: $turqoise;
       }
       &:hover {
         opacity: 0.7;
@@ -675,7 +773,6 @@ three_sections & image_sections
 /********************
   404-page
 *********************/
-
 .nopage {
   background: $lightgrey;
   border: 1px solid $themeBorderColor;
@@ -736,7 +833,7 @@ three_sections & image_sections
         position: relative;
         a {
           display: block;
-          color: #111;
+          color: $navcolor;
           padding: 3px 3px 1px 3px;
           text-decoration: none;
           font-size: 1.2rem;
@@ -751,13 +848,13 @@ three_sections & image_sections
           }
           &:active,
           &:visited {
-            color: #111;
+            color: $navcolor;
           }
         }
         /*Wp:s klasser*/
         &.current-menu-item > a {
           /* color: #aab946; */
-          border-bottom: 1px solid #111;
+          border-bottom: 1px solid $navcolor;
         }
         &.menu-item-has-children {
           > a::after {
@@ -772,7 +869,7 @@ three_sections & image_sections
             width: 170px;
             padding-bottom: 3px;
             margin-top: -3px;
-            box-shadow: 0 2px 2px rgba(0, 0, 0, 0.175);
+            box-shadow: $themeBox_shadow_nav;
             display: none;
             &.sub_menu_open {
               display: flex;
@@ -825,7 +922,7 @@ three_sections & image_sections
       flex: none;
       width: 100%;
       height: 2px;
-      background: #111;
+      background: $navcolor;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1012,6 +1109,41 @@ three_sections & image_sections
 }
 
 /*********************
+   boka_direkt_banner
+*********************/
+.boka_direkt_banner {
+  //background and overlay: see scss section
+  text-align: center;
+  .heading {
+    position: relative;
+    z-index: 1000;
+  }
+  .reviews {
+    padding: 0.5rem;
+    text-align: center;
+    .logo {
+      margin-bottom: 0.8rem;
+      img {
+        max-width: 250px;
+      }
+    }
+    .stars,
+    .text {
+      margin-bottom: 0.8rem;
+      .fas {
+        color: #ffd11a;
+      }
+    }
+  }
+  .link {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/*********************
    pdf_section
 *********************/
 .pdf_section {
@@ -1061,7 +1193,7 @@ contact_form_block
   label textarea {
     max-width: 100%;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: $btnBorder_radius;
     padding: 0.5rem;
   }
   input[text] {
@@ -1076,7 +1208,7 @@ contact_form_block
   html input[type="button"],
   input[type="reset"],
   input[type="submit"] {
-    border-radius: 3px;
+    border-radius: $btnBorder_radius;
     text-decoration: none;
     padding: 10px 20px;
     transition: 1s all ease-in-out;

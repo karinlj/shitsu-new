@@ -16,21 +16,25 @@ $max-page-width: 1380px;
 
 /* colors */
 
-$colorOrange: #f26d55;
-
 //text color
-$themecolor: #4a5669;
-$themecolorLight: #66758d;
-$themecolorLightest: #b5bdc9;
+$themecolor: #555;
+//$themecolorLight: #555;
+$themecolorLightest: #999;
 $themeHeadingcolor: #212735;
-$themecolorFront: #dae0f1;
 
 $themeBorderColor: #ebebeb;
 $lightgrey: #fafafb;
-$themecolorGreen: #55763f; //rgb(85,118,63);  // #666f2a;
+$themecolorGreen: #55763f; // #666f2a;
+$colorOrange: #f26d55;
 $lightblue: #c8e5ea;
 $turqoise: #56b1bf;
 $turqoiseDark: #2a656f;
+$backgroundDarkest: #333;
+$backgroundDark: #262626;
+
+$linkcolor: #009ccc;
+$linkcolor_hover: #0089b3;
+$navcolor: #111;
 
 //overlays
 $themecolorDarkGreyOverlay: rgba(0, 0, 0, 0.2);
@@ -38,18 +42,12 @@ $themecolorLightOverlay: rgba(255, 255, 255, 0.3);
 
 //other
 $themefont: "Roboto", "Helvetica", sans-serif;
-$navfont: $themefont;
-$headingfont: $themefont;
 $themeBorder_radius: 8px;
 $btnBorder_radius: 4px;
 
+$themeBox_shadow_nav: 0 2px 2px rgba(0, 0, 0, 0.175);
 $themeBox_shadow: 0 4px 8px 0 hsl(217deg 17% 35% / 8%);
-$themeBox_shadow_more: 0px 2px 10px rgb(0 0 0 / 20%);
+//$themeBox_shadow_more: 0px 2px 10px rgb(0 0 0 / 20%);
 $themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
   rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 $themeBox_shadow_images_hover: rgba(0, 0, 0, 0.4) 0px 30px 90px;
-
-$navcolor: #fff;
-$navcolorDark: $themecolor;
-$navBg_transp: transparent;
-//$linkcolor: $themecolorNewBlue;

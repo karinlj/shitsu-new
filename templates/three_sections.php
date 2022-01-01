@@ -29,7 +29,7 @@ if (get_row_layout() == 'three_sections') { ?>
                     </a>
                     <?php } ?>
 
-                    <h2 class="heading"><?php echo $heading; ?></h2>
+                    <h3 class="heading"><?php echo $heading; ?></h3>
                     <div class="text_part">
                         <p class="text"><?php echo $text; ?></p>
 
