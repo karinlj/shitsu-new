@@ -4,7 +4,6 @@ if (get_row_layout() == 'three_sections') { ?>
 <section class="three_sections section_spacing_top_medium">
     <div class="container">
         <div class="row align-items-start justify-content-around">
-
             <?php
                 // check if repeater field has rows
                 if (have_rows('three_sections_content')) {

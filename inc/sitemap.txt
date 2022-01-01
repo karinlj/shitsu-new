@@ -4,6 +4,7 @@ http://shiatsurummet.se/behandlingar/?treatment-category=shiatsu
 http://shiatsurummet.se/behandlingar/?treatment-category=dorn
 http://shiatsurummet.se/foretagsmassage/
 http://shiatsurummet.se/om-mig/
+http://shiatsurummet.se/produkter/
 http://shiatsurummet.se/kontakt/
 
 

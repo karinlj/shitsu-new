@@ -104,7 +104,8 @@ body.no_scroll {
 .header_big,
 .header_small,
 .info_banner,
-.hero_section {
+.hero_section,
+.pdf_section {
   position: relative;
 
   &.overlay-dark::before {
@@ -413,75 +414,75 @@ three_sections & image_sections
 ***********************/
 .testimonials_section {
   background: $lightblue;
-  .header {
-    display: flex;
-    justify-content: space-evenly;
+  .heading {
+    text-align: center;
+    color: $turqoiseDark !important;
+    padding-top: 0;
     padding-bottom: 2rem;
-    h2 {
-      text-align: center;
-      color: $turqoiseDark !important;
-      padding-top: 0;
-      line-height: 1;
+    line-height: 1;
+  }
+  .reviews {
+    padding: 0.5rem;
+    // margin-right: 2rem;
+    .logo {
+      max-width: 200px;
+      margin-bottom: 0.5rem;
     }
-    .reviews {
-      padding: 0.5rem;
-      .logo {
-        max-width: 200px;
-        margin-bottom: 0.5rem;
+    .stars,
+    .text {
+      padding-left: 2rem;
+      margin-bottom: 0.5rem;
+      .fas {
+        color: #ffd11a;
       }
-      .stars,
-      .text,
-      .link {
-        padding-left: 2rem;
-        margin-bottom: 0.5rem;
-        .fas {
-          color: #ffd11a;
+    }
+  }
+  .link {
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .testimonials_inner {
+    height: auto;
+    overflow: hidden;
+    margin-top: 2rem;
+    @include d-flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: $lg-min) {
+      min-height: 500px;
+    }
+    > .container > .row {
+      padding: 0.75rem 0;
+    }
+    .item {
+      width: 100%;
+      background-color: #fff;
+      padding: 2rem 3rem;
+      border-radius: 8px;
+      margin-bottom: 4rem;
+      .icon {
+        margin-bottom: 1rem;
+        i.fab,
+        i.fas {
+          font-size: 1rem;
+          color: inherit;
+          font-weight: 600;
         }
       }
-      .link {
-        font-weight: 600;
-        letter-spacing: 1px;
-      }
-    }
-  }
-}
-.testimonials_inner {
-  height: auto;
-  overflow: hidden;
-  @include d-flex;
-  justify-content: center;
-  align-items: center;
-  @media all and (min-width: $lg-min) {
-    min-height: 500px;
-  }
-  > .container > .row {
-    padding: 0.75rem 0;
-  }
-  .item {
-    width: 100%;
-    background-color: #fff;
-    padding: 2rem 3rem;
-    border-radius: 8px;
-    margin-bottom: 4rem;
-    .icon {
-      margin-bottom: 1rem;
-      i.fab,
-      i.fas {
+      .text {
         font-size: 1rem;
-        color: inherit;
-        font-weight: 600;
+        font-style: italic;
+        font-family: serif;
+        line-height: 1.8rem;
+        letter-spacing: 0.5px;
       }
-    }
-    .text {
-      font-size: 1rem;
-      font-style: italic;
-      font-family: serif;
-      line-height: 1.8rem;
-      letter-spacing: 0.5px;
-    }
-    .signature {
-      text-transform: uppercase;
-      opacity: 0.7;
+      .signature {
+        text-transform: uppercase;
+        opacity: 0.7;
+      }
     }
   }
 }
@@ -1009,6 +1010,13 @@ three_sections & image_sections
     padding-top: 1rem;
   }
 }
+
+/*********************
+   pdf_section
+*********************/
+.pdf_section {
+}
+
 /**********************
 contact_form_block
 ***********************/

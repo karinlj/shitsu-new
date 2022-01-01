@@ -137,13 +137,15 @@ body.no_scroll {
 .header_big,
 .header_small,
 .info_banner,
-.hero_section {
+.hero_section,
+.pdf_section {
   position: relative;
 }
 .header_big.overlay-dark::before,
 .header_small.overlay-dark::before,
 .info_banner.overlay-dark::before,
-.hero_section.overlay-dark::before {
+.hero_section.overlay-dark::before,
+.pdf_section.overlay-dark::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -487,43 +489,39 @@ three_sections & image_sections
 .testimonials_section {
   background: #c8e5ea;
 }
-.testimonials_section .header {
-  display: flex;
-  justify-content: space-evenly;
-  padding-bottom: 2rem;
-}
-.testimonials_section .header h2 {
+.testimonials_section .heading {
   text-align: center;
   color: #2a656f !important;
   padding-top: 0;
+  padding-bottom: 2rem;
   line-height: 1;
 }
-.testimonials_section .header .reviews {
+.testimonials_section .reviews {
   padding: 0.5rem;
 }
-.testimonials_section .header .reviews .logo {
+.testimonials_section .reviews .logo {
   max-width: 200px;
   margin-bottom: 0.5rem;
 }
-.testimonials_section .header .reviews .stars,
-.testimonials_section .header .reviews .text,
-.testimonials_section .header .reviews .link {
+.testimonials_section .reviews .stars,
+.testimonials_section .reviews .text {
   padding-left: 2rem;
   margin-bottom: 0.5rem;
 }
-.testimonials_section .header .reviews .stars .fas,
-.testimonials_section .header .reviews .text .fas,
-.testimonials_section .header .reviews .link .fas {
+.testimonials_section .reviews .stars .fas,
+.testimonials_section .reviews .text .fas {
   color: #ffd11a;
 }
-.testimonials_section .header .reviews .link {
+.testimonials_section .link {
   font-weight: 600;
   letter-spacing: 1px;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
 }
-
-.testimonials_inner {
+.testimonials_section .testimonials_inner {
   height: auto;
   overflow: hidden;
+  margin-top: 2rem;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -532,37 +530,37 @@ three_sections & image_sections
   align-items: center;
 }
 @media all and (min-width: 992px) {
-  .testimonials_inner {
+  .testimonials_section .testimonials_inner {
     min-height: 500px;
   }
 }
-.testimonials_inner > .container > .row {
+.testimonials_section .testimonials_inner > .container > .row {
   padding: 0.75rem 0;
 }
-.testimonials_inner .item {
+.testimonials_section .testimonials_inner .item {
   width: 100%;
   background-color: #fff;
   padding: 2rem 3rem;
   border-radius: 8px;
   margin-bottom: 4rem;
 }
-.testimonials_inner .item .icon {
+.testimonials_section .testimonials_inner .item .icon {
   margin-bottom: 1rem;
 }
-.testimonials_inner .item .icon i.fab,
-.testimonials_inner .item .icon i.fas {
+.testimonials_section .testimonials_inner .item .icon i.fab,
+.testimonials_section .testimonials_inner .item .icon i.fas {
   font-size: 1rem;
   color: inherit;
   font-weight: 600;
 }
-.testimonials_inner .item .text {
+.testimonials_section .testimonials_inner .item .text {
   font-size: 1rem;
   font-style: italic;
   font-family: serif;
   line-height: 1.8rem;
   letter-spacing: 0.5px;
 }
-.testimonials_inner .item .signature {
+.testimonials_section .testimonials_inner .item .signature {
   text-transform: uppercase;
   opacity: 0.7;
 }
@@ -1091,6 +1089,9 @@ three_sections & image_sections
   padding-top: 1rem;
 }
 
+/*********************
+   pdf_section
+*********************/
 /**********************
 contact_form_block
 ***********************/
