@@ -374,7 +374,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: #55763f !important;
 }
 
@@ -568,16 +568,16 @@ fullwidth_editor
 }
 
 /*********************
-three_sections & image_sections
+three_sections & products_sections
 *********************/
 .three_sections,
-.image_sections {
+.products_sections {
   background: #fff;
   height: auto;
   overflow: hidden;
 }
 .three_sections .item,
-.image_sections .item {
+.products_sections .item {
   padding-top: 3em;
   padding-bottom: 0.5em;
   margin: 10px 0;
@@ -589,35 +589,36 @@ three_sections & image_sections
 }
 @media all and (min-width: 768px) {
   .three_sections .item,
-.image_sections .item {
+.products_sections .item {
     padding-top: 0;
   }
 }
 .three_sections .item img,
-.image_sections .item img {
+.products_sections .item img {
   width: 100%;
   border-radius: 4px;
   transition: 1s;
   opacity: 1;
 }
 .three_sections .item img:hover,
-.image_sections .item img:hover {
+.products_sections .item img:hover {
   opacity: 0.8;
 }
 .three_sections .item .heading,
-.image_sections .item .heading {
+.products_sections .item .heading {
   color: #55763f;
-  padding: 30px 0 10px 0;
+  padding: 30px 5px 10px 5px;
 }
 .three_sections .item .text_part,
-.image_sections .item .text_part {
+.products_sections .item .text_part {
+  padding: 30px 5px 10px 5px;
   height: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 .three_sections .item .text_part .text,
-.image_sections .item .text_part .text {
+.products_sections .item .text_part .text {
   color: #555;
 }
 
@@ -625,6 +626,26 @@ three_sections & image_sections
   .three_sections {
     min-height: 600px;
   }
+}
+
+.products_sections .item {
+  text-align: left;
+}
+.products_sections .item img:hover {
+  opacity: 1;
+}
+.products_sections .item .heading_section {
+  display: flex;
+  padding: 30px 5px 10px 5px;
+}
+.products_sections .item .heading_section .logo {
+  width: auto;
+  height: 50px;
+}
+.products_sections .item .heading_section .heading {
+  color: #555 !important;
+  margin-left: 0.5rem;
+  padding: 0;
 }
 
 /**********************
@@ -917,7 +938,7 @@ three_sections & image_sections
 }
 .nav_desktop .site_title a {
   color: #55763f;
-  font-size: 1.3em;
+  font-size: 2.4rem;
   font-weight: 600;
   font-family: "GeosansLight", Arial, sans-serif;
 }

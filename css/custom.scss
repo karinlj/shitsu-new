@@ -313,7 +313,7 @@ h1 {
   letter-spacing: 1.2px;
 }
 h2 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   color: $themecolorGreen !important;
   // letter-spacing: 1.2px;
 }
@@ -485,10 +485,10 @@ fullwidth_editor
 }
 
 /*********************
-three_sections & image_sections
+three_sections & products_sections
 *********************/
 .three_sections,
-.image_sections {
+.products_sections {
   background: #fff;
   height: auto;
   overflow: hidden;
@@ -515,9 +515,10 @@ three_sections & image_sections
     }
     .heading {
       color: $themecolorGreen;
-      padding: 30px 0 10px 0;
+      padding: 30px 5px 10px 5px;
     }
     .text_part {
+      padding: 30px 5px 10px 5px;
       height: 200px;
       display: flex;
       flex-direction: column;
@@ -531,6 +532,29 @@ three_sections & image_sections
 .three_sections {
   @media all and (min-width: $xl-min) {
     min-height: 600px;
+  }
+}
+.products_sections {
+  .item {
+    text-align: left;
+    img {
+      &:hover {
+        opacity: 1;
+      }
+    }
+    .heading_section {
+      display: flex;
+      padding: 30px 5px 10px 5px;
+      .logo {
+        width: auto;
+        height: 50px;
+      }
+      .heading {
+        color: $themecolor !important;
+        margin-left: 0.5rem;
+        padding: 0;
+      }
+    }
   }
 }
 
@@ -811,7 +835,7 @@ three_sections & image_sections
     a {
       color: $themecolorGreen;
       //letter-spacing: 0;
-      font-size: 1.3em;
+      font-size: 2.4rem;
       font-weight: 600;
       font-family: "GeosansLight", Arial, sans-serif;
     }
