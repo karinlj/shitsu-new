@@ -248,51 +248,9 @@ License: GNU General Public License v2 or later
 /*
 * Contact Form layout
 */
-div.wpcf7 {
+/* div.wpcf7 {
   padding-top: 2em;
-}
-
-label {
-  width: 70%;
-  font-weight: 400;
-  font-size: 90%;
-
-  margin: 0.5em 0;
-}
-
-label input,
-label textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  background-color: #567dbf;
-  color: #fff;
-  border: 1.5px solid #567dbf;
-  padding: 5px 12px;
-  transition: 1s;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"]:hover {
-  background-color: #fff;
-  color: #567dbf;
-  border: 1.5px solid #567dbf;
-}
-/*Contact page for larger screen*/
-@media only screen and (min-width: 768px) {
-  .contact-part-text,
-  .contact-part-map {
-    width: 50%;
-  }
-}
+} */
 
 /*********************************
 Media Queries for smallest screen

@@ -35,6 +35,7 @@ $backgroundDark: #262626;
 $linkcolor: #009ccc;
 $linkcolor_hover: #0089b3;
 $navcolor: #111;
+$bordercolor: rgba(0, 0, 0, 0.15);
 
 //overlays
 $themecolorDarkGreyOverlay: rgba(0, 0, 0, 0.2);
@@ -42,7 +43,7 @@ $themecolorLightOverlay: rgba(255, 255, 255, 0.3);
 
 //other
 $themefont: "Roboto", "Helvetica", sans-serif;
-$themeBorder_radius: 8px;
+$themeBorder_radius: 4px;
 $btnBorder_radius: 4px;
 
 $themeBox_shadow_nav: 0 2px 2px rgba(0, 0, 0, 0.175);
