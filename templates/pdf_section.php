@@ -1,6 +1,7 @@
 <?php
 if (get_row_layout() == 'pdf_section') { ?>
 <?php
+    $color = get_sub_field('color_theme');
     $style = '';
     $bg_image = get_sub_field('background_image');
 
@@ -10,7 +11,8 @@ if (get_row_layout() == 'pdf_section') { ?>
     }
     ?>
 
-<section class="pdf_section <?php echo $overlay_color; ?> section_spacing_top_medium" <?php echo $style; ?>>
+<section class="pdf_section <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
+    <?php echo $style; ?>>
     <?php
         $part_of_url = get_sub_field('part_of_url');
         $link_text = get_sub_field('link_text');

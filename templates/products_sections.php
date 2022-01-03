@@ -21,7 +21,7 @@ if (get_row_layout() == 'products_sections') { ?>
                         $logo = wp_get_attachment_image_src($logo_id, 'full');
                         $alt_text_logo = get_post_meta($logo_id, '_wp_attachment_image_alt', true); ?>
 
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="item">
                     <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
 

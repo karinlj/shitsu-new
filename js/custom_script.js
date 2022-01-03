@@ -3,10 +3,6 @@
 jQuery(document).ready(function ($) {
   /*when click on veggoburger...add or remove class */
 
-  //   $(".toggle").click(function () {
-  //     $(".nav_mobile").toggleClass("nav_mobile_open");
-  //   });
-
   /*Desktop*/
   $(".nav_desktop ul li.menu-item-has-children").click(function (event) {
     event.stopPropagation(); /* to stop the 'document handler' from activating at the same time as the click event on class */

@@ -17,8 +17,8 @@ $max-page-width: 1380px;
 /* colors */
 
 //text color
-$themecolor: #555;
-//$themecolorLight: #555;
+$themecolor: #333;
+$themecolorLight: #555;
 $themecolorLightest: #999;
 $themeHeadingcolor: #212735;
 
@@ -52,3 +52,7 @@ $themeBox_shadow: 0 4px 8px 0 hsl(217deg 17% 35% / 8%);
 $themeBox_shadow_images: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
   rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 $themeBox_shadow_images_hover: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+
+$box-shadow_icons: -1px 3px 5px 0 rgb(7 42 68 / 20%);
+$box-shadow_icons_hover: -1px 3px 5px 0 rgb(7 42 68 / 30%);
+$text-shadow: 1px 1px rgb(7 42 68 / 20%);

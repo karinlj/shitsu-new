@@ -33,7 +33,7 @@
                     } ?>
 
                 <div class="col-lg-2 col-xl-2">
-                    <div class="footer-list">
+                    <div class="btn_container">
                         <?php
                             $book_button_url = get_field('footer_booking_button_url', 'option');
                             $book_image_url = get_field('footer_booking_button_image', 'option');
@@ -51,27 +51,29 @@
             </div>
         </div>
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-2">
-                    <div class="social_icons">
-                        <ul class="social">
-                            <?php
-                                //repeater
-                                if (have_rows('social_icons', 'option')) {
-                                    while (have_rows('social_icons', 'option')) {
-                                        the_row();
+            <div class="row">
+                <div class="col-12">
+                    <div class="social_icons_container">
+                        <div class="social_icons">
+                            <ul class="social">
+                                <?php
+                                    //repeater
+                                    if (have_rows('social_icons', 'option')) {
+                                        while (have_rows('social_icons', 'option')) {
+                                            the_row();
 
-                                        $social_url = get_sub_field('social_url');
-                                        $social_site = get_sub_field('social_site'); ?>
-                            <li class="social-item">
-                                <a href="<?php echo $social_url; ?>"><i
-                                        class="fab fa-<?php echo $social_site; ?>"></i></a>
-                            </li>
+                                            $social_url = get_sub_field('social_url');
+                                            $social_site = get_sub_field('social_site'); ?>
+                                <li class="social-item">
+                                    <a href="<?php echo $social_url; ?>"><i
+                                            class="fab fa-<?php echo $social_site; ?>"></i></a>
+                                </li>
 
-                            <?php
-                                    }
-                                } ?>
-                        </ul>
+                                <?php
+                                        }
+                                    } ?>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

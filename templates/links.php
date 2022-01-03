@@ -1,7 +1,8 @@
 <?php
-if (get_row_layout() == 'links') { ?>
+if (get_row_layout() == 'links') {
+    $color = get_sub_field('color_theme'); ?>
 
-<section class="link_section section_spacing_top_small">
+<section class="link_section <?php echo $color; ?> section_spacing_top_small">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12">

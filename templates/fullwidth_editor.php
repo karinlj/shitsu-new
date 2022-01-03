@@ -1,8 +1,9 @@
 <?php
 
-if (get_row_layout() == 'fullwidth_editor') { ?>
+if (get_row_layout() == 'fullwidth_editor') {
+    $color = get_sub_field('color_theme'); ?>
 
-<section class="fullwidth_editor section_spacing_top_small">
+<section class="fullwidth_editor <?php echo $color; ?>  section_spacing_top_small">
 
     <div class="container">
         <div class="row justify-content-center">

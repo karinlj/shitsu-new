@@ -11,7 +11,7 @@ add_action('wp_enqueue_scripts', 'sh_script_resourses');
 function sh_style_resourses()
 {
     //name, absolute path, dependencies, version, media
-    wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '#', 'all');
+    //wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '#', 'all');
     //lagt till
     wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
 
@@ -22,6 +22,8 @@ function sh_style_resourses()
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css');
     //lagt till
     wp_enqueue_style('font-awesome-5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null);
+
+    // wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:wght@300;400;600" rel="stylesheet');
 
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet');
 }
@@ -46,11 +48,6 @@ function sh_theme_setup()
     add_image_size('normal-wide-thumbnail', 400, 300, true); // 320, 420
     add_image_size('normal-thumbnail', 300, 300, true);
     add_image_size('large-thumbnail', 340, 550, true);
-
-
-    add_image_size('banner-image', 920, 510, true);
-    /*add_image_size('banner-image', 920, 610, array('left', 'top'
-    ));*/
 
     //Nav menus
     register_nav_menus(array(
