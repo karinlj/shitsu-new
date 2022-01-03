@@ -5,7 +5,7 @@ if (get_row_layout() == 'contact_form_block') {
     $color = get_sub_field('color_theme');
 ?>
 
-<section id="contact_form" class="contact_form_block <?php echo $color; ?>  section_spacing_top_medium">
+<section id="contact_form" class="contact_form_block <?php echo $color; ?>  section_spacing_top_small">
     <div class="container">
         <div class="row">
             <div class="col-md-6">

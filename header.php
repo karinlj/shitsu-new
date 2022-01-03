@@ -23,6 +23,7 @@
     $style = '';
     $color = get_field('color_theme');
     $header_image = get_field('header_image');
+    $header_image_default = get_field('header_image_default', 'option');
     $overlay_color = '';
 
     if (is_front_page()) {
@@ -31,11 +32,16 @@
     } else {
         $header_class = 'header_small';
     }
+
     if ($header_image) {
         $style = 'style="background-image:url(\'' . wp_get_attachment_url($header_image, 'full') . '\')"';
         $overlay_color = get_field('overlay_color');
+    } else if ($header_image_default) {
+        $style = 'style="background-image:url(\'' . wp_get_attachment_url($header_image_default, 'full') . '\')"';
     }
     ?>
+
+
     <div class="header_wrapper">
         <div class="container">
             <div class="row">
@@ -95,4 +101,5 @@
                 </div>
             </div>
         </div>
+    </div>
     </div>

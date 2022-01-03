@@ -65,3 +65,17 @@ if (function_exists('acf_add_options_page')) {
         'position' => 3.33,
     ));
 }
+function my_acf_admin_head()
+{
+?>
+<script type="text/javascript">
+(function($) {
+    $(document).ready(function() {
+        $('.layout').addClass('-collapsed');
+        $('.acf-postbox').addClass('closed');
+    });
+})(jQuery);
+</script>
+<?php
+}
+add_action('acf/input/admin_head', 'my_acf_admin_head');
