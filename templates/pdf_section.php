@@ -23,7 +23,8 @@ if (get_row_layout() == 'pdf_section') { ?>
         <div class="row align-items-center">
             <div class="col-6">
                 <a href="<?php echo get_bloginfo('template_url') . '/'; ?><?php echo esc_url($part_of_url); ?>"
-                    target='_blank' class="button_link dark"> <?php echo esc_html($link_text); ?></a>
+                    rel="noopener norefferer" target='_blank' class="button_link dark">
+                    <?php echo esc_html($link_text); ?></a>
 
                 <?php } ?>
             </div>

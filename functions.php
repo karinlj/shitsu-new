@@ -26,6 +26,8 @@ function sh_style_resourses()
     // wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Poppins:wght@300;400;600" rel="stylesheet');
 
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet');
+
+    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,900" rel="stylesheet');
 }
 add_action('wp_enqueue_scripts', 'sh_style_resourses');
 

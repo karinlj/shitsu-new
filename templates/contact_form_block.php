@@ -5,7 +5,7 @@ if (get_row_layout() == 'contact_form_block') {
     $color = get_sub_field('color_theme');
 ?>
 
-<section id="contact_form" class="contact_form_block <?php echo $color; ?>  section_spacing_top_small">
+<section id="contact_form" class="contact_form_block <?php echo $color; ?> section_spacing_top_small">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
@@ -38,7 +38,6 @@ if (get_row_layout() == 'contact_form_block') {
                 </div>
             </div>
         </div>
-
         <div class="row">
             <?php
                 if (have_rows('editors')) {
@@ -50,7 +49,6 @@ if (get_row_layout() == 'contact_form_block') {
                 <h2 class="text-heading">
                     <?php the_sub_field('heading'); ?>
                 </h2>
-
                 <div class="text">
                     <?php $text = get_sub_field('text'); ?>
                     <?php echo $text; ?>
@@ -59,8 +57,6 @@ if (get_row_layout() == 'contact_form_block') {
             <?php }
                 }
                 ?>
-
-
         </div>
     </div>
 </section>

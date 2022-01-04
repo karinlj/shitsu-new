@@ -43,7 +43,7 @@ if (get_row_layout() == 'boka_direkt_banner') { ?>
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
                     </div>
-                    <p class="text"><?php echo $text; ?></p>
+                    <h6 class="text"><?php echo $text; ?></h6>
                 </div>
                 <?php } ?>
                 <?php if ($link) {
@@ -53,7 +53,8 @@ if (get_row_layout() == 'boka_direkt_banner') { ?>
                 <?php } ?>
 
                 <!-- <a class="link" -->
-                <a class="button_link dark" href="<?php echo esc_url($link_url); ?>">
+                <a class="button_link dark" href="<?php echo esc_url($link_url); ?>" target="_blank"
+                    rel="noopener norefferer">
                     <?php echo esc_html($link_title); ?></a>
 
             </div>

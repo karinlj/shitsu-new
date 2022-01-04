@@ -17,14 +17,13 @@ $max-page-width: 1380px;
 /* colors */
 
 //text color
-$themecolor: #333;
-$themecolorLight: #555;
+$themecolor: #444; //#333;
+//$themecolorLight: #444;
 $themecolorLightest: #999;
-$themeHeadingcolor: #212735;
 
 $themeBorderColor: #ebebeb;
 $lightgrey: #fafafb;
-$themecolorGreen: #55763f; // #666f2a;
+$themecolorGreen: #5c7e36; // #666f2a;
 $colorOrange: #f26d55;
 $lightblue: #c8e5ea;
 $turqoise: #56b1bf;
@@ -34,7 +33,7 @@ $backgroundDark: #262626;
 
 $linkcolor: #009ccc;
 $linkcolor_hover: #0089b3;
-$navcolor: #111;
+$navcolor: #333; //#111;
 $bordercolor: rgba(0, 0, 0, 0.15);
 
 //overlays
@@ -42,7 +41,7 @@ $themecolorDarkGreyOverlay: rgba(0, 0, 0, 0.2);
 $themecolorLightOverlay: rgba(255, 255, 255, 0.3);
 
 //other
-$themefont: "Roboto", "Helvetica", sans-serif;
+//$themefont: "Roboto", "Helvetica", sans-serif;
 $themeBorder_radius: 4px;
 $btnBorder_radius: 4px;
 

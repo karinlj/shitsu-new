@@ -32,7 +32,7 @@
                         }
                     } ?>
 
-                <div class="col-lg-2 col-xl-2">
+                <div class="col-lg-2 col-xl-3">
                     <div class="btn_container">
                         <?php
                             $book_button_url = get_field('footer_booking_button_url', 'option');
@@ -83,11 +83,20 @@
         ?>
     </div>
 
-    <div class="footer-bottom">
-        <p class="footer-copy">&copy; <?php echo Date('Y'); ?> Shiatsurummet - All rights reserved.</p>
-        <a href="#header-new">
-            <p class="to-top" title="Till toppen av sidan"></p>
-        </a>
+    <div class="footer-bottom section_spacing_top_mini">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+
+                    <p class="footer-copy">&copy; <?php echo Date('Y'); ?> Shiatsurummet - All rights reserved.</p>
+                </div>
+                <div class="col-6">
+                    <a href="#header-new">
+                        <p class="to-top" title="Till toppen av sidan"></p>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 

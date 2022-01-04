@@ -29,19 +29,8 @@ Description:  Page Two Columns
                         } ?>
                     </div>
                     <div class="col-12 col-md-4">
-                        <?php
+                        <h2> hej sidebar</h2>
 
-                        if (function_exists('have_rows')) {
-
-                            if (have_rows('page_blocks')) {
-                                while (have_rows('page_blocks')) {
-                                    the_row();
-
-                                    $layout = get_row_layout();
-                                    get_template_part('templates/' . $layout);
-                                }
-                            }
-                        } ?>
                     </div>
                 </div>
                 <?php get_footer(); ?>

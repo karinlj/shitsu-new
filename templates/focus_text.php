@@ -16,9 +16,9 @@ if (get_row_layout() == 'focus_text') {
                     <?php  } ?>
                 </header>
                 <?php if (get_sub_field('text')) { ?>
-                <h6 class="text">
+                <p class="text">
                     <?php the_sub_field('text'); ?>
-                </h6>
+                </p>
                 <?php  } ?>
             </div>
         </div>

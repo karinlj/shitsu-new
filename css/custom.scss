@@ -142,7 +142,7 @@ body {
   font-family: "Open Sans", arial, sans-serif;
   //font-family: "Poppins", sans-serif;
   color: #333;
-  font-size: 16px;
+  font-size: 15px;
   width: 100%;
   background-color: /*#f5f0e6;*/ #f5f0eb;
   background: #fff;
@@ -263,17 +263,17 @@ img {
 }
 .lightgrey {
   background: $lightgrey;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $themeHeadingcolor;
-  }
-  p {
-    color: $themecolor;
-  }
+  // h1,
+  // h2,
+  // h3,
+  // h4,
+  // h5,
+  // h6 {
+  //   color: $themecolor;
+  // }
+  // p {
+  //   color: $themecolor;
+  // }
 }
 
 /*********************
@@ -281,7 +281,8 @@ img {
 *********************/
 p {
   line-height: 1.7em;
-  letter-spacing: 0.1px;
+  letter-spacing: 0;
+  color: $themecolor;
 }
 h1,
 h2,
@@ -294,7 +295,7 @@ h6 {
     sans-serif;
   font-weight: 600;
   color: $themecolor;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.1px;
   padding: 5px 0 10px 0;
   line-height: 1.3em;
 }
@@ -308,9 +309,12 @@ h2 {
 }
 h3 {
   font-size: 1.7rem;
+  color: $themecolorGreen !important;
 }
 h4 {
   font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: $themecolorGreen !important;
 }
 h5 {
   font-size: 1.3rem;
@@ -323,6 +327,7 @@ h6 {
 a {
   color: $linkcolor;
   font-size: 1.2rem;
+  // font-family: "Open Sans", arial, sans-serif !important;
   &:hover {
     color: $linkcolor_hover;
     text-decoration: none;
@@ -355,7 +360,8 @@ a.button_link {
   color: $turqoise;
   padding: 12px 20px;
   font-size: 14px;
-  letter-spacing: 2px;
+  font-size: 0.8rem;
+  letter-spacing: 2.2px;
   font-weight: 600;
   text-transform: uppercase;
   transition: 1s;
@@ -408,8 +414,8 @@ a.button_link {
       display: block;
     }
     .header_heading {
-      font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica,
-        Arial;
+      // font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica,
+      //  Arial;
       color: #fff;
       text-shadow: $text-shadow;
       margin-bottom: 1rem;
@@ -533,16 +539,19 @@ a.button_link {
           color: $navcolor;
           padding: 3px 3px 1px 3px;
           text-decoration: none;
-          font-size: 18px;
           cursor: pointer;
+          // font-family: "GeosansLight", Arial, sans-serif;
+          font-family: "Open Sans", arial, sans-serif !important;
+          // font-family: "Roboto", "Helvetica", sans-serif !important;
+          font-size: 16px;
           letter-spacing: 0px;
-          font-family: "GeosansLight", Arial, sans-serif;
+
           transition: all 0.3s ease-in;
           border-bottom: 1px solid transparent;
           margin: 0 0.5rem -1px 0.5rem;
 
           @media only screen and (min-width: 1500px) {
-            font-size: 19px;
+            //font-size: 19px;
           }
           &:hover {
             opacity: 0.8;
@@ -569,9 +578,10 @@ a.button_link {
             background-color: #fff;
             width: 170px;
             padding-bottom: 3px;
-            margin-top: -3px;
+            margin-top: 3px;
             box-shadow: $themeBox_shadow_nav;
             display: none;
+            border-radius: 2px;
             &.sub_menu_open {
               display: flex;
               flex-direction: column;
@@ -585,7 +595,8 @@ a.button_link {
                 padding: 2px 16px;
                 background-color: transparent;
                 border-radius: 0;
-                font-size: 1.1rem;
+                font-size: 14px;
+
                 &:hover {
                   opacity: 0.8;
                   border-bottom: 1px solid transparent;
@@ -714,7 +725,7 @@ a.button_link {
         letter-spacing: 1px;
         transition: 0.3s;
         font-weight: 600;
-        font-family: "GeosansLight", Arial, sans-serif;
+        // font-family: "GeosansLight", Arial, sans-serif;
         &:hover {
           opacity: 0.7;
         }
@@ -817,20 +828,19 @@ three_sections & products_sections
       }
     }
     .heading {
-      color: $themecolorGreen;
       padding: 15px 5px;
     }
     .text_part {
       padding: 10px 5px;
-      height: 200px;
+      min-height: 200px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       @media all and (min-width: $md-min) {
-        height: 250px;
+        min-height: 250px;
       }
       .text {
-        color: $themecolor;
+        // color: $themecolor;
       }
       .button_link {
         margin-top: 1rem;
@@ -853,16 +863,27 @@ three_sections & products_sections
     }
     .heading_section {
       display: flex;
-      padding: 30px 5px 10px 5px;
+      padding: 30px 1px 10px 1px;
       .logo {
         width: auto;
-        height: 50px;
+        height: 45px;
       }
       .heading {
         margin-left: 0.5rem;
         padding: 0;
       }
     }
+    .text_part {
+      padding: 10px 1px;
+      min-height: 150px;
+      @media all and (min-width: $md-min) {
+        min-height: 200px;
+      }
+    }
+  }
+  .product_info {
+    // padding: 2rem 2.5rem 5rem 2.5rem;
+    background: $lightgrey;
   }
 }
 
@@ -1043,7 +1064,7 @@ three_sections & products_sections
 .focus_text {
   .heading,
   .text {
-    color: $colorOrange;
+    color: $colorOrange !important;
   }
 }
 /*********************
@@ -1251,7 +1272,7 @@ social icons
   }
   p {
     color: #fff;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   .logo {
     max-width: 90px;
@@ -1267,6 +1288,10 @@ social icons
     display: flex;
     @media only screen and (min-width: $lg-min) {
       justify-content: center;
+      padding-top: 3rem;
+    }
+    @media all and (min-width: $xl-min) {
+      padding-top: 5rem;
     }
     .social_icons {
       padding: 1rem 0;
@@ -1284,19 +1309,18 @@ social icons
     }
   }
   .footer-bottom {
-    padding: 3em 10%;
+    // padding: 3em 10%;
     background-color: $backgroundDark;
-    color: $themecolorLightest;
     position: relative;
     p {
       margin: 0;
-      font-size: 90%;
-      color: $lightgrey;
+      font-size: 0.8rem;
+      color: $themecolorLightest;
     }
     .to-top {
       position: absolute;
-      right: 70px;
-      bottom: 50px;
+      right: 10px;
+      //  bottom: 50px;
       display: none;
       @media only screen and (min-width: $md-min) {
         display: block;
