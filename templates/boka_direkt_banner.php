@@ -51,12 +51,11 @@ if (get_row_layout() == 'boka_direkt_banner') { ?>
                         $link_title = $link['title'];
                     ?>
                 <?php } ?>
-
-                <!-- <a class="link" -->
-                <a class="button_link dark" href="<?php echo esc_url($link_url); ?>" target="_blank"
-                    rel="noopener norefferer">
-                    <?php echo esc_html($link_title); ?></a>
-
+                <div class="btn_wrapper">
+                    <a class="button_link dark" href="<?php echo esc_url($link_url); ?>" target="_blank"
+                        rel="noopener norefferer">
+                        <?php echo esc_html($link_title); ?></a>
+                </div>
             </div>
         </div>
     </div>

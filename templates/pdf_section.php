@@ -16,16 +16,31 @@ if (get_row_layout() == 'pdf_section') { ?>
     <?php
         $part_of_url = get_sub_field('part_of_url');
         $link_text = get_sub_field('link_text');
+        $heading = get_sub_field('heading');
+        $text = get_sub_field('text');
 
-        if ($part_of_url && $link_text) {
         ?>
     <div class="container">
         <div class="row align-items-center">
             <div class="col-6">
-                <a href="<?php echo get_bloginfo('template_url') . '/'; ?><?php echo esc_url($part_of_url); ?>"
-                    rel="noopener norefferer" target='_blank' class="button_link dark">
-                    <?php echo esc_html($link_text); ?></a>
+                <?php if ($heading) { ?>
+                <h2 class="heading">
+                    <?php echo $heading ?>
+                </h2>
+                <?php
+                    }
+                    if ($text) { ?>
+                <h5 class=""><?php echo $text; ?></h5>
 
+                <?php
+                    }
+                    if ($part_of_url && $link_text) { ?>
+
+                <div class="btn_wrapper">
+                    <a href="<?php echo get_bloginfo('template_url') . '/'; ?><?php echo esc_url($part_of_url); ?>"
+                        rel="noopener norefferer" target='_blank' class="button_link dark">
+                        <?php echo esc_html($link_text); ?></a>
+                </div>
                 <?php } ?>
             </div>
         </div>

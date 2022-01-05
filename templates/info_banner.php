@@ -33,10 +33,10 @@ if (get_row_layout() == 'info_banner') { ?>
                         $link_title = $link['title'];
                     ?>
                 <div class="btn_wrapper">
-                    <a class="button_link dark"
-                        href="<?php echo esc_url($link_url); ?>"><?php echo esc_html($link_title); ?></a>
+                    <a href="<?php echo esc_url($link_url); ?>" rel="noopener norefferer" target='_blank'
+                        class="button_link dark">
+                        <?php echo esc_html($link_title); ?></a>
                 </div>
-
                 <?php } ?>
             </div>
         </div>

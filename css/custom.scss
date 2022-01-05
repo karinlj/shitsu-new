@@ -140,7 +140,6 @@ table {
 
 body {
   font-family: "Open Sans", arial, sans-serif;
-  //font-family: "Poppins", sans-serif;
   color: #333;
   font-size: 15px;
   width: 100%;
@@ -232,7 +231,6 @@ img {
 .text_block_full_width,
 .text_and_or_image {
   position: relative;
-
   &.overlay-dark::before {
     position: absolute;
     top: 0;
@@ -263,17 +261,6 @@ img {
 }
 .lightgrey {
   background: $lightgrey;
-  // h1,
-  // h2,
-  // h3,
-  // h4,
-  // h5,
-  // h6 {
-  //   color: $themecolor;
-  // }
-  // p {
-  //   color: $themecolor;
-  // }
 }
 
 /*********************
@@ -504,7 +491,7 @@ a.button_link {
       font-weight: 600;
       font-family: "GeosansLight", Arial, sans-serif;
       @media only screen and (min-width: $xl-min) {
-        font-size: 2.8rem;
+        font-size: 2.9rem;
       }
       &:hover,
       :focus {
@@ -1009,24 +996,13 @@ three_sections & products_sections
     Hero background image
   ***********************/
 .hero_section {
-  position: relative;
   height: 400px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
   display: flex;
   justify-content: center;
   align-items: center;
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.1);
-    content: "";
-    display: block;
-  }
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
   @media all and (min-width: $lg-min) {
     height: 600px;
   }
@@ -1079,6 +1055,14 @@ three_sections & products_sections
 }
 
 /*********************
+   pdf_section
+*********************/
+.pdf_section {
+  .button_link {
+    margin-top: 1rem;
+  }
+}
+/*********************
    boka_direkt_banner
 *********************/
 .boka_direkt_banner {
@@ -1111,13 +1095,6 @@ three_sections & products_sections
     padding: 0.5rem;
     margin-bottom: 0.5rem;
   }
-}
-
-/*********************
-   pdf_section
-*********************/
-.pdf_section {
-  //
 }
 
 /**********************
@@ -1275,7 +1252,7 @@ social icons
     font-size: 0.9rem;
   }
   .logo {
-    max-width: 90px;
+    max-width: 120px;
   }
   .bokadirekt {
     margin-top: 1.5rem;
