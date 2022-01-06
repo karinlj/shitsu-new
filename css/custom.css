@@ -369,7 +369,7 @@ h6 {
 }
 
 a {
-  color: #009ccc;
+  color: #00b0e6;
   font-size: 1.2rem;
 }
 a:hover {
@@ -378,7 +378,7 @@ a:hover {
   outline: none;
 }
 a:focus {
-  color: #009ccc;
+  color: #00b0e6;
   text-decoration: none;
   outline: none;
 }
@@ -942,6 +942,12 @@ three_sections & products_sections
 }
 .products_sections .product_info {
   background: #fafafb;
+}
+.products_sections .product_info .swish_logo {
+  margin-top: 0.75rem;
+}
+.products_sections .product_info .swish_logo img {
+  max-width: 50px;
 }
 
 /**********************

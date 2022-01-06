@@ -55,26 +55,29 @@ if (get_row_layout() == 'products_sections') { ?>
                             $heading = get_sub_field('heading');
                             $text = get_sub_field('text');
 
-                            // $logo_id = get_sub_field('logo');
-                            // $logo = wp_get_attachment_image_src($logo_id, 'full');
-                            // $alt_text_logo = get_post_meta($logo_id, '_wp_attachment_image_alt', true); 
+                            $swish_logo_id = get_sub_field('swish_logo_field');
+                            $swish_logo = wp_get_attachment_image_src($swish_logo_id, 'full');
+                            $alt_text_swish_logo = get_post_meta($swish_logo_id, '_wp_attachment_image_alt', true);
                     ?>
 
                 <div class="product_info section_spacing_top_mini">
-                    <!-- <img class="logo" src="<?php echo $logo[0]; ?>" alt="<?php echo $alt_text_logo; ?>" /> -->
                     <h3 class="heading"><?php echo $heading; ?></h3>
                     </>
                     <div class="text_part">
                         <p class="text"><?php echo $text; ?></p>
                     </div>
-                </div>
 
+                    <?php if ($swish_logo_id) { ?>
+                    <div class="swish_logo">
+                        <img class="logo" src="<?php echo $swish_logo[0]; ?>"
+                            alt="<?php echo $alt_text_swish_logo; ?>" />
+                    </div>
+                    <?php  } ?>
+                </div>
                 <?php
                         }
                     } ?>
             </div>
-
-
         </div>
     </div>
 </section>

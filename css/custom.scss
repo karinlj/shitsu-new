@@ -826,9 +826,6 @@ three_sections & products_sections
       @media all and (min-width: $md-min) {
         min-height: 250px;
       }
-      .text {
-        // color: $themecolor;
-      }
       .button_link {
         margin-top: 1rem;
       }
@@ -869,8 +866,13 @@ three_sections & products_sections
     }
   }
   .product_info {
-    // padding: 2rem 2.5rem 5rem 2.5rem;
     background: $lightgrey;
+    .swish_logo {
+      margin-top: 0.75rem;
+      img {
+        max-width: 50px;
+      }
+    }
   }
 }
 

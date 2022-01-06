@@ -40,8 +40,6 @@
         $style = 'style="background-image:url(\'' . wp_get_attachment_url($header_image_default, 'full') . '\')"';
     }
     ?>
-
-
     <div class="header_wrapper">
         <div class="container">
             <div class="row">
@@ -79,7 +77,7 @@
 
                                             <?php if ($button_link_url && $button_link_text) { ?>
                                             <div class="btn_wrapper">
-                                                <a class="button_link" href="<?php echo $button_link_url; ?>">
+                                                <a class="button_link dark" href="<?php echo $button_link_url; ?>">
                                                     <?php echo $button_link_text; ?></a>
                                             </div>
                                             <?php } ?>
