@@ -215,6 +215,7 @@ img {
   padding: 3rem 0;
   @media all and (min-width: $xl-min) {
     padding: 4rem 0;
+    margin: 0 -15px;
   }
   .col {
     margin: 0 -15px;
@@ -223,6 +224,8 @@ img {
 /*********************************************
     overlay and background - sections
  *********************************************/
+.header_big,
+.header_small,
 .info_banner,
 .link_section,
 .hero_section,
@@ -293,23 +296,38 @@ h1 {
 h2 {
   font-size: 2rem;
   color: $themecolorGreen !important;
+  @media all and (max-width: $xs-max) {
+    font-size: 1.8rem;
+  }
 }
 h3 {
   font-size: 1.7rem;
   color: $themecolorGreen !important;
+  @media all and (max-width: $xs-max) {
+    font-size: 1.6rem;
+  }
 }
 h4 {
   font-size: 1.5rem;
   letter-spacing: 1px;
   color: $themecolorGreen !important;
+  @media all and (max-width: $xs-max) {
+    font-size: 1.4rem;
+  }
 }
 h5 {
   font-size: 1.3rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+  @media all and (max-width: $xs-max) {
+    font-size: 1.2rem;
+  }
 }
 h6 {
   font-size: 1.1rem;
   letter-spacing: 1px;
+  @media all and (max-width: $xs-max) {
+    font-size: 1rem;
+  }
 }
 a {
   color: $linkcolor;
@@ -327,7 +345,7 @@ a {
   }
 }
 li {
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 /*********************
@@ -390,29 +408,22 @@ a.button_link {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    &.overlay-dark::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0, 0, 0, 0.1);
-      content: "";
-      display: block;
-    }
     .header_heading {
-      // font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica,
-      //  Arial;
       color: #fff;
       text-shadow: $text-shadow;
       margin-bottom: 1rem;
       letter-spacing: 2px;
     }
     .header_text {
+      font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica;
       font-size: 1.3rem;
       color: #fff;
       margin-bottom: 1rem;
       text-shadow: $text-shadow;
+      letter-spacing: 0.5px;
+      @media all and (max-width: $xs-max) {
+        font-size: 1.2rem;
+      }
     }
     .btn {
       margin-top: 1.4rem;
@@ -422,7 +433,7 @@ a.button_link {
   }
   /*header big*/
   .header_big {
-    min-height: 800px;
+    min-height: 650px;
     @include d-flex;
     align-items: center;
     position: relative;
@@ -432,10 +443,13 @@ a.button_link {
       align-items: center;
       min-height: 360px;
     }
+    @media only screen and (min-width: 1600px) {
+      min-height: 800px;
+    }
     .header_heading {
       font-size: 4.3rem;
       @media all and (max-width: $xs-max) {
-        font-size: 3rem;
+        font-size: 2.4rem;
       }
     }
     .header_text {
@@ -444,18 +458,21 @@ a.button_link {
   }
   /*header small*/
   .header_small {
-    min-height: 600px;
+    min-height: 550px;
     @include d-flex;
     justify-content: center;
     align-items: center;
     @media all and (max-width: $xs-max) {
       min-height: 360px;
     }
+    @media only screen and (min-width: 1600px) {
+      min-height: 700px;
+    }
     .header_heading {
       text-align: center;
       font-size: 3.4rem;
       @media all and (max-width: $xs-max) {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
       }
     }
     .header_text {
@@ -527,22 +544,14 @@ a.button_link {
           padding: 3px 3px 1px 3px;
           text-decoration: none;
           cursor: pointer;
-          // font-family: "GeosansLight", Arial, sans-serif;
           font-family: "Open Sans", arial, sans-serif !important;
-          // font-family: "Roboto", "Helvetica", sans-serif !important;
           font-size: 16px;
           letter-spacing: 0px;
-
           transition: all 0.3s ease-in;
           border-bottom: 1px solid transparent;
           margin: 0 0.5rem -1px 0.5rem;
-
-          @media only screen and (min-width: 1500px) {
-            //font-size: 19px;
-          }
           &:hover {
             opacity: 0.8;
-            // border-bottom: 1px solid $navcolor;
           }
           &:active,
           &:visited {
@@ -609,7 +618,7 @@ a.button_link {
   }
   > .toggle_btn {
     position: absolute;
-    top: 0.8rem;
+    top: 0.4rem;
     right: 0;
     z-index: 10000;
     width: 60px;
@@ -619,6 +628,7 @@ a.button_link {
     display: flex;
     align-items: center;
     justify-content: center;
+
     /* Hamburger Line */
     > div {
       position: relative;
@@ -689,6 +699,7 @@ a.button_link {
   left: 0;
   // background: #4e7425;
   background: rgba(250, 250, 251, 0.9);
+  background: rgb(250, 250, 251);
   padding: 0 10%;
   padding-top: 60px;
   text-align: left;
@@ -713,6 +724,8 @@ a.button_link {
         transition: 0.3s;
         font-weight: 600;
         // font-family: "GeosansLight", Arial, sans-serif;
+        //font-family: "Open Sans", arial, sans-serif !important;
+
         &:hover {
           opacity: 0.7;
         }
@@ -826,6 +839,9 @@ three_sections & products_sections
       @media all and (min-width: $md-min) {
         min-height: 250px;
       }
+      @media all and (min-width: $xl-min) {
+        min-height: 200px;
+      }
       .button_link {
         margin-top: 1rem;
       }
@@ -853,7 +869,7 @@ three_sections & products_sections
         height: 45px;
       }
       .heading {
-        margin-left: 0.5rem;
+        margin-left: 0.2rem;
         padding: 0;
       }
     }
@@ -866,6 +882,7 @@ three_sections & products_sections
     }
   }
   .product_info {
+    // padding: 1rem 1.8rem;
     background: $lightgrey;
     .swish_logo {
       margin-top: 0.75rem;
@@ -927,6 +944,9 @@ three_sections & products_sections
         text-transform: uppercase;
         opacity: 0.7;
       }
+      @media all and (max-width: $xs-max) {
+        padding: 1rem 2rem;
+      }
     }
   }
 }
@@ -987,8 +1007,12 @@ three_sections & products_sections
       @media only screen and (min-width: $md-min) {
         display: inline-block;
       }
-      a {
+      .button_link {
         margin-right: 1rem;
+        @media only screen and (max-width: $xs-max) {
+          display: block;
+          width: 100%;
+        }
       }
     }
   }
@@ -1073,6 +1097,7 @@ three_sections & products_sections
   .heading {
     position: relative;
     z-index: 1000;
+    margin-bottom: 1rem;
   }
   .reviews {
     padding: 0.5rem;
@@ -1243,18 +1268,22 @@ social icons
       padding-bottom: 0;
     }
   }
-  h5 {
+  .footer-fields-heading {
     font-weight: 600;
     letter-spacing: 1.7px;
     color: $turqoise;
     font-size: 1.6em;
+    padding-right: 0.5rem;
   }
-  p {
+  .footer-fields-text {
     color: #fff;
     font-size: 0.9rem;
   }
   .logo {
-    max-width: 120px;
+    max-width: 100px;
+    @media all and (min-width: 1600px) {
+      max-width: 120px;
+    }
   }
   .bokadirekt {
     margin-top: 1.5rem;

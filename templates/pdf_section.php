@@ -22,7 +22,7 @@ if (get_row_layout() == 'pdf_section') { ?>
         ?>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-6">
+            <div class="col-md-8 col-lg-6">
                 <?php if ($heading) { ?>
                 <h2 class="heading">
                     <?php echo $heading ?>

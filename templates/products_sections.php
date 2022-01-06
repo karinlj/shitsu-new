@@ -4,7 +4,7 @@ if (get_row_layout() == 'products_sections') { ?>
 <section class="products_sections section_spacing_only_top_small">
     <div class="container">
         <div class="row align-items-start">
-            <div class="col-md-8">
+            <div class="col-md-8 col-lg-9 col-xl-8">
                 <div class="row align-items-start">
 
                     <?php
@@ -40,12 +40,9 @@ if (get_row_layout() == 'products_sections') { ?>
                     <?php
                             }
                         } ?>
-
                 </div>
             </div>
-
-
-            <div class="col-md-4">
+            <div class="col-md-4 col-lg-3 col-xl-4">
                 <?php
                     // check if repeater field has rows
                     if (have_rows('product_sidebar')) {

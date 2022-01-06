@@ -256,6 +256,7 @@ img {
 @media all and (min-width: 1200px) {
   .section_spacing_only_top_small {
     padding: 4rem 0;
+    margin: 0 -15px;
   }
 }
 .section_spacing_only_top_small .col {
@@ -265,6 +266,8 @@ img {
 /*********************************************
     overlay and background - sections
  *********************************************/
+.header_big,
+.header_small,
 .info_banner,
 .link_section,
 .hero_section,
@@ -274,6 +277,8 @@ img {
 .text_and_or_image {
   position: relative;
 }
+.header_big.overlay-dark::before,
+.header_small.overlay-dark::before,
 .info_banner.overlay-dark::before,
 .link_section.overlay-dark::before,
 .hero_section.overlay-dark::before,
@@ -346,10 +351,20 @@ h2 {
   font-size: 2rem;
   color: #5c7e36 !important;
 }
+@media all and (max-width: 575.9px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+}
 
 h3 {
   font-size: 1.7rem;
   color: #5c7e36 !important;
+}
+@media all and (max-width: 575.9px) {
+  h3 {
+    font-size: 1.6rem;
+  }
 }
 
 h4 {
@@ -357,15 +372,30 @@ h4 {
   letter-spacing: 1px;
   color: #5c7e36 !important;
 }
+@media all and (max-width: 575.9px) {
+  h4 {
+    font-size: 1.4rem;
+  }
+}
 
 h5 {
   font-size: 1.3rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+}
+@media all and (max-width: 575.9px) {
+  h5 {
+    font-size: 1.2rem;
+  }
 }
 
 h6 {
   font-size: 1.1rem;
   letter-spacing: 1px;
+}
+@media all and (max-width: 575.9px) {
+  h6 {
+    font-size: 1rem;
+  }
 }
 
 a {
@@ -384,7 +414,7 @@ a:focus {
 }
 
 li {
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 /*********************
@@ -454,17 +484,6 @@ a.button_link.dark:hover {
   background-repeat: no-repeat;
   background-position: top center;
 }
-.header_wrapper .header_big.overlay-dark::before,
-.header_wrapper .header_small.overlay-dark::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.1);
-  content: "";
-  display: block;
-}
 .header_wrapper .header_big .header_heading,
 .header_wrapper .header_small .header_heading {
   color: #fff;
@@ -474,10 +493,18 @@ a.button_link.dark:hover {
 }
 .header_wrapper .header_big .header_text,
 .header_wrapper .header_small .header_text {
+  font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica;
   font-size: 1.3rem;
   color: #fff;
   margin-bottom: 1rem;
   text-shadow: 1px 1px rgba(7, 42, 68, 0.2);
+  letter-spacing: 0.5px;
+}
+@media all and (max-width: 575.9px) {
+  .header_wrapper .header_big .header_text,
+.header_wrapper .header_small .header_text {
+    font-size: 1.2rem;
+  }
 }
 .header_wrapper .header_big .btn,
 .header_wrapper .header_small .btn {
@@ -486,7 +513,7 @@ a.button_link.dark:hover {
   font-size: 1.2em;
 }
 .header_wrapper .header_big {
-  min-height: 800px;
+  min-height: 650px;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -494,7 +521,7 @@ a.button_link.dark:hover {
   align-items: center;
   position: relative;
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 575.9px) {
   .header_wrapper .header_big {
     padding: 0;
     justify-content: center;
@@ -502,19 +529,24 @@ a.button_link.dark:hover {
     min-height: 360px;
   }
 }
+@media only screen and (min-width: 1600px) {
+  .header_wrapper .header_big {
+    min-height: 800px;
+  }
+}
 .header_wrapper .header_big .header_heading {
   font-size: 4.3rem;
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 575.9px) {
   .header_wrapper .header_big .header_heading {
-    font-size: 3rem;
+    font-size: 2.4rem;
   }
 }
 .header_wrapper .header_big .header_text {
   margin-bottom: 2rem;
 }
 .header_wrapper .header_small {
-  min-height: 600px;
+  min-height: 550px;
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
@@ -522,18 +554,23 @@ a.button_link.dark:hover {
   justify-content: center;
   align-items: center;
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 575.9px) {
   .header_wrapper .header_small {
     min-height: 360px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .header_wrapper .header_small {
+    min-height: 700px;
   }
 }
 .header_wrapper .header_small .header_heading {
   text-align: center;
   font-size: 3.4rem;
 }
-@media all and (max-width: 480px) {
+@media all and (max-width: 575.9px) {
   .header_wrapper .header_small .header_heading {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 }
 .header_wrapper .header_small .header_text {
@@ -683,7 +720,7 @@ a.button_link.dark:hover {
 }
 .nav_desktop > .toggle_btn {
   position: absolute;
-  top: 0.8rem;
+  top: 0.4rem;
   right: 0;
   z-index: 10000;
   width: 60px;
@@ -757,6 +794,7 @@ a.button_link.dark:hover {
   top: 0;
   left: 0;
   background: rgba(250, 250, 251, 0.9);
+  background: #fafafb;
   padding: 0 10%;
   padding-top: 60px;
   text-align: left;
@@ -902,6 +940,12 @@ three_sections & products_sections
     min-height: 250px;
   }
 }
+@media all and (min-width: 1200px) {
+  .three_sections .item .text_part,
+.products_sections .item .text_part {
+    min-height: 200px;
+  }
+}
 .three_sections .item .text_part .button_link,
 .products_sections .item .text_part .button_link {
   margin-top: 1rem;
@@ -928,7 +972,7 @@ three_sections & products_sections
   height: 45px;
 }
 .products_sections .item .heading_section .heading {
-  margin-left: 0.5rem;
+  margin-left: 0.2rem;
   padding: 0;
 }
 .products_sections .item .text_part {
@@ -1009,6 +1053,11 @@ three_sections & products_sections
   text-transform: uppercase;
   opacity: 0.7;
 }
+@media all and (max-width: 575.9px) {
+  .testimonials_section .testimonials_inner .item {
+    padding: 1rem 2rem;
+  }
+}
 
 /*********************
    text_and_or_image 
@@ -1065,8 +1114,14 @@ three_sections & products_sections
     display: inline-block;
   }
 }
-.link_section ul li a {
+.link_section ul li .button_link {
   margin-right: 1rem;
+}
+@media only screen and (max-width: 575.9px) {
+  .link_section ul li .button_link {
+    display: block;
+    width: 100%;
+  }
 }
 
 /*************************
@@ -1147,6 +1202,7 @@ three_sections & products_sections
 .boka_direkt_banner .heading {
   position: relative;
   z-index: 1000;
+  margin-bottom: 1rem;
 }
 .boka_direkt_banner .reviews {
   padding: 0.5rem;
@@ -1327,18 +1383,24 @@ social icons
     padding-bottom: 0;
   }
 }
-.footer_container h5 {
+.footer_container .footer-fields-heading {
   font-weight: 600;
   letter-spacing: 1.7px;
   color: #56b1bf;
   font-size: 1.6em;
+  padding-right: 0.5rem;
 }
-.footer_container p {
+.footer_container .footer-fields-text {
   color: #fff;
   font-size: 0.9rem;
 }
 .footer_container .logo {
-  max-width: 120px;
+  max-width: 100px;
+}
+@media all and (min-width: 1600px) {
+  .footer_container .logo {
+    max-width: 120px;
+  }
 }
 .footer_container .bokadirekt {
   margin-top: 1.5rem;
