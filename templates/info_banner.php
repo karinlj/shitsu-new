@@ -12,12 +12,12 @@ if (get_row_layout() == 'info_banner') { ?>
     }
     ?>
 
-<section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_small"
+<section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
     <?php echo $style; ?>>
 
     <div class="container">
         <div class="row justify-content-center align-items-center">
-            <div class="col-12">
+            <div class="col-md-8 col-xl-6">
                 <?php
                     $heading = get_sub_field('heading');
                     $text = get_sub_field('text');

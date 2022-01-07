@@ -28,7 +28,7 @@
 
     if (is_front_page()) {
         $header_class = 'header_big';
-        $col_class = 'col 12 col-md-8 offset-md-1';
+        $col_class = 'col-12 col-md-8 col-xl-6 offset-md-1';
     } else {
         $header_class = 'header_small';
     }

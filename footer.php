@@ -87,7 +87,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <p class="footer-copy">&copy; <?php echo Date('Y'); ?> Shiatsurummet - All rights reserved.</p>
+                    <p class="footer_copy">&copy; <?php echo Date('Y'); ?> Shiatsurummet - All rights reserved. Theme
+                        by <a href="http://karinljunggren.com/" target="_blank">Karin</a></p>
                 </div>
                 <div class="col-6">
                     <a href="#header-new">

@@ -317,7 +317,7 @@ h4 {
 }
 h5 {
   font-size: 1.3rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.9px;
   @media all and (max-width: $xs-max) {
     font-size: 1.2rem;
   }
@@ -697,9 +697,7 @@ a.button_link {
   z-index: 2;
   top: 0;
   left: 0;
-  // background: #4e7425;
-  background: rgba(250, 250, 251, 0.9);
-  background: rgb(250, 250, 251);
+  background: rgba(250, 250, 251, 0.95);
   padding: 0 10%;
   padding-top: 60px;
   text-align: left;
@@ -1271,7 +1269,7 @@ social icons
   .footer-fields-heading {
     font-weight: 600;
     letter-spacing: 1.7px;
-    color: $turqoise;
+    color: $themecolorGreenLighter;
     font-size: 1.6em;
     padding-right: 0.5rem;
   }
@@ -1282,7 +1280,7 @@ social icons
   .logo {
     max-width: 100px;
     @media all and (min-width: 1600px) {
-      max-width: 120px;
+      max-width: 110px;
     }
   }
   .bokadirekt {
@@ -1320,10 +1318,13 @@ social icons
     // padding: 3em 10%;
     background-color: $backgroundDark;
     position: relative;
-    p {
+    .footer_copy {
       margin: 0;
       font-size: 0.8rem;
       color: $themecolorLightest;
+      a {
+        font-size: 0.9rem;
+      }
     }
     .to-top {
       position: absolute;
@@ -1345,7 +1346,6 @@ social icons
     }
   }
 }
-//kolla denna
 /********************
   no_page 404
 *********************/
