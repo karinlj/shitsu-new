@@ -86,11 +86,11 @@
     <div class="footer-bottom section_spacing_top_mini">
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-10">
                     <p class="footer_copy">&copy; <?php echo Date('Y'); ?> Shiatsurummet - All rights reserved. Theme
                         by <a href="http://karinljunggren.com/" target="_blank">Karin</a></p>
                 </div>
-                <div class="col-6">
+                <div class="col-2">
                     <a href="#header-new">
                         <p class="to-top" title="Till toppen av sidan"></p>
                     </a>

@@ -16,7 +16,7 @@
                 $booking_button_image = get_field('booking_button_image', 'option');
                 if ($booking_button_image) {
                 ?>
-            <a href="<?php echo esc_url($booking_button_image); ?>" target="_blank">
+            <a href="<?php echo esc_url($booking_button_url); ?>" target="_blank">
                 <img class=" bokadirekt" src="<?php echo esc_url($booking_button_image); ?>" alt="Boka tid"
                     border="0" />
             </a>
