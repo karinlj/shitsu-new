@@ -17,8 +17,8 @@ if (get_row_layout() == 'hero_section') {
 
 <section class="<?php echo $hero_class; ?>" <?php echo $style; ?>>
     <div class="container">
-        <div class="row">
-            <div class="col-12">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-10">
                 <?php
                 if ($hero_text_link) { ?>
                 <a href="<?php echo $hero_text_link; ?>">

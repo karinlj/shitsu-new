@@ -1,11 +1,4 @@
 //Funktioner
-@function black($opacity) {
-  @return rgba(0, 0, 0, $opacity);
-}
-
-@function white($opacity) {
-  @return rgba(255, 255, 255, $opacity);
-}
 
 //För vertikal centrering
 @mixin translate($x, $y) {
@@ -24,26 +17,12 @@
 }
 
 //Display flex med prefix
-@mixin d-inline-flex() {
-  display: -webkit-inline-box !important;
-  display: -webkit-inline-flex !important;
-  display: -ms-inline-flexbox !important;
-  display: inline-flex !important;
-}
 
 @mixin d-flex() {
   display: -webkit-box !important;
   display: -webkit-flex !important;
   display: -ms-flexbox !important;
   display: flex !important;
-}
-
-@mixin flex($x, $y, $z) {
-  -webkit-box-flex: $x $y $z;
-  -webkit-flex: $x $y $z;
-  -ms-flex: $x $y $z;
-  flex: $x $y $z;
-  max-width: $z;
 }
 
 //Kolumner

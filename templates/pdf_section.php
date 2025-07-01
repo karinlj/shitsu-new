@@ -14,8 +14,8 @@ if (get_row_layout() == 'pdf_section') { ?>
 <section class="pdf_section <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
     <?php echo $style; ?>>
     <?php
-        $part_of_url = get_sub_field('part_of_url');
-        $link_text = get_sub_field('link_text');
+        // $part_of_url = get_sub_field('part_of_url');
+        // $link_text = get_sub_field('link_text');
         $heading = get_sub_field('heading');
         $text = get_sub_field('text');
 
@@ -33,15 +33,11 @@ if (get_row_layout() == 'pdf_section') { ?>
                 <h5 class=""><?php echo $text; ?></h5>
 
                 <?php
-                    }
-                    if ($part_of_url && $link_text) { ?>
-
+                    } ?>
                 <div class="btn_wrapper">
-                    <a href="<?php echo get_bloginfo('template_url') . '/'; ?><?php echo esc_url($part_of_url); ?>"
-                        rel="noopener norefferer" target='_blank' class="button_link dark">
-                        <?php echo esc_html($link_text); ?></a>
+                    <a href="<?php echo get_bloginfo('template_url') . '/inc/foretagsmassage.pdf'; ?>" target='_blank'
+                        class="button_link dark">Informationsfolder i pdf-format</a>
                 </div>
-                <?php } ?>
             </div>
         </div>
     </div>

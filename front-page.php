@@ -15,22 +15,22 @@
                 //Loopa ACF flex Content
                 if (function_exists('have_rows')) { ?>
 
-                <?php
+                    <?php
                     if (have_rows('front_page_blocks')) { ?>
 
-                <?php while (have_rows('front_page_blocks')) { ?>
-                <?php the_row(); ?>
+                        <?php while (have_rows('front_page_blocks')) { ?>
+                            <?php the_row(); ?>
 
-                <?php $layout = get_row_layout(); ?>
+                            <?php $layout = get_row_layout(); ?>
 
-                <?php // load layout from the templates folder
+                            <?php // load layout from the templates folder
                             get_template_part('templates/' . $layout); ?>
 
                 <?php }
                     }
                 } ?>
-                <?php get_footer(); ?>
             </div>
         </div>
     </div>
 </div>
+<?php get_footer(); ?>

@@ -10,20 +10,20 @@
         <?php
         if (function_exists('acf_add_options_page')) {
         ?>
-        <div class="booking_btn">
-            <?php
+            <div class="booking_btn">
+                <?php
                 $booking_button_url = get_field('booking_button_url', 'option');
-                $booking_button_image = get_field('booking_button_image', 'option');
-                if ($booking_button_image) {
+                $booking_button_text = get_field('booking_button_text', 'option');
+                if ($booking_button_url) {
                 ?>
-            <a href="<?php echo esc_url($booking_button_image); ?>" target="_blank">
-                <img class=" bokadirekt" src="<?php echo esc_url($booking_button_image); ?>" alt="Boka tid"
-                    border="0" />
-            </a>
-            <?php
+                    <a class="button_link dark" href="<?php echo esc_url($booking_button_url); ?>" target="_blank">
+                        <?php echo esc_html($booking_button_text); ?>
+
+                    </a>
+                <?php
                 }
                 ?>
-        </div>
+            </div>
         <?php
         }
         ?>
@@ -38,13 +38,26 @@
     <div class="nav_links">
         <?php wp_nav_menu(); ?>
 
-        <div class="booking_btn">
-            <a href="<?php echo get_theme_mod('custom-link-booking-url'); ?>" title="bokadirekt" target="_blank">
+        <?php
+        if (function_exists('acf_add_options_page')) {
+        ?>
+               <div class="booking_btn">
+                <?php
+                $booking_button_url = get_field('booking_button_url', 'option');
+                $booking_button_text = get_field('booking_button_text', 'option');
+                if ($booking_button_url) {
+                ?>
+                    <a class="button_link dark" href="<?php echo esc_url($booking_button_url); ?>" target="_blank">
+                        <?php echo esc_html($booking_button_text); ?>
 
-                <img class="bokadirekt" src="https://foretag.bokadirekt.se/bokatid/BokaTid_Gron_MorkBakgrund_120px.png"
-                    alt="Boka tid" border="0" />
-            </a>
-        </div>
+                    </a>
+                <?php
+                }
+                ?>
+            </div>
+        <?php
+        }
+        ?>
     </div>
 
 </div>

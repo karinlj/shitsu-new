@@ -7,10 +7,10 @@ Description:  Page
 <?php get_header(); ?>
 
 <div id="main">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <?php //layouts of page_blocks - Flex content
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <?php //layouts of page_blocks - Flex content
 
         //Loopa ACF flex Content
         if (function_exists('have_rows')) {
@@ -25,8 +25,8 @@ Description:  Page
             }
           }
         } ?>
-                <?php get_footer(); ?>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>
+<?php get_footer(); ?>

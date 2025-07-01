@@ -255,11 +255,9 @@ img {
   h5,
   h6 {
     color: #fff !important;
-    text-shadow: $text-shadow;
   }
   p {
     color: #fff;
-    text-shadow: $text-shadow;
   }
 }
 .lightgrey {
@@ -281,7 +279,9 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica, Arial,
+  // font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica, Arial,
+    font-family: "Open Sans", "Work Sans", "Helvetica Neue", Helvetica, Arial,
+
     sans-serif;
   font-weight: 600;
   color: $themecolor;
@@ -297,14 +297,14 @@ h2 {
   font-size: 2rem;
   color: $themecolorGreen !important;
   @media all and (max-width: $xs-max) {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 }
 h3 {
   font-size: 1.7rem;
   color: $themecolorGreen !important;
   @media all and (max-width: $xs-max) {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 h4 {
@@ -312,14 +312,14 @@ h4 {
   letter-spacing: 1px;
   color: $themecolorGreen !important;
   @media all and (max-width: $xs-max) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
 h5 {
   font-size: 1.3rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.9px;
   @media all and (max-width: $xs-max) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 h6 {
@@ -364,13 +364,16 @@ a.button_link {
   background: #fff;
   color: $turqoise;
   padding: 12px 20px;
-  font-size: 14px;
-  font-size: 0.8rem;
-  letter-spacing: 2.2px;
+  font-size: 15px;
+  // font-size: 0.8rem;
+   letter-spacing: 2.2px;
   font-weight: 600;
   text-transform: uppercase;
   transition: 1s;
   line-height: 20px;
+  @media only screen and (max-width: $xs-max) {
+    padding: 10px 15px;
+  }
   &:hover {
     background: $turqoise;
     color: #fff;
@@ -399,6 +402,7 @@ a.button_link {
    header 
 *********************/
 .header_wrapper {
+  position: relative;
   @media only screen and (min-width: $lg-min) {
     padding-top: 1.5rem;
   }
@@ -415,7 +419,9 @@ a.button_link {
       letter-spacing: 2px;
     }
     .header_text {
-      font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica;
+      // font-family: "GeosansLight", "Work Sans", "Helvetica Neue", Helvetica;
+            font-family: "Open Sans", "Work Sans", "Helvetica Neue", Helvetica;
+
       font-size: 1.3rem;
       color: #fff;
       margin-bottom: 1rem;
@@ -501,12 +507,12 @@ a.button_link {
   .site_title {
     padding: 0;
     margin: 0;
-    padding-right: 25px;
     a {
       color: $themecolorGreen;
       font-size: 2.5rem;
       font-weight: 600;
-      font-family: "GeosansLight", Arial, sans-serif;
+      // font-family: "GeosansLight", Arial, sans-serif;
+          font-family: "Open Sans", Arial, sans-serif;
       @media only screen and (min-width: $xl-min) {
         font-size: 2.9rem;
       }
@@ -521,6 +527,7 @@ a.button_link {
   .nav_links {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     @media only screen and (min-width: $lg-min) {
       justify-content: flex-end;
@@ -574,7 +581,7 @@ a.button_link {
             background-color: #fff;
             width: 170px;
             padding-bottom: 3px;
-            margin-top: 3px;
+            margin-top: 6px;
             box-shadow: $themeBox_shadow_nav;
             display: none;
             border-radius: 2px;
@@ -591,8 +598,7 @@ a.button_link {
                 padding: 2px 16px;
                 background-color: transparent;
                 border-radius: 0;
-                font-size: 14px;
-
+                font-size: 15px;
                 &:hover {
                   opacity: 0.8;
                   border-bottom: 1px solid transparent;
@@ -690,15 +696,14 @@ a.button_link {
 }
 //Mobile
 .nav_mobile {
-  clear: both;
+  // clear: both;
   position: fixed;
   height: 100%;
   width: 100%;
-  z-index: 2;
+  z-index: 500;
   top: 0;
   left: 0;
-  // background: #4e7425;
-  background: rgba(250, 250, 251, 0.9);
+  background: rgba(250, 250, 251, 0.95);
   background: rgb(250, 250, 251);
   padding: 0 10%;
   padding-top: 60px;
@@ -724,8 +729,6 @@ a.button_link {
         transition: 0.3s;
         font-weight: 600;
         // font-family: "GeosansLight", Arial, sans-serif;
-        //font-family: "Open Sans", arial, sans-serif !important;
-
         &:hover {
           opacity: 0.7;
         }
@@ -754,7 +757,7 @@ a.button_link {
               padding: 0.75rem;
               background-color: transparent;
               border-radius: 0;
-              font-size: 1.1rem;
+              font-size: 1.2rem;
               text-align: left;
               margin-top: 0;
               margin-left: 1rem;
@@ -924,6 +927,9 @@ three_sections & products_sections
       padding: 2rem 3rem;
       border-radius: $themeBorder_radius;
       margin-bottom: 4rem;
+      @media all and (max-width: $xs-max) {
+        padding: 1rem;
+      }
       .icon {
         margin-bottom: 1rem;
         i.fab,
@@ -943,9 +949,6 @@ three_sections & products_sections
       .signature {
         text-transform: uppercase;
         opacity: 0.7;
-      }
-      @media all and (max-width: $xs-max) {
-        padding: 1rem 2rem;
       }
     }
   }
@@ -1039,6 +1042,9 @@ three_sections & products_sections
     text-align: center;
     margin-bottom: 2rem;
     color: #fff !important;
+    @media all and (max-width: $sm-max) {
+      font-size: 1.5rem;
+    }
   }
   .hero_text {
     text-align: center;
@@ -1075,6 +1081,11 @@ three_sections & products_sections
 .info_banner {
   //background and overlay: see scss section
   text-align: center;
+  .heading {
+    @media all and (max-width: $sm-max) {
+      font-size: 1.5rem;
+    }
+  }
   .btn_wrapper {
     padding-top: 1rem;
   }
@@ -1098,6 +1109,9 @@ three_sections & products_sections
     position: relative;
     z-index: 1000;
     margin-bottom: 1rem;
+    @media all and (max-width: $xs-max) {
+      font-size: 1.6rem;
+    }
   }
   .reviews {
     padding: 0.5rem;
@@ -1106,6 +1120,9 @@ three_sections & products_sections
       margin-bottom: 0.8rem;
       img {
         max-width: 250px;
+        @media all and (max-width: $xs-max) {
+          max-width: 200px;
+        }
       }
     }
     .stars,
@@ -1214,7 +1231,7 @@ social icons
 .social_icons_container {
   .social_icons {
     ul.social {
-      @include d-inline-flex;
+      display: flex;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -1255,9 +1272,10 @@ social icons
 *********************/
 .footer_container {
   margin-bottom: 1.5rem;
-  background: $backgroundDarkest;
+
   .footer_parent {
     padding-bottom: 1.5rem;
+    background: $backgroundDarkest;
   }
   h5,
   p,
@@ -1271,7 +1289,7 @@ social icons
   .footer-fields-heading {
     font-weight: 600;
     letter-spacing: 1.7px;
-    color: $turqoise;
+    color: $themecolorGreenLighter;
     font-size: 1.6em;
     padding-right: 0.5rem;
   }
@@ -1282,7 +1300,7 @@ social icons
   .logo {
     max-width: 100px;
     @media all and (min-width: 1600px) {
-      max-width: 120px;
+      max-width: 110px;
     }
   }
   .bokadirekt {
@@ -1317,18 +1335,19 @@ social icons
     }
   }
   .footer-bottom {
-    // padding: 3em 10%;
     background-color: $backgroundDark;
     position: relative;
-    p {
+    .footer_copy {
       margin: 0;
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       color: $themecolorLightest;
+      a {
+        font-size: 0.9rem;
+      }
     }
     .to-top {
       position: absolute;
       right: 10px;
-      //  bottom: 50px;
       display: none;
       @media only screen and (min-width: $md-min) {
         display: block;
@@ -1345,7 +1364,6 @@ social icons
     }
   }
 }
-//kolla denna
 /********************
   no_page 404
 *********************/

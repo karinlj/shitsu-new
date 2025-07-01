@@ -28,7 +28,7 @@
 
     if (is_front_page()) {
         $header_class = 'header_big';
-        $col_class = 'col 12 col-md-8 offset-md-1';
+        $col_class = 'col-12 col-md-8 col-xl-6 offset-md-1';
     } else {
         $header_class = 'header_small';
     }
@@ -60,8 +60,7 @@
                                             $header_heading = get_field('header_heading');
                                             $header_text = get_field('header_text');
                                             $button_link_url = get_field('button_link_url');
-                                            $button_link_text = get_field('button_link_text');
-                                            $button_image_url = get_field('button_image_url'); ?>
+                                            $button_link_text = get_field('button_link_text'); ?>
 
                                             <?php if ($header_heading) { ?>
                                             <h1 class="header_heading">
@@ -75,22 +74,13 @@
                                             </p>
                                             <?php } ?>
 
-                                            <?php if ($button_link_url && $button_link_text) { ?>
+                                            <?php if ($button_link_url) { ?>
                                             <div class="btn_wrapper">
-                                                <a class="button_link dark" href="<?php echo $button_link_url; ?>">
+                                                <a class="button_link dark" href="<?php echo $button_link_url; ?>" target="_blank">
                                                     <?php echo $button_link_text; ?></a>
                                             </div>
                                             <?php } ?>
 
-                                            <?php if ($button_link_url && $button_image_url) { ?>
-                                            <div class="booking_btn">
-                                                <a href="<?php echo esc_url($button_link_url); ?>" target="_blank">
-                                                    <img class=" bokadirekt"
-                                                        src="<?php echo esc_url($button_image_url); ?>" alt="Boka tid"
-                                                        border="0" />
-                                                </a>
-                                                <?php } ?>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
