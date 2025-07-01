@@ -1,5 +1,5 @@
 <?php
-if (get_row_layout() == 'boka_direkt_banner') { ?>
+if (get_row_layout() == 'boka_och_omdomen_banner') { ?>
     <?php
     $style = '';
     $color = get_sub_field('color_theme');
@@ -26,7 +26,6 @@ if (get_row_layout() == 'boka_direkt_banner') { ?>
 
                     <?php if ($img_id) {
                         $text = get_sub_field('text');
-                        // $link = get_sub_field('link');
                     ?>
                         <div class="reviews">
                             <div class="logo">
@@ -43,6 +42,7 @@ if (get_row_layout() == 'boka_direkt_banner') { ?>
                         </div>
                     <?php } ?>
                     <?php if (get_sub_field('link')) {
+                         $link = get_sub_field('link');
                         $link_url = $link['url'];
                         $link_title = $link['title'];
                     ?>
