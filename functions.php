@@ -27,6 +27,16 @@ function sh_style_resourses()
 }
 add_action('wp_enqueue_scripts', 'sh_style_resourses');
 
+//Fonts
+function google_fonts()
+{
+    //Av någon anledning knasar det med wp_enqueue_script
+?>
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Questrial&display=swap" rel="stylesheet"><?php
+}
+add_action('wp_head', 'google_fonts');
+
+
 function add_scripts()
 {
     wp_register_script('custom_script', home_url() . '/wp-content/themes/theme-shiatsu/js/custom_script.js', array('jquery'));

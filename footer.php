@@ -6,7 +6,7 @@
                     <?php
                     if (function_exists('acf_add_options_page')) { ?>
                         <div class="container">
-                            <div class="row">
+                            <div class="row justify-content-between">
                                 <?php
                                 $logo_id = get_field('logo', 'option');
                                 $logo = wp_get_attachment_image_src($logo_id, 'full');
@@ -30,7 +30,7 @@
                                     while (have_rows('footer_fields', 'option')) {
                                         the_row(); ?>
                                         <div class="col-lg-3 col-xl-2">
-                                            <h5 class="footer-fields-heading"><?php the_sub_field('heading'); ?></h5>
+                                            <h2 class="smaller_text footer-fields-heading"><?php the_sub_field('heading'); ?></h2>
                                             <p class="footer-fields-text"><?php the_sub_field('text'); ?></p>
                                         </div>
                                 <?php

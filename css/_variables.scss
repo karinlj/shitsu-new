@@ -23,11 +23,11 @@ $themecolorLightest: #999;
 $themeBorderColor: #ebebeb;
 $lightgrey: #fafafb;
 $themecolorGreen: #5c7e36; // #666f2a;
-$themecolorGreenLighter: #698f3d;
+$themecolorGreenLighter: #8fba5e;  //#698f3d;
 $colorOrange: #f26d55;
 $lightblue: #c8e5ea;
-$turqoise: #56b1bf;
-$turqoiseDark: #2a656f;
+$turqoise: #409DB0; // #56b1bf;
+$turqoiseDark:  #2a656f;
 $backgroundDarkest: #333;
 $backgroundDark: #262626;
 
@@ -37,7 +37,7 @@ $navcolor: #333; //#111;
 $bordercolor: rgba(0, 0, 0, 0.15);
 
 //overlays
-$themecolorDarkGreyOverlay: rgba(0, 0, 0, 0.2);
+$themecolorDarkGreyOverlay: rgba(0, 0, 0, 0.3);
 $themecolorLightOverlay: rgba(255, 255, 255, 0.3);
 
 //other
