@@ -38,6 +38,11 @@
                                 } ?>
 
                                 <div class="col-lg-2 col-xl-2">
+                                    <?php
+                                    $cert_id = get_field('certificate', 'option');
+                                    $certificate = wp_get_attachment_image_src($cert_id, 'full');
+                                    $alt_text = get_post_meta($cert_id, '_wp_attachment_image_alt', true); ?>
+
                                     <div class="btn_container">
                                         <?php
                                         $book_button_url = get_field('footer_booking_button_url', 'option');
@@ -52,6 +57,16 @@
                                         }
                                         ?>
                                     </div>
+
+                                    <!-- <?php if ($certificate) {
+                                            ?>
+                                            <div class="logo">
+                                                <img class="logo" src="<?php echo $certificate[0]; ?>" alt="<?php echo $alt_text; ?>" />
+
+                                            </div>
+                                        <?php
+                                            }
+                                        ?> -->
                                 </div>
                             </div>
                         </div>

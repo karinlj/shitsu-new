@@ -1,9 +1,11 @@
 <nav class="nav_desktop">
-    <h2 class="site_title">
+    <span class="site_title">
         <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
+            <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/inc/shiatsu_logo.png"
+                width="400" height="" alt="Shiatsu logo" /> -->
             ShiatsuRummet
         </a>
-    </h2>
+    </span>
     <div class="nav_links">
         <?php wp_nav_menu(); ?>
 
@@ -40,7 +42,7 @@
         <?php
         if (function_exists('acf_add_options_page')) {
         ?>
-               <div class="booking_btn">
+            <div class="booking_btn">
                 <?php
                 $booking_button_url = get_field('booking_button_url', 'option');
                 $booking_button_text = get_field('booking_button_text', 'option');

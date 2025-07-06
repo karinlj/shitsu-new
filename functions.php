@@ -22,8 +22,6 @@ function sh_style_resourses()
     wp_enqueue_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css');
     //lagt till
     wp_enqueue_style('font-awesome-5', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css', array(), null);
-
-    wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet');
 }
 add_action('wp_enqueue_scripts', 'sh_style_resourses');
 
@@ -32,7 +30,7 @@ function google_fonts()
 {
     //Av någon anledning knasar det med wp_enqueue_script
 ?>
-<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Questrial&display=swap" rel="stylesheet"><?php
+<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"><?php
 }
 add_action('wp_head', 'google_fonts');
 
