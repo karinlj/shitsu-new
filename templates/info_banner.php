@@ -1,7 +1,7 @@
 <?php
 // get started layout for  Pages Content block
 if (get_row_layout() == 'info_banner') { ?>
-<?php
+    <?php
     $style = '';
     $color = get_sub_field('color_theme');
     $bg_image = get_sub_field('background_image');
@@ -12,35 +12,35 @@ if (get_row_layout() == 'info_banner') { ?>
     }
     ?>
 
-<section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium"
-    <?php echo $style; ?>>
+    <section class="info_banner <?php echo $color; ?> <?php echo $overlay_color; ?> text_center section_spacing_top_medium"
+        <?php echo $style; ?>>
 
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-8 col-xl-6">
-                <?php
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-md-8 col-xl-6">
+                    <?php
                     $heading = get_sub_field('heading');
                     $text = get_sub_field('text');
                     ?>
-                <h2 class="heading"><?php echo $heading; ?></h2>
-                <h5 class=""><?php echo $text; ?></h5>
+                    <h2 class="heading"><?php echo $heading; ?></h2>
+                    <h5 class="margin_2"><?php echo $text; ?></h5>
 
-                <?php
+                    <?php
                     $link = get_sub_field('button_link');
 
                     if ($link) {
                         $link_url = $link['url'];
                         $link_title = $link['title'];
                     ?>
-                <div class="btn_wrapper">
-                    <a href="<?php echo esc_url($link_url); ?>" rel="noopener norefferer" target='_blank'
-                        class="button_link dark">
-                        <?php echo esc_html($link_title); ?></a>
+                        <div class="btn_wrapper">
+                            <a href="<?php echo esc_url($link_url); ?>" rel="noopener norefferer" target='_blank'
+                                class="button_link dark">
+                                <?php echo esc_html($link_title); ?></a>
+                        </div>
+                    <?php } ?>
                 </div>
-                <?php } ?>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 <?php
 } ?>

@@ -116,7 +116,7 @@
                             </div>
                             <div class="col-2">
                                 <a href="#header-new">
-                                    <p class="to-top" title="Till toppen av sidan"></p>
+                                    <p class="to_top" title="Till toppen av sidan"></p>
                                 </a>
                             </div>
                         </div>

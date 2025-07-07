@@ -48,7 +48,7 @@
                 $booking_button_text = get_field('booking_button_text', 'option');
                 if ($booking_button_url) {
                 ?>
-                    <a class="button_link dark" href="<?php echo esc_url($booking_button_url); ?>" target="_blank">
+                    <a class="button_link" href="<?php echo esc_url($booking_button_url); ?>" target="_blank">
                         <?php echo esc_html($booking_button_text); ?>
 
                     </a>

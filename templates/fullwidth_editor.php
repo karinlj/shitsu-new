@@ -9,7 +9,7 @@ if (get_row_layout() == 'fullwidth_editor') {
         <div class="row justify-content-center">
             <div class="col-md-8">
 
-                <div class="text text-center">
+                <div class="text text_center_laptop">
                     <?php the_sub_field('text'); ?>
                 </div>
 

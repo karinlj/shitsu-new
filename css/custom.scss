@@ -101,20 +101,7 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
+
 body {
   line-height: 1;
 }
@@ -140,10 +127,9 @@ table {
 
 body {
   font-family: "Open Sans", arial, sans-serif;
-  color: #333;
+  color: $themecolor;
   font-size: 16px;
   width: 100%;
-  background-color: /*#f5f0e6;*/ #f5f0eb;
   background: #fff;
 }
 body.no_scroll {
@@ -154,6 +140,7 @@ body.no_scroll {
 }
 .container {
   max-width: 1400px;
+  width: 100%;
   @media all and (min-width: $xl-min) {
     max-width: 88vw;
   }
@@ -262,11 +249,53 @@ img {
 .lightgrey {
   background: $lightgrey;
 }
-
-/*********************
-   fonts 
+/********************
+ text style
 *********************/
-
+//centered text
+.text_center_laptop {
+  text-align: left;
+  @media all and (min-width: $md-min) {
+    text-align: center;
+  }
+}
+.text_center_mobile {
+  text-align: center;
+  @media all and (min-width: $sm-min) {
+    text-align: left;
+  }
+}
+.text_center {
+  text-align: center;
+}
+.margin_2 {
+  margin-bottom: 1.5rem;
+  @media all and (min-width: $lg-min) {
+    margin-bottom: 2rem;
+  }
+}
+.margin_3 {
+  margin-bottom: 2rem;
+  @media all and (min-width: $lg-min) {
+    margin-bottom: 3rem;
+  }
+}
+.margin_4 {
+  margin-bottom: 3rem;
+  @media all and (min-width: $lg-min) {
+    margin-bottom: 4rem;
+  }
+}
+/*********************
+   typography 
+*********************/
+p {
+  line-height: 1.9;
+  color: $themecolor;
+  @media all and (max-width: $xs-max) {
+    font-size: 17px;
+  }
+}
 h1,
 h2,
 h3,
@@ -274,30 +303,23 @@ h4,
 h5,
 h6 {
   font-family: "Didact Gothic", sans-serif;
-  color: $themecolor;
-}
-p {
-  line-height: 1.9;
-  color: $themecolor;
-}
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  font-weight: 600;
-  font-weight: 400;
   padding: 5px 0 10px 0;
   line-height: 1.3;
 }
+
+h1,
+h2,
+h3,
+h4 {
+  color: $themecolorGreen;
+  font-weight: 400;
+}
+
 h1 {
-  padding: 5px 0 10px 0;
-  // font-weight: 600;
   line-height: 1;
   font-size: 3.3rem;
   @media all and (min-width: $xl-min) {
-    font-size: 4.4rem;
+    font-size: 4.3rem;
   }
   @media all and (max-width: $xs-max) {
     font-size: 2.5rem;
@@ -305,54 +327,53 @@ h1 {
 }
 
 h2 {
-  font-size: 2.1rem;
-  color: $themecolorGreen !important;
+  font-size: 2.2rem;
   @media all and (min-width: $xl-min) {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
   @media all and (max-width: $xs-max) {
-    font-size: 2rem;
+    font-size: 2.1rem;
   }
   &.smaller_text {
-  font-size: 1.8rem;
-  color: $themecolorGreen !important;
-  @media all and (max-width: $xs-max) {
-    font-size: 1.5rem;
-  }
+    font-size: 1.6rem;
   }
 }
+
 h3 {
-  font-size: 1.8rem;
-  color: $themecolorGreen !important;
+  font-size: 1.7rem;
+  @media all and (min-width: $xl-min) {
+    font-size: 1.8rem;
+  }
   @media all and (max-width: $xs-max) {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 h4 {
   font-size: 1.5rem;
-  //letter-spacing: 1px;
-  color: $themecolorGreen !important;
   @media all and (max-width: $xs-max) {
     font-size: 1.3rem;
   }
 }
 h5 {
   font-size: 1.3rem;
-  //letter-spacing: 0.9px;
   @media all and (max-width: $xs-max) {
     font-size: 1.1rem;
   }
 }
 h6 {
   font-size: 1.1rem;
-  //letter-spacing: 1px;
   @media all and (max-width: $xs-max) {
     font-size: 1rem;
   }
 }
+
+/*********************
+   buttons & links
+*********************/
 a {
   color: $linkcolor;
   font-size: 1.2rem;
+  text-decoration: none;
   &:hover {
     color: $linkcolor_hover;
     text-decoration: none;
@@ -364,20 +385,7 @@ a {
     outline: none;
   }
 }
-li {
-  //letter-spacing: 0.5px;
-}
 
-/*********************
-   buttons 
-*********************/
-.bokadirekt {
-  box-shadow: $themeBox_shadow_images;
-  transition: 0.3s all ease-in;
-  &:hover {
-    opacity: 0.8;
-  }
-}
 a.button_link {
   font-family: "Didact Gothic", sans-serif;
   letter-spacing: 1px;
@@ -392,7 +400,7 @@ a.button_link {
   line-height: 20px;
   @media only screen and (max-width: $xs-max) {
     padding: 8px 16px;
-    font-size: 15px;
+    // font-size: 15px;
   }
   &:hover {
     background: $turqoise;
@@ -432,13 +440,16 @@ a.button_link {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
+    .header_items {
+      max-width: 100%;
+    }
     .header_heading {
       line-height: 1.2;
       color: #fff;
       text-shadow: $text-shadow;
       margin-bottom: 1rem;
-         @media only screen and (min-width: $xl-min) {
-          line-height: 1.1;
+      @media only screen and (min-width: $xl-min) {
+        line-height: 1.1;
       }
     }
     .header_text {
@@ -462,9 +473,10 @@ a.button_link {
   /*header big*/
   .header_big {
     min-height: 650px;
-    @include d-flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    position: relative;
     @media all and (max-width: $xs-max) {
       padding: 0;
       justify-content: center;
@@ -475,9 +487,9 @@ a.button_link {
       min-height: 800px;
     }
     .header_heading {
-      font-size: 4rem;
+      font-size: 3.9rem;
       @media all and (min-width: $xl-min) {
-        font-size: 5.2rem;
+        font-size: 5.1rem;
       }
       @media all and (max-width: $xs-max) {
         font-size: 2.5rem;
@@ -490,7 +502,8 @@ a.button_link {
   /*header small*/
   .header_small {
     min-height: 550px;
-    @include d-flex;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     @media all and (max-width: $xs-max) {
@@ -574,24 +587,26 @@ a.button_link {
           padding: 3px 0;
           text-decoration: none;
           cursor: pointer;
-          font-size: 18px;
+          font-size: 1.15rem;
           transition: all 0.2s ease-in;
           border-bottom: 2px solid transparent;
           margin: 0 1rem -2px 1rem;
-          &:hover {
-            border-color: $themecolorGreenLighter;
-          }
           &:active,
           &:visited {
             color: $navcolor;
           }
+          &:hover {
+            color: $themecolorGreen;
+            border-color: $themecolorGreen;
+          }
         }
         /*Wp:s klasser*/
         &.current-menu-item > a {
-          border-bottom: 2px solid $themecolorGreenLighter;
+          color: $themecolorGreen;
+          border-bottom: 2px solid $themecolorGreen;
         }
         &.current-menu-ancestor > a {
-          border-bottom: 2px solid $themecolorGreenLighter;
+          border-bottom: 2px solid $themecolorGreen;
         }
         &.menu-item-has-children {
           > a::after {
@@ -603,9 +618,9 @@ a.button_link {
             position: absolute;
             z-index: 10;
             background-color: #fff;
-            width: 170px;
+            width: 14rem;
             padding-bottom: 3px;
-            margin-top: 6px;
+            margin-top: 10px;
             box-shadow: $themeBox_shadow_nav;
             display: none;
             border-radius: 2px;
@@ -615,17 +630,22 @@ a.button_link {
             }
             li {
               width: 100%;
+              border-bottom: 1px solid $themecolorGreenLighter;
+              &:last-of-type {
+                border-bottom: none;
+              }
               &.current-menu-item > a {
-                border-bottom: 1px solid transparent;
+                border-color: transparent !important;
               }
               a {
                 padding: 5px 16px;
                 background-color: transparent;
                 border-radius: 0;
-                font-size: 16px;
-                border-bottom: none;
+                font-size: 1.05rem;
+                margin: 0 1rem;
                 &:hover {
                   color: $themecolorGreen;
+                  border-color: transparent;
                 }
               }
             }
@@ -728,8 +748,7 @@ a.button_link {
   z-index: 500;
   top: 0;
   left: 0;
-  background: rgba(250, 250, 251, 0.95);
-  background: rgb(250, 250, 251);
+  background: $themecolorGreenLighter;
   padding: 0 10%;
   padding-top: 60px;
   text-align: left;
@@ -747,14 +766,13 @@ a.button_link {
       a {
         font-family: "Didact Gothic", sans-serif;
         padding: 1rem 1rem 1rem 0;
-        color: #555;
+        color: $navcolor;
         text-decoration: none;
         display: block;
-        font-size: 21px;
+        font-size: 1.5rem;
         transition: 0.3s;
-        font-weight: 600;
         &:hover {
-          opacity: 0.7;
+          color: $navcolor;
         }
       }
       &.menu-item-has-children {
@@ -781,7 +799,7 @@ a.button_link {
               padding: 0.75rem;
               background-color: transparent;
               border-radius: 0;
-              font-size: 18px;
+              font-size: 1.2rem;
               text-align: left;
               margin-top: 0;
               margin-left: 1rem;
@@ -928,15 +946,12 @@ three_sections & products_sections
   .heading {
     text-align: center;
     color: $turqoiseDark !important;
-    padding-top: 0;
-    padding-bottom: 2rem;
-    line-height: 1;
   }
   .testimonials_inner {
     height: auto;
     overflow: hidden;
     margin-top: 2rem;
-    @include d-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     @media all and (min-width: $lg-min) {
@@ -966,7 +981,7 @@ three_sections & products_sections
       .text {
         font-style: italic;
         font-family: serif;
-        font-size: 17px;
+        // font-size: 17px;
       }
       .signature {
         text-transform: uppercase;
@@ -1102,15 +1117,6 @@ three_sections & products_sections
 *********************/
 .info_banner {
   //background and overlay: see scss section
-  text-align: center;
-  .heading {
-    @media all and (max-width: $sm-max) {
-      font-size: 1.5rem;
-    }
-  }
-  .btn_wrapper {
-    padding-top: 1rem;
-  }
 }
 
 /*********************
@@ -1301,8 +1307,7 @@ social icons
   }
   h5,
   p,
-  .logo,
-  .bokadirekt {
+  .logo {
     padding-bottom: 1rem;
     @media all and (min-width: $lg-min) {
       padding-bottom: 0;
@@ -1323,13 +1328,7 @@ social icons
       max-width: 110px;
     }
   }
-  .bokadirekt {
-    margin-top: 1.5rem;
-    @media all and (min-width: $lg-min) {
-      float: right;
-      margin-top: 0;
-    }
-  }
+
   .social_icons_container {
     display: flex;
     @media only screen and (min-width: $lg-min) {
@@ -1365,10 +1364,10 @@ social icons
         font-size: 0.8rem;
       }
     }
-    .to-top {
+    .to_top {
       position: absolute;
-      right: 10px;
-      display: none;
+      right: 1.5rem;
+      bottom: 5rem;
       @media only screen and (min-width: $md-min) {
         display: block;
       }
@@ -1377,9 +1376,12 @@ social icons
         content: "\f077";
         font-size: 1.4rem;
         color: $turqoise;
+        transition: all 0.3s ease;
       }
       &:hover {
-        opacity: 0.7;
+        &::before {
+          color: #fff;
+        }
       }
     }
   }
