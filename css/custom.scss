@@ -216,7 +216,7 @@ img {
 .link_section,
 .hero_section,
 .pdf_section,
-.boka_direkt_banner,
+.boka_och_omdomen_banner,
 .text_block_full_width,
 .text_and_or_image {
   position: relative;
@@ -295,6 +295,15 @@ p {
   @media all and (max-width: $xs-max) {
     font-size: 17px;
   }
+  &.bigger_text {
+    font-size: 20px;
+    @media all and (min-width: $xl-min) {
+      font-size: 22px;
+    }
+    @media all and (max-width: $xs-max) {
+      font-size: 19px;
+    }
+  }
 }
 h1,
 h2,
@@ -335,7 +344,13 @@ h2 {
     font-size: 2.1rem;
   }
   &.smaller_text {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
+    @media all and (min-width: $xl-min) {
+      font-size: 1.8rem;
+    }
+    @media all and (max-width: $xs-max) {
+      font-size: 1.6rem;
+    }
   }
 }
 
@@ -942,7 +957,7 @@ three_sections & products_sections
    testimonials
 ***********************/
 .testimonials_section {
-  background: $lightblue;
+  background: $turqoiseLight;
   .heading {
     text-align: center;
     color: $turqoiseDark !important;
@@ -973,15 +988,15 @@ three_sections & products_sections
         margin-bottom: 1rem;
         i.fab,
         i.fas {
-          font-size: 1rem;
-          color: inherit;
+          font-size: 1.7rem;
+          color: $turqoiseLight;
           font-weight: 600;
         }
       }
       .text {
         font-style: italic;
-        font-family: serif;
-        // font-size: 17px;
+        font-family: "Didact Gothic", sans-serif;
+        font-size: 17px;
       }
       .signature {
         text-transform: uppercase;
@@ -1128,9 +1143,9 @@ three_sections & products_sections
   }
 }
 /*********************
-   boka_direkt_banner
+   boka_och_omdomen_banner
 *********************/
-.boka_direkt_banner {
+.boka_och_omdomen_banner {
   //background and overlay: see scss section
   text-align: center;
   .heading {
@@ -1305,22 +1320,17 @@ social icons
     padding-bottom: 1.5rem;
     background: $backgroundDarkest;
   }
-  h5,
-  p,
+  .footer_fields_text,
   .logo {
-    padding-bottom: 1rem;
-    @media all and (min-width: $lg-min) {
-      padding-bottom: 0;
-    }
+    padding-bottom: 2rem;
   }
-  .footer-fields-heading {
-    // font-weight: 600;
+  .footer_fields_heading {
     color: $themecolorGreenLighter !important;
     padding-right: 0.5rem;
   }
-  .footer-fields-text {
+  .footer_fields_text {
     color: #fff;
-    font-size: 0.9rem;
+    font-size: 15px;
   }
   .logo {
     max-width: 100px;
@@ -1331,12 +1341,13 @@ social icons
 
   .social_icons_container {
     display: flex;
+     margin-top: 1rem;
     @media only screen and (min-width: $lg-min) {
-      justify-content: center;
-      padding-top: 3rem;
+      justify-content: space-between;
+      margin-top: 2rem;
     }
     @media all and (min-width: $xl-min) {
-      padding-top: 5rem;
+      margin-top: 4rem;
     }
     .social_icons {
       padding: 1rem 0;
@@ -1353,6 +1364,14 @@ social icons
       }
     }
   }
+  .certificate {
+        padding: 1rem 0;
+    max-width: 90px;
+    @media all and (min-width: 1600px) {
+      max-width: 100px;
+    }
+  }
+
   .footer-bottom {
     background-color: $backgroundDark;
     position: relative;
@@ -1365,22 +1384,20 @@ social icons
       }
     }
     .to_top {
-      position: absolute;
-      right: 1.5rem;
-      bottom: 5rem;
-      @media only screen and (min-width: $md-min) {
-        display: block;
-      }
-      &::before {
-        font-family: FontAwesome;
-        content: "\f077";
-        font-size: 1.4rem;
-        color: $turqoise;
-        transition: all 0.3s ease;
-      }
-      &:hover {
+      float: right;
+      margin-top: -1rem;
+      p {
         &::before {
-          color: #fff;
+          font-family: FontAwesome;
+          content: "\f077";
+          font-size: 1.4rem;
+          color: $turqoise;
+          transition: all 0.3s ease;
+        }
+        &:hover {
+          &::before {
+            color: #fff;
+          }
         }
       }
     }

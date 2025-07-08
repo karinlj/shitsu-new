@@ -256,7 +256,7 @@ img {
 .link_section,
 .hero_section,
 .pdf_section,
-.boka_direkt_banner,
+.boka_och_omdomen_banner,
 .text_block_full_width,
 .text_and_or_image {
   position: relative;
@@ -267,7 +267,7 @@ img {
 .link_section.overlay-dark::before,
 .hero_section.overlay-dark::before,
 .pdf_section.overlay-dark::before,
-.boka_direkt_banner.overlay-dark::before,
+.boka_och_omdomen_banner.overlay-dark::before,
 .text_block_full_width.overlay-dark::before,
 .text_and_or_image.overlay-dark::before {
   position: absolute;
@@ -364,6 +364,19 @@ p {
     font-size: 17px;
   }
 }
+p.bigger_text {
+  font-size: 20px;
+}
+@media all and (min-width: 1200px) {
+  p.bigger_text {
+    font-size: 22px;
+  }
+}
+@media all and (max-width: 575.9px) {
+  p.bigger_text {
+    font-size: 19px;
+  }
+}
 
 h1,
 h2,
@@ -413,7 +426,17 @@ h2 {
   }
 }
 h2.smaller_text {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
+}
+@media all and (min-width: 1200px) {
+  h2.smaller_text {
+    font-size: 1.8rem;
+  }
+}
+@media all and (max-width: 575.9px) {
+  h2.smaller_text {
+    font-size: 1.6rem;
+  }
 }
 
 h3 {
@@ -1068,7 +1091,7 @@ three_sections & products_sections
    testimonials
 ***********************/
 .testimonials_section {
-  background: #c8e5ea;
+  background: #c7e5eb;
 }
 .testimonials_section .heading {
   text-align: center;
@@ -1107,13 +1130,14 @@ three_sections & products_sections
 }
 .testimonials_section .testimonials_inner .item .icon i.fab,
 .testimonials_section .testimonials_inner .item .icon i.fas {
-  font-size: 1rem;
-  color: inherit;
+  font-size: 1.7rem;
+  color: #c7e5eb;
   font-weight: 600;
 }
 .testimonials_section .testimonials_inner .item .text {
   font-style: italic;
-  font-family: serif;
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 17px;
 }
 .testimonials_section .testimonials_inner .item .signature {
   text-transform: uppercase;
@@ -1253,45 +1277,45 @@ three_sections & products_sections
 }
 
 /*********************
-   boka_direkt_banner
+   boka_och_omdomen_banner
 *********************/
-.boka_direkt_banner {
+.boka_och_omdomen_banner {
   text-align: center;
 }
-.boka_direkt_banner .heading {
+.boka_och_omdomen_banner .heading {
   position: relative;
   z-index: 1000;
   margin-bottom: 1rem;
 }
 @media all and (max-width: 575.9px) {
-  .boka_direkt_banner .heading {
+  .boka_och_omdomen_banner .heading {
     font-size: 1.6rem;
   }
 }
-.boka_direkt_banner .reviews {
+.boka_och_omdomen_banner .reviews {
   padding: 0.5rem;
   text-align: center;
 }
-.boka_direkt_banner .reviews .logo {
+.boka_och_omdomen_banner .reviews .logo {
   margin-bottom: 0.8rem;
 }
-.boka_direkt_banner .reviews .logo img {
+.boka_och_omdomen_banner .reviews .logo img {
   max-width: 250px;
 }
 @media all and (max-width: 575.9px) {
-  .boka_direkt_banner .reviews .logo img {
+  .boka_och_omdomen_banner .reviews .logo img {
     max-width: 200px;
   }
 }
-.boka_direkt_banner .reviews .stars,
-.boka_direkt_banner .reviews .text {
+.boka_och_omdomen_banner .reviews .stars,
+.boka_och_omdomen_banner .reviews .text {
   margin-bottom: 0.8rem;
 }
-.boka_direkt_banner .reviews .stars .fas,
-.boka_direkt_banner .reviews .text .fas {
+.boka_och_omdomen_banner .reviews .stars .fas,
+.boka_och_omdomen_banner .reviews .text .fas {
   color: #ffd11a;
 }
-.boka_direkt_banner .link {
+.boka_och_omdomen_banner .link {
   font-weight: 600;
   padding: 0.5rem;
   margin-bottom: 0.5rem;
@@ -1434,25 +1458,17 @@ social icons
   padding-bottom: 1.5rem;
   background: #333;
 }
-.footer_container h5,
-.footer_container p,
+.footer_container .footer_fields_text,
 .footer_container .logo {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
-@media all and (min-width: 992px) {
-  .footer_container h5,
-.footer_container p,
-.footer_container .logo {
-    padding-bottom: 0;
-  }
-}
-.footer_container .footer-fields-heading {
+.footer_container .footer_fields_heading {
   color: #8fba5e !important;
   padding-right: 0.5rem;
 }
-.footer_container .footer-fields-text {
+.footer_container .footer_fields_text {
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 15px;
 }
 .footer_container .logo {
   max-width: 100px;
@@ -1464,16 +1480,17 @@ social icons
 }
 .footer_container .social_icons_container {
   display: flex;
+  margin-top: 1rem;
 }
 @media only screen and (min-width: 992px) {
   .footer_container .social_icons_container {
-    justify-content: center;
-    padding-top: 3rem;
+    justify-content: space-between;
+    margin-top: 2rem;
   }
 }
 @media all and (min-width: 1200px) {
   .footer_container .social_icons_container {
-    padding-top: 5rem;
+    margin-top: 4rem;
   }
 }
 .footer_container .social_icons_container .social_icons {
@@ -1483,6 +1500,15 @@ social icons
 .footer_container .social_icons_container .social_icons ul.social li.social-item a .fas {
   color: #fff;
   background: #404040;
+}
+.footer_container .certificate {
+  padding: 1rem 0;
+  max-width: 90px;
+}
+@media all and (min-width: 1600px) {
+  .footer_container .certificate {
+    max-width: 100px;
+  }
 }
 .footer_container .footer-bottom {
   background-color: #262626;
@@ -1497,23 +1523,17 @@ social icons
   font-size: 0.8rem;
 }
 .footer_container .footer-bottom .to_top {
-  position: absolute;
-  right: 1.5rem;
-  bottom: 5rem;
+  float: right;
+  margin-top: -1rem;
 }
-@media only screen and (min-width: 768px) {
-  .footer_container .footer-bottom .to_top {
-    display: block;
-  }
-}
-.footer_container .footer-bottom .to_top::before {
+.footer_container .footer-bottom .to_top p::before {
   font-family: FontAwesome;
   content: "";
   font-size: 1.4rem;
   color: #409DB0;
   transition: all 0.3s ease;
 }
-.footer_container .footer-bottom .to_top:hover::before {
+.footer_container .footer-bottom .to_top p:hover::before {
   color: #fff;
 }
 

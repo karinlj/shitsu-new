@@ -30,19 +30,14 @@
                                     while (have_rows('footer_fields', 'option')) {
                                         the_row(); ?>
                                         <div class="col-lg-3 col-xl-2">
-                                            <h2 class="smaller_text footer-fields-heading"><?php the_sub_field('heading'); ?></h2>
-                                            <p class="footer-fields-text"><?php the_sub_field('text'); ?></p>
+                                            <p class="bigger_text footer_fields_heading"><?php the_sub_field('heading'); ?></p>
+                                            <p class="footer_fields_text"><?php the_sub_field('text'); ?></p>
                                         </div>
                                 <?php
                                     }
                                 } ?>
 
                                 <div class="col-lg-2 col-xl-2">
-                                    <?php
-                                    $cert_id = get_field('certificate', 'option');
-                                    $certificate = wp_get_attachment_image_src($cert_id, 'full');
-                                    $alt_text = get_post_meta($cert_id, '_wp_attachment_image_alt', true); ?>
-
                                     <div class="btn_container">
                                         <?php
                                         $book_button_url = get_field('footer_booking_button_url', 'option');
@@ -58,21 +53,12 @@
                                         ?>
                                     </div>
 
-                                    <!-- <?php if ($certificate) {
-                                            ?>
-                                            <div class="logo">
-                                                <img class="logo" src="<?php echo $certificate[0]; ?>" alt="<?php echo $alt_text; ?>" />
-
-                                            </div>
-                                        <?php
-                                            }
-                                        ?> -->
                                 </div>
                             </div>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-12">
+
+                            <div class="row justify-content-between align-items-end">
+
+                                <div class="col-lg-2 col-xl-2">
                                     <div class="social_icons_container">
                                         <div class="social_icons">
                                             <ul class="social">
@@ -88,13 +74,29 @@
                                                             <a href="<?php echo $social_url; ?>"><i
                                                                     class="fab fa-<?php echo $social_site; ?>"></i></a>
                                                         </li>
-
                                                 <?php
                                                     }
                                                 } ?>
                                             </ul>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="col-lg-2">
+                                    <?php
+                                    $cert_id = get_field('certificate', 'option');
+                                    $certificate = wp_get_attachment_image_src($cert_id, 'full');
+                                    $alt_text = get_post_meta($cert_id, '_wp_attachment_image_alt', true); ?>
+
+                                    <?php if ($certificate) {
+                                    ?>
+                                        <div class="certificate">
+                                            <img src="<?php echo $certificate[0]; ?>" alt="<?php echo $alt_text; ?>" />
+
+                                        </div>
+                                    <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                         </div>
@@ -110,15 +112,18 @@
                                 <p class="footer_copy">&copy; <?php echo Date('Y'); ?> Shiatsurummet - All rights
                                     reserved. Theme
                                     by <a href="http://frilans.karinljunggren.com/" target="_blank">KarinsWeb</a> |
-                                    <span> <a href="https://shiatsurummet.se/privacy-policy/">Privacy Policy</a></span>
+                                    <span> <a href="https://shiatsurummet.se/privacy-policy/">Integritetspolicy </a></span>
 
                                 </p>
                             </div>
                             <div class="col-2">
-                                <a href="#header-new">
-                                    <p class="to_top" title="Till toppen av sidan"></p>
-                                </a>
+                                <div class="to_top">
+                                    <a href="#header-new">
+                                        <p  title="Till toppen av sidan"></p>
+                                    </a>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

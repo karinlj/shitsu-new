@@ -10,7 +10,7 @@ if (get_row_layout() == 'boka_och_omdomen_banner') { ?>
         $overlay_color = get_sub_field('overlay_color');
     }
     ?>
-    <section class="boka_direkt_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium" <?php echo $style; ?>>
+    <section class="boka_och_omdomen_banner <?php echo $color; ?> <?php echo $overlay_color; ?> section_spacing_top_medium" <?php echo $style; ?>>
         <?php
         $heading = get_sub_field('heading');
         ?>
