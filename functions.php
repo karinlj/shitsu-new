@@ -11,11 +11,8 @@ add_action('wp_enqueue_scripts', 'sh_script_resourses');
 function sh_style_resourses()
 {
     //name, absolute path, dependencies, version, media
-    //wp_enqueue_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '#', 'all');
-    //lagt till
-    // wp_enqueue_style('bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css');
 
-        wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.min.css');
+    wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.min.css');
 
     wp_enqueue_style('style', get_stylesheet_uri(), array(), '1.0.0', 'all');
     //lagt till
