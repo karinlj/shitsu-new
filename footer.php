@@ -37,7 +37,7 @@
                                     }
                                 } ?>
 
-                                <div class="col-lg-2 col-xl-2">
+                                <div class="col-lg-2">
                                     <div class="btn_container">
                                         <?php
                                         $book_button_url = get_field('footer_booking_button_url', 'option');
@@ -58,7 +58,7 @@
 
                             <div class="row justify-content-between align-items-end">
 
-                                <div class="col-lg-2 col-xl-2">
+                                <div class="col-lg-2">
                                     <div class="social_icons_container">
                                         <div class="social_icons">
                                             <ul class="social">
@@ -67,9 +67,9 @@
                                                 if (have_rows('social_icons', 'option')) {
                                                     while (have_rows('social_icons', 'option')) {
                                                         the_row();
-
                                                         $social_url = get_sub_field('social_url');
                                                         $social_site = get_sub_field('social_site'); ?>
+
                                                         <li class="social-item">
                                                             <a href="<?php echo $social_url; ?>"><i
                                                                     class="fab fa-<?php echo $social_site; ?>"></i></a>
@@ -82,22 +82,26 @@
                                     </div>
                                 </div>
 
-                                <div class="col-lg-2">
-                                    <?php
-                                    $cert_id = get_field('certificate', 'option');
-                                    $certificate = wp_get_attachment_image_src($cert_id, 'full');
-                                    $alt_text = get_post_meta($cert_id, '_wp_attachment_image_alt', true); ?>
-
-                                    <?php if ($certificate) {
-                                    ?>
-                                        <div class="certificate">
-                                            <img src="<?php echo $certificate[0]; ?>" alt="<?php echo $alt_text; ?>" />
-
-                                        </div>
-                                    <?php
-                                    }
-                                    ?>
+                                <div class="col-lg-6">
+                                    <ul class="badges">
+                                        <?php
+                                        //repeater
+                                        if (have_rows('footer_bages', 'option')) {
+                                            while (have_rows('footer_bages', 'option')) {
+                                                the_row();
+                                                $img_id = get_sub_field('image');
+                                                $image = wp_get_attachment_image_src($img_id, 'full');
+                                                $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true);  ?>
+                                      
+                                                <li class="badge_item">
+                                                    <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+                                                </li>
+                                        <?php
+                                            }
+                                        } ?>
+                                    </ul>
                                 </div>
+
                             </div>
                         </div>
                     <?php
@@ -119,11 +123,10 @@
                             <div class="col-2">
                                 <div class="to_top">
                                     <a href="#header-new">
-                                        <p  title="Till toppen av sidan"></p>
+                                        <p title="Till toppen av sidan"></p>
                                     </a>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>

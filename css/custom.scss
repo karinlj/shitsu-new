@@ -1337,7 +1337,7 @@ social icons
 
   .social_icons_container {
     display: flex;
-     margin-top: 1rem;
+    margin-top: 1rem;
     @media only screen and (min-width: $lg-min) {
       justify-content: space-between;
       margin-top: 2rem;
@@ -1360,11 +1360,25 @@ social icons
       }
     }
   }
-  .certificate {
-        padding: 1rem 0;
-    max-width: 90px;
-    @media all and (min-width: 1600px) {
-      max-width: 100px;
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    @media only screen and (min-width: $lg-min) {
+      justify-content: flex-end;
+    }
+    .badge_item {
+      padding: 1rem 0.5rem 1rem 0;
+      @media only screen and (min-width: $lg-min) {
+        padding: 1rem 0 1rem 1rem;
+      }
+      img {
+        max-width: 90px;
+        @media all and (min-width: 1600px) {
+          max-width: 100px;
+        }
+      }
     }
   }
 
