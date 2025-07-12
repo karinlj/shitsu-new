@@ -21,21 +21,21 @@ if (get_row_layout() == 'hero_section') {
             <div class="col-lg-10">
                 <?php
                 if ($hero_text_link) { ?>
-                <a href="<?php echo $hero_text_link; ?>">
+                    <a href="<?php echo $hero_text_link; ?>">
                     <?php
                 }
                 if ($hero_heading) { ?>
-                    <h2 class="hero_heading">
-                        <?php echo $hero_heading ?>
-                    </h2>
+                        <h2 class="hero_heading">
+                            <?php echo $hero_heading ?>
+                        </h2>
                     <?php
                 }
                 if ($hero_text) { ?>
-                    <h5 class="hero_text"><?php echo $hero_text; ?></h5>
+                        <p class="bigger_text hero_text"><?php echo $hero_text; ?></p>
                     <?php
                 }
                 if ($hero_text_link) { ?>
-                </a>
+                    </a>
                 <?php
                 } ?>
             </div>

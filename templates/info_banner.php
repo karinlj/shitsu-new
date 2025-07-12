@@ -23,7 +23,7 @@ if (get_row_layout() == 'info_banner') { ?>
                     $text = get_sub_field('text');
                     ?>
                     <h2 class="heading"><?php echo $heading; ?></h2>
-                    <h5 class="margin_2"><?php echo $text; ?></h5>
+                    <p class="bigger_text margin_2"><?php echo $text; ?></p>
 
                     <?php
                     $link = get_sub_field('button_link');
