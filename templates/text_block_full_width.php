@@ -16,7 +16,7 @@ if (get_row_layout() == 'text_block_full_width') {
                     </h2>
                     <?php  } ?>
                     <?php if (get_sub_field('preamble')) { ?>
-                    <h5 class="preamble">
+                    <h3 class="preamble">
                         <?php the_sub_field('preamble'); ?>
                     </h5>
                     <?php  } ?>

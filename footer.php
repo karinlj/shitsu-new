@@ -30,7 +30,7 @@
                                     while (have_rows('footer_fields', 'option')) {
                                         the_row(); ?>
                                         <div class="col-lg-3 col-xl-2">
-                                            <p class="bigger_text footer_fields_heading"><?php the_sub_field('heading'); ?></p>
+                                            <h3 class="smaller_text footer_fields_heading"><?php the_sub_field('heading'); ?></h3>
                                             <p class="footer_fields_text"><?php the_sub_field('text'); ?></p>
                                         </div>
                                 <?php

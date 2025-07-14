@@ -1,13 +1,13 @@
 <?php
 if (get_row_layout() == 'products_sections') { ?>
 
-<section class="products_sections section_spacing_only_top_small">
-    <div class="container">
-        <div class="row align-items-start">
-            <div class="col-md-8 col-lg-9 col-xl-8">
-                <div class="row align-items-start">
+    <section class="products_sections section_spacing_only_top_small">
+        <div class="container">
+            <div class="row align-items-start">
+                <div class="col-xl-6">
+                    <div class="row align-items-start">
 
-                    <?php
+                        <?php
                         // check if repeater field has rows
                         if (have_rows('image_sections_content')) {
                             while (have_rows('image_sections_content')) {
@@ -24,26 +24,27 @@ if (get_row_layout() == 'products_sections') { ?>
                                 $logo = wp_get_attachment_image_src($logo_id, 'full');
                                 $alt_text_logo = get_post_meta($logo_id, '_wp_attachment_image_alt', true); ?>
 
-                    <div class="col-md-6 col-xl-4">
-                        <div class="item">
-                            <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
+                                <div class="col-md-6">
+                                    <div class="item">
+                                        <img src="<?php echo $image[0]; ?>" alt="<?php echo $alt_text; ?>" />
 
-                            <div class="heading_section">
-                                <img class="logo" src="<?php echo $logo[0]; ?>" alt="<?php echo $alt_text_logo; ?>" />
-                                <h4 class="heading"><?php echo $heading; ?></h4>
-                            </div>
-                            <div class="text_part">
-                                <p class="text"><?php echo $text; ?></p>
-                            </div>
-                        </div>
-                    </div>
-                    <?php
+                                        <div class="heading_section">
+                                            <img class="logo" src="<?php echo $logo[0]; ?>" alt="<?php echo $alt_text_logo; ?>" />
+                                            <h3 class="heading"><?php echo $heading; ?></h3>
+                                        </div>
+                                        <div class="text_part">
+                                            <p class="text"><?php echo $text; ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                        <?php
                             }
                         } ?>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 col-lg-3 col-xl-4">
-                <?php
+
+                <div class="col-xl-6">
+                    <?php
                     // check if repeater field has rows
                     if (have_rows('product_sidebar')) {
                         while (have_rows('product_sidebar')) {
@@ -54,30 +55,29 @@ if (get_row_layout() == 'products_sections') { ?>
 
                             $swish_logo_id = get_sub_field('swish_logo_field');
                             $swish_logo = wp_get_attachment_image_src($swish_logo_id, 'full');
-                            $alt_text_swish_logo = get_post_meta($swish_logo_id, '_wp_attachment_image_alt', true);
-                    ?>
+                            $alt_text_swish_logo = get_post_meta($swish_logo_id, '_wp_attachment_image_alt', true);  ?>
 
-                <div class="product_info section_spacing_top_mini">
-                    <h3 class="heading"><?php echo $heading; ?></h3>
-                    </>
-                    <div class="text_part">
-                        <p class="text"><?php echo $text; ?></p>
-                    </div>
+                            <div class="product_info section_spacing_top_mini">
+                                <h2 class="heading"><?php echo $heading; ?></h2>
+                                </>
+                                <div class="text_part">
+                                    <p class="text"><?php echo $text; ?></p>
+                                </div>
 
-                    <?php if ($swish_logo_id) { ?>
-                    <div class="swish_logo">
-                        <img class="logo" src="<?php echo $swish_logo[0]; ?>"
-                            alt="<?php echo $alt_text_swish_logo; ?>" />
-                    </div>
-                    <?php  } ?>
-                </div>
-                <?php
+                                <?php if ($swish_logo_id) { ?>
+                                    <div class="swish_logo">
+                                        <img class="logo" src="<?php echo $swish_logo[0]; ?>"
+                                            alt="<?php echo $alt_text_swish_logo; ?>" />
+                                    </div>
+                                <?php  } ?>
+                            </div>
+                    <?php
                         }
                     } ?>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 <?php
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 if (get_row_layout() == 'three_sections') { ?>
 
-    <section class="three_sections section_spacing_top_medium">
+    <section class="three_sections section_spacing_top_small">
         <div class="container">
             <div class="row align-items-start justify-content-around">
                 <?php
@@ -19,7 +19,7 @@ if (get_row_layout() == 'three_sections') { ?>
                         $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true); ?>
 
                         <div class="col-lg-4">
-                            <div class="item">
+                            <div class="item text_center_laptop">
 
                                 <?php if ($link) {
                                     $link_url = $link['url'];

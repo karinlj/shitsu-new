@@ -207,8 +207,24 @@ img {
     margin: 0 -15px;
   }
 }
+.section_spacing_only_top_medium {
+  padding: 4rem 0;
+  @media all and (min-width: $sm-min) {
+    padding: 4rem 0;
+  }
+  @media all and (min-width: $md-min) {
+    padding: 4rem 0;
+  }
+  @media all and (min-width: $xl-min) {
+    padding: 7rem 0;
+     margin: 0 -15px;
+  }
+    .col {
+    margin: 0 -15px;
+  }
+}
 /*********************************************
-    overlay and background - sections
+    background and overlay - sections
  *********************************************/
 .header_big,
 .header_small,
@@ -232,22 +248,60 @@ img {
   }
 }
 /*radio button-background colors for content fields and infoboxes*/
-.dark {
-  background: $themecolor;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: #fff !important;
+// .dark {
+//   background: $themecolor;
+//   h1,
+//   h2,
+//   h3,
+//   h4,
+//   h5,
+//   h6 {
+//     color: #fff !important;
+//   }
+//   p {
+//     color: #fff;
+//   }
+// }
+// .lightgrey {
+//   background: $lightgrey;
+// }
+
+section,
+header,
+footer {
+  position: relative;
+  &.dark {
+    background: $themecolor;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #fff !important;
+    }
+    p {
+      color: #fff;
+    }
   }
-  p {
-    color: #fff;
+  &.lighturqoise {
+    background: $turqoiseLight;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: $turqoiseDark !important;
+    }
   }
-}
-.lightgrey {
-  background: $lightgrey;
+  &.lightgrey {
+    background: $lightgrey;
+  }
+
+  &.white {
+    background: #fff;
+  }
 }
 /********************
  text style
@@ -326,9 +380,14 @@ h4 {
 
 h1 {
   line-height: 1;
-  font-size: 3.3rem;
+  color: #fff;
+  text-shadow: $text-shadow;
+  margin-bottom: 1rem;
+
+  font-size: 3.9rem;
   @media all and (min-width: $xl-min) {
-    font-size: 4.3rem;
+    font-size: 5.1rem;
+    line-height: 1.1;
   }
   @media all and (max-width: $xs-max) {
     font-size: 2.5rem;
@@ -338,7 +397,7 @@ h1 {
 h2 {
   font-size: 2.2rem;
   @media all and (min-width: $xl-min) {
-    font-size: 2.3rem;
+    font-size: 2.5rem;
   }
   @media all and (max-width: $xs-max) {
     font-size: 2.1rem;
@@ -361,6 +420,15 @@ h3 {
   }
   @media all and (max-width: $xs-max) {
     font-size: 1.6rem;
+  }
+  &.smaller_text {
+    font-size: 1.4rem;
+    @media all and (min-width: $xl-min) {
+      font-size: 1.5rem;
+    }
+    @media all and (max-width: $xs-max) {
+      font-size: 1.4rem;
+    }
   }
 }
 h4 {
@@ -458,15 +526,12 @@ a.button_link {
     .header_items {
       max-width: 100%;
     }
-    .header_heading {
-      line-height: 1.2;
-      color: #fff;
-      text-shadow: $text-shadow;
-      margin-bottom: 1rem;
-      @media only screen and (min-width: $xl-min) {
-        line-height: 1.1;
-      }
-    }
+    // .header_heading {
+    //   line-height: 1.2;
+    //   color: #fff;
+    //   text-shadow: $text-shadow;
+    //   margin-bottom: 1rem;
+    // }
     .header_text {
       font-size: 1.3rem;
       color: #fff;
@@ -500,15 +565,6 @@ a.button_link {
     }
     @media only screen and (min-width: 1600px) {
       min-height: 800px;
-    }
-    .header_heading {
-      font-size: 3.9rem;
-      @media all and (min-width: $xl-min) {
-        font-size: 5.1rem;
-      }
-      @media all and (max-width: $xs-max) {
-        font-size: 2.5rem;
-      }
     }
     .header_text {
       margin-bottom: 2rem;
@@ -862,22 +918,20 @@ fullwidth_editor
 three_sections & products_sections
 *********************/
 .three_sections,
-.products_sections {
+.products_sections,
+.info_sections {
   background: #fff;
   height: auto;
   overflow: hidden;
   .item {
-    padding-top: 3em;
-    padding-bottom: 0.5em;
-    margin: 10px 0;
+    padding-bottom: 3rem;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    @media all and (min-width: $md-min) {
-      padding-top: 0;
-    }
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // @media all and (min-width: $md-min) {
+    //   padding-bottom: 2rem;
+    // }
     img {
       width: 100%;
       border-radius: $themeBorder_radius;
@@ -887,24 +941,25 @@ three_sections & products_sections
         opacity: 0.8;
       }
     }
-    .heading {
-      padding: 15px 5px;
-    }
-    .text_part {
-      padding: 10px 5px;
+  }
+  .heading {
+    padding: 15px 5px;
+  }
+  .text_part {
+    padding: 10px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+ min-height: 125px;
+
+    @media all and (min-width: $lg-min) {
       min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      @media all and (min-width: $md-min) {
-        min-height: 250px;
-      }
-      @media all and (min-width: $xl-min) {
-        min-height: 200px;
-      }
-      .button_link {
-        margin-top: 1rem;
-      }
+    }
+  
+    .button_link {
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
     }
   }
 }
@@ -913,9 +968,27 @@ three_sections & products_sections
     min-height: 600px;
   }
 }
+.info_sections {
+    .item {
+     padding-bottom: 5rem;
+    }
+  .heading {
+    @media all and (min-width: $xl-min) {
+      min-height: 100px;
+    }
+  }
+  .text_part {
+    display: block;
+    min-height: auto;
+
+    @media all and (min-width: $xl-min) {
+      min-height: auto;
+    }
+  }
+}
 .products_sections {
   .item {
-    text-align: left;
+    padding-right: 1rem;
     img {
       &:hover {
         opacity: 1;
@@ -1323,6 +1396,7 @@ social icons
   .footer_fields_heading {
     color: $themecolorGreenLighter !important;
     padding-right: 0.5rem;
+    line-height: 1.5;
   }
   .footer_fields_text {
     color: #fff;

@@ -7,12 +7,12 @@ if (get_row_layout() == 'focus_text') {
 
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+                <div class="col-xl-10 offset-xl-1">
                 <header class="header">
                     <?php if (get_sub_field('heading')) { ?>
-                    <h3 class="heading">
+                    <h2 class="heading">
                         <?php the_sub_field('heading'); ?>
-                    </h3>
+                    </h2>
                     <?php  } ?>
                 </header>
                 <?php if (get_sub_field('text')) { ?>
