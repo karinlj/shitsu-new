@@ -217,24 +217,19 @@ img {
   }
   @media all and (min-width: $xl-min) {
     padding: 7rem 0;
-     margin: 0 -15px;
+    margin: 0 -15px;
   }
-    .col {
+  .col {
     margin: 0 -15px;
   }
 }
 /*********************************************
     background and overlay - sections
- *********************************************/
-.header_big,
-.header_small,
-.info_banner,
-.link_section,
-.hero_section,
-.pdf_section,
-.boka_och_omdomen_banner,
-.text_block_full_width,
-.text_and_or_image {
+//  *********************************************/
+
+section,
+header,
+footer {
   position: relative;
   &.overlay-dark::before {
     position: absolute;
@@ -248,23 +243,6 @@ img {
   }
 }
 /*radio button-background colors for content fields and infoboxes*/
-// .dark {
-//   background: $themecolor;
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6 {
-//     color: #fff !important;
-//   }
-//   p {
-//     color: #fff;
-//   }
-// }
-// .lightgrey {
-//   background: $lightgrey;
-// }
 
 section,
 header,
@@ -298,7 +276,6 @@ footer {
   &.lightgrey {
     background: $lightgrey;
   }
-
   &.white {
     background: #fff;
   }
@@ -376,13 +353,13 @@ h3,
 h4 {
   color: $themecolorGreen;
   font-weight: 400;
+    margin-bottom: 1rem;
 }
 
 h1 {
   line-height: 1;
   color: #fff;
   text-shadow: $text-shadow;
-  margin-bottom: 1rem;
 
   font-size: 3.9rem;
   @media all and (min-width: $xl-min) {
@@ -917,10 +894,11 @@ fullwidth_editor
 /*********************
 three_sections & products_sections
 *********************/
+//  //background and overlay: see scss section
+
 .three_sections,
 .products_sections,
 .info_sections {
-  background: #fff;
   height: auto;
   overflow: hidden;
   .item {
@@ -950,12 +928,10 @@ three_sections & products_sections
     display: flex;
     flex-direction: column;
     justify-content: space-between;
- min-height: 125px;
-
+    min-height: 125px;
     @media all and (min-width: $lg-min) {
       min-height: 200px;
     }
-  
     .button_link {
       margin-top: 1rem;
       width: 100%;
@@ -969,20 +945,28 @@ three_sections & products_sections
   }
 }
 .info_sections {
-    .item {
-     padding-bottom: 5rem;
+  .item {
+    padding-bottom: 5rem;
+    img {
+      &:hover {
+        opacity: 1;
+      }
     }
+  }
   .heading {
+    padding: 0;
     @media all and (min-width: $xl-min) {
       min-height: 100px;
+      margin-bottom: 0.5rem;
+    
     }
   }
   .text_part {
     display: block;
     min-height: auto;
 
-    @media all and (min-width: $xl-min) {
-      min-height: auto;
+    @media all and (min-width: $lg-min) {
+      min-height: 200px;
     }
   }
 }
@@ -1491,8 +1475,7 @@ social icons
   no_page 404
 *********************/
 .no_page {
-  background: #fff;
-  min-height: 300px;
+  min-height: 500px;
 
   .nopage-heading {
     margin-bottom: 2rem;

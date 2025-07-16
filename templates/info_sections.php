@@ -5,9 +5,12 @@ if (get_row_layout() == 'info_sections') { ?>
     <section class="info_sections lighturqoise section_spacing_top_medium">
         <div class="container">
             <div class="row">
-                <div class="col-xl-10 offset-xl-1">
-                        <?php $main_heading = get_sub_field('main_heading'); ?>
-            <h2 class="main_heading margin_3"><?php echo $main_heading; ?></h2>
+                <!-- <div class="col-xl-10 offset-xl-1"> -->
+                <div class="col">
+
+                    <?php $main_heading = get_sub_field('main_heading'); ?>
+                    <h2 class="main_heading margin_3"><?php echo $main_heading; ?></h2>
+
                     <div class="row align-items-start">
                         <?php
                         // repeater field 
@@ -23,11 +26,11 @@ if (get_row_layout() == 'info_sections') { ?>
                                 $image = wp_get_attachment_image_src($img_id, 'full');
                                 $alt_text = get_post_meta($img_id, '_wp_attachment_image_alt', true); ?>
 
-                                <div class="col-sm-6 col-md-4">
+                                <div class="col-sm-6 col-md-4 col-xl-3">
                                     <div class="item">
 
                                         <h3 class="heading"><?php echo $heading; ?></h3>
-                                        <div class="text_part margin_2">
+                                        <div class="text_part">
                                             <p class="text"><?php echo $text; ?></p>
                                         </div>
                                         <?php if ($img_id) {

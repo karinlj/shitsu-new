@@ -272,27 +272,15 @@ img {
 
 /*********************************************
     background and overlay - sections
- *********************************************/
-.header_big,
-.header_small,
-.info_banner,
-.link_section,
-.hero_section,
-.pdf_section,
-.boka_och_omdomen_banner,
-.text_block_full_width,
-.text_and_or_image {
+//  *********************************************/
+section,
+header,
+footer {
   position: relative;
 }
-.header_big.overlay-dark::before,
-.header_small.overlay-dark::before,
-.info_banner.overlay-dark::before,
-.link_section.overlay-dark::before,
-.hero_section.overlay-dark::before,
-.pdf_section.overlay-dark::before,
-.boka_och_omdomen_banner.overlay-dark::before,
-.text_block_full_width.overlay-dark::before,
-.text_and_or_image.overlay-dark::before {
+section.overlay-dark::before,
+header.overlay-dark::before,
+footer.overlay-dark::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -470,13 +458,13 @@ h3,
 h4 {
   color: #5c7e36;
   font-weight: 400;
+  margin-bottom: 1rem;
 }
 
 h1 {
   line-height: 1;
   color: #fff;
   text-shadow: 1px 1px rgba(7, 42, 68, 0.2);
-  margin-bottom: 1rem;
   font-size: 3.9rem;
 }
 @media all and (min-width: 1200px) {
@@ -1050,7 +1038,6 @@ three_sections & products_sections
 .three_sections,
 .products_sections,
 .info_sections {
-  background: #fff;
   height: auto;
   overflow: hidden;
 }
@@ -1111,18 +1098,25 @@ three_sections & products_sections
 .info_sections .item {
   padding-bottom: 5rem;
 }
+.info_sections .item img:hover {
+  opacity: 1;
+}
+.info_sections .heading {
+  padding: 0;
+}
 @media all and (min-width: 1200px) {
   .info_sections .heading {
     min-height: 100px;
+    margin-bottom: 0.5rem;
   }
 }
 .info_sections .text_part {
   display: block;
   min-height: auto;
 }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 992px) {
   .info_sections .text_part {
-    min-height: auto;
+    min-height: 200px;
   }
 }
 
@@ -1629,8 +1623,7 @@ social icons
   no_page 404
 *********************/
 .no_page {
-  background: #fff;
-  min-height: 300px;
+  min-height: 500px;
 }
 .no_page .nopage-heading {
   margin-bottom: 2rem;
