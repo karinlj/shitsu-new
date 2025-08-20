@@ -583,11 +583,11 @@ a.button_link {
   font-family: "Didact Gothic", sans-serif;
   letter-spacing: 1px;
   display: inline-block;
-  border: 1.5px solid #409DB0;
+  border: 1.5px solid #2aacc6;
   background: #fff;
-  color: #409DB0;
+  color: #2aacc6;
   padding: 10px 18px;
-  font-size: 16px;
+  font-size: 17px;
   text-transform: uppercase;
   transition: 1s;
   line-height: 20px;
@@ -595,29 +595,34 @@ a.button_link {
 @media only screen and (max-width: 575.9px) {
   a.button_link {
     padding: 8px 16px;
+    margin-bottom: 1rem;
   }
 }
 a.button_link:hover {
-  background: #409DB0;
+  background: #2aacc6;
   color: #fff;
   text-decoration: none;
 }
 a.button_link:active,
 a.button_link :visited {
-  border: 1.5px solid #409DB0;
+  border: 1.5px solid #2aacc6;
   background: #fff;
-  color: #409DB0;
+  color: #2aacc6;
   text-decoration: none;
 }
 a.button_link.dark {
-  background: #409DB0;
+  background: #2aacc6;
   color: #fff;
 }
 a.button_link.dark:hover {
-  border: 1.5px solid #409DB0;
+  border: 1.5px solid #2aacc6;
   background: #fff;
-  color: #409DB0;
+  color: #2aacc6;
   text-decoration: none;
+}
+a.button_link.large {
+  padding: 14px 22px;
+  font-size: 19px;
 }
 
 /*********************
@@ -1033,7 +1038,7 @@ a.button_link.dark:hover {
 fullwidth_editor
 *********************/
 /*********************
-three_sections & products_sections
+three_sections, info_sections & products_sections
 *********************/
 .three_sections,
 .products_sections,
@@ -1064,6 +1069,11 @@ three_sections & products_sections
 .products_sections .heading,
 .info_sections .heading {
   padding: 15px 5px;
+}
+.three_sections .heading.centered_text,
+.products_sections .heading.centered_text,
+.info_sections .heading.centered_text {
+  text-align: center;
 }
 .three_sections .text_part,
 .products_sections .text_part,
@@ -1101,21 +1111,33 @@ three_sections & products_sections
 .info_sections .item img:hover {
   opacity: 1;
 }
-.info_sections .heading {
-  padding: 0;
+.info_sections .heading_section .preamble {
+  max-width: 90%;
+  margin: 0 auto;
 }
-@media all and (min-width: 1200px) {
-  .info_sections .heading {
-    min-height: 100px;
-    margin-bottom: 0.5rem;
+@media all and (min-width: 992px) {
+  .info_sections .heading_section .preamble {
+    max-width: 60%;
   }
+}
+.info_sections .heading_section.centered_text {
+  text-align: center;
 }
 .info_sections .text_part {
   display: block;
   min-height: auto;
 }
+.info_sections.same_height .heading {
+  padding: 0;
+}
+@media all and (min-width: 1200px) {
+  .info_sections.same_height .heading {
+    min-height: 100px;
+    margin-bottom: 0.5rem;
+  }
+}
 @media all and (min-width: 992px) {
-  .info_sections .text_part {
+  .info_sections.same_height .text_part {
     min-height: 200px;
   }
 }
@@ -1211,7 +1233,7 @@ three_sections & products_sections
 }
 .testimonials_section .testimonials_inner .item .signature {
   text-transform: uppercase;
-  color: #409DB0;
+  color: #2aacc6;
 }
 
 /*********************
@@ -1322,24 +1344,9 @@ three_sections & products_sections
   margin-bottom: 1rem;
 }
 
-/**********************
- focus_text
-***********************/
-.focus_text .heading,
-.focus_text .text {
-  color: #f26d55 !important;
-}
-
 /*********************
    info banner
 *********************/
-/*********************
-   pdf_section
-*********************/
-.pdf_section .button_link {
-  margin-top: 1rem;
-}
-
 /*********************
    boka_och_omdomen_banner
 *********************/
@@ -1450,8 +1457,8 @@ contact_form_block
   width: auto;
   border-radius: 0;
   display: inline-block;
-  border: 1.5px solid #409DB0;
-  background: #409DB0;
+  border: 1.5px solid #2aacc6;
+  background: #2aacc6;
   color: #fff;
   padding: 12px 20px;
   font-size: 14px;
@@ -1612,7 +1619,7 @@ social icons
   font-family: FontAwesome;
   content: "";
   font-size: 1.4rem;
-  color: #409DB0;
+  color: #2aacc6;
   transition: all 0.3s ease;
 }
 .footer_container .footer-bottom .to_top p:hover::before {

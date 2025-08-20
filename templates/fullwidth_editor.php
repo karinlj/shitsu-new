@@ -1,4 +1,5 @@
 <?php
+// fullwidth_editor layout 
 
 if (get_row_layout() == 'fullwidth_editor') {
     $color = get_sub_field('color_theme'); ?>

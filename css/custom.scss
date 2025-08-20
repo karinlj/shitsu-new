@@ -353,7 +353,7 @@ h3,
 h4 {
   color: $themecolorGreen;
   font-weight: 400;
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -454,13 +454,13 @@ a.button_link {
   background: #fff;
   color: $turqoise;
   padding: 10px 18px;
-  font-size: 16px;
+  font-size: 17px;
   text-transform: uppercase;
   transition: 1s;
   line-height: 20px;
   @media only screen and (max-width: $xs-max) {
     padding: 8px 16px;
-    // font-size: 15px;
+    margin-bottom: 1rem;
   }
   &:hover {
     background: $turqoise;
@@ -483,6 +483,10 @@ a.button_link {
       color: $turqoise;
       text-decoration: none;
     }
+  }
+  &.large {
+    padding: 14px 22px;
+    font-size: 19px;
   }
 }
 
@@ -887,15 +891,12 @@ a.button_link {
 /*********************
 fullwidth_editor
 *********************/
-.fullwidth_editor {
-  //
-}
+//background and overlay: see scss section
 
 /*********************
-three_sections & products_sections
+three_sections, info_sections & products_sections
 *********************/
 //  //background and overlay: see scss section
-
 .three_sections,
 .products_sections,
 .info_sections {
@@ -904,12 +905,6 @@ three_sections & products_sections
   .item {
     padding-bottom: 3rem;
     width: 100%;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // @media all and (min-width: $md-min) {
-    //   padding-bottom: 2rem;
-    // }
     img {
       width: 100%;
       border-radius: $themeBorder_radius;
@@ -922,6 +917,9 @@ three_sections & products_sections
   }
   .heading {
     padding: 15px 5px;
+    &.centered_text {
+      text-align: center;
+    }
   }
   .text_part {
     padding: 10px 5px;
@@ -953,20 +951,34 @@ three_sections & products_sections
       }
     }
   }
-  .heading {
-    padding: 0;
-    @media all and (min-width: $xl-min) {
-      min-height: 100px;
-      margin-bottom: 0.5rem;
-    
+  .heading_section {
+    .preamble {
+      max-width: 90%;
+      margin: 0 auto;
+      @media all and (min-width: $lg-min) {
+        max-width: 60%;
+      }
+    }
+    &.centered_text {
+      text-align: center;
     }
   }
   .text_part {
     display: block;
     min-height: auto;
-
-    @media all and (min-width: $lg-min) {
-      min-height: 200px;
+  }
+  &.same_height {
+    .heading {
+      padding: 0;
+      @media all and (min-width: $xl-min) {
+        min-height: 100px;
+        margin-bottom: 0.5rem;
+      }
+    }
+    .text_part {
+      @media all and (min-width: $lg-min) {
+        min-height: 200px;
+      }
     }
   }
 }
@@ -999,7 +1011,6 @@ three_sections & products_sections
     }
   }
   .product_info {
-    // padding: 1rem 1.8rem;
     background: $lightgrey;
     .swish_logo {
       margin-top: 0.75rem;
@@ -1171,30 +1182,11 @@ three_sections & products_sections
   }
 }
 
-/**********************
- focus_text
-***********************/
-.focus_text {
-  .heading,
-  .text {
-    color: $colorOrange !important;
-  }
-}
 /*********************
    info banner
 *********************/
-.info_banner {
-  //background and overlay: see scss section
-}
+//background and overlay: see scss section
 
-/*********************
-   pdf_section
-*********************/
-.pdf_section {
-  .button_link {
-    margin-top: 1rem;
-  }
-}
 /*********************
    boka_och_omdomen_banner
 *********************/

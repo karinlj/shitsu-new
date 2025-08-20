@@ -1,5 +1,5 @@
 <?php
-// get started layout for  Pages Content block
+// info_banner layout for  Pages Content block
 if (get_row_layout() == 'info_banner') { ?>
     <?php
     $style = '';
@@ -27,6 +27,7 @@ if (get_row_layout() == 'info_banner') { ?>
 
                     <?php
                     $link = get_sub_field('button_link');
+                    $file_upload = get_sub_field('file_upload');
 
                     if ($link) {
                         $link_url = $link['url'];
@@ -36,8 +37,13 @@ if (get_row_layout() == 'info_banner') { ?>
                             <a href="<?php echo esc_url($link_url); ?>" rel="noopener norefferer" target='_blank'
                                 class="button_link dark">
                                 <?php echo esc_html($link_title); ?></a>
+                    <?php } 
+
+                    if ($file_upload) { ?>
+
+                            <a href="<?php echo $file_upload['url']; ?>" class="button_link dark"><?php echo $file_upload['filename']; ?></a>
                         </div>
-                    <?php } ?>
+                    <?php  } ?>
                 </div>
             </div>
         </div>

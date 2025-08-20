@@ -77,7 +77,7 @@
 
                                         <?php if ($button_link_url) { ?>
                                             <div class="btn_wrapper">
-                                                <a class="button_link dark" href="<?php echo $button_link_url; ?>" target="_blank">
+                                                <a class="button_link dark large" href="<?php echo $button_link_url; ?>" target="_blank">
                                                     <?php echo $button_link_text; ?></a>
                                             </div>
                                         <?php } ?>
