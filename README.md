@@ -18,7 +18,7 @@ ShiatsuRummet is a massage studio focused on Shiatsu and Spinal Energetics based
 - Fontawesome icons
 - PHP, HTML5, SASS
 - jQuery for interactivity
-- built according to The Web Content Accessibility Guidelines ( WCAG )
+- Built according to The Web Content Accessibility Guidelines ( WCAG )
 
 ## Made by KarinsWeb 
 ##### Url: https://frilans.karinljunggren.com/
