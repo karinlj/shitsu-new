@@ -8,7 +8,7 @@ ShiatsuRummet is a massage studio focused on Shiatsu and Spinal Energetics based
 ![Screenshot](/screenshot.jpg?raw=true "Screenshot")
 
 
-## Custom built WordPress theme for ShiatsuRummet 2025
+## Custom built WordPress theme for ShiatsuRummet 2025.
 
 ## Built with 
 
@@ -16,8 +16,9 @@ ShiatsuRummet is a massage studio focused on Shiatsu and Spinal Energetics based
 - ACF for content interface
 - Bootstrap for grid
 - Fontawesome icons
-- SASS
+- PHP, HTML5, SASS
 - jQuery for interactivity
+- built according to The Web Content Accessibility Guidelines ( WCAG )
 
 ## Made by KarinsWeb 
 ##### Url: https://frilans.karinljunggren.com/
