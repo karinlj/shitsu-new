@@ -1,4 +1,5 @@
 <?php
+// three_sections layout for Front Page Blocks
 if (get_row_layout() == 'three_sections') { ?>
 
     <section class="three_sections section_spacing_top_small">

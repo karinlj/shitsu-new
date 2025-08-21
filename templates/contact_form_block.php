@@ -1,5 +1,5 @@
 <?php
-// contact_form_block
+//contact_form_block template for Page blocks
 if (get_row_layout() == 'contact_form_block') {
 
     $color = get_sub_field('color_theme');

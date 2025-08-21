@@ -1,4 +1,6 @@
 <?php
+//products_sections template for Page blocks
+
 if (get_row_layout() == 'products_sections') { ?>
 
     <section class="products_sections section_spacing_only_top_small">

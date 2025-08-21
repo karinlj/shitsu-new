@@ -1,6 +1,5 @@
 <?php
-// fullwidth_editor layout 
-
+//fullwidth_editor template for Page blocks & Front Page Blocks
 if (get_row_layout() == 'fullwidth_editor') {
     $color = get_sub_field('color_theme'); ?>
 

@@ -12,7 +12,7 @@
             <div class="col-12">
                 <?php //layouts of front_page_blocks - Flex content
 
-                //Loopa ACF flex Content
+                //ACF Flex content for Front page blocks
                 if (function_exists('have_rows')) { ?>
 
                     <?php
@@ -25,7 +25,6 @@
 
                             <?php // load layout from the templates folder
                             get_template_part('templates/' . $layout); ?>
-
                 <?php }
                     }
                 } ?>

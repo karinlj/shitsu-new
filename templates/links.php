@@ -1,4 +1,6 @@
 <?php
+//links template for Page blocks
+
 if (get_row_layout() == 'links') {
     $color = get_sub_field('color_theme'); ?>
 

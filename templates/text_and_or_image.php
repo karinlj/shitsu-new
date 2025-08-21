@@ -1,4 +1,5 @@
 <?php
+//text_and_or_image template for Page blocks
 if (get_row_layout() == 'text_and_or_image') {
 
     $color = get_sub_field('color_theme');

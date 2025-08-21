@@ -4,7 +4,6 @@
 if (get_row_layout() == 'hero_section') {
     $style = '';
     $hero_class = 'hero_section overlay-dark';
-
     $hero_image = get_sub_field('hero_image');
     $hero_heading = get_sub_field('heading');
     $hero_text = get_sub_field('text');

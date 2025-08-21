@@ -1,4 +1,5 @@
 <?php
+// boka_och_omdomen_banner layout for Front Page Blocks
 if (get_row_layout() == 'boka_och_omdomen_banner') { ?>
     <?php
     $style = '';

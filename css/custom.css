@@ -4,7 +4,7 @@ Theme Name: Theme Shiatsu
 Author: Karin Ljunggren
 Author URI: http://karinljunggren.com/
 Description:  Theme for Shiatsurummet.
-Version: 1.0.1
+Version: 1.0.3
 License: GNU General Public License v2 or later
 */
 /* colors */
@@ -101,15 +101,6 @@ video {
   vertical-align: baseline;
 }
 
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
 blockquote,
 q {
   quotes: none;
@@ -128,12 +119,18 @@ table {
   border-spacing: 0;
 }
 
+ol,
+ul {
+  list-style: none;
+}
+
 body {
   font-family: "Open Sans", arial, sans-serif;
   color: #444;
   font-size: 16px;
   width: 100%;
   background: #fff;
+  line-height: 1;
 }
 
 body.no_scroll {
@@ -801,7 +798,12 @@ a.button_link.large {
   font-size: 1.15rem;
   transition: all 0.2s ease-in;
   border-bottom: 2px solid transparent;
-  margin: 0 1rem -2px 1rem;
+  margin: 0 0.8rem -2px 0.8rem;
+}
+@media only screen and (min-width: 1200px) {
+  .nav_desktop .nav_links ul li a {
+    margin: 0 1rem -2px 1rem;
+  }
 }
 .nav_desktop .nav_links ul li a:active, .nav_desktop .nav_links ul li a:visited {
   color: #333;
@@ -1630,6 +1632,7 @@ social icons
   no_page 404
 *********************/
 .no_page {
+  background: #fafafb;
   min-height: 500px;
 }
 .no_page .nopage-heading {

@@ -1,5 +1,5 @@
 <?php
-
+// testimonials layout for Front Page Blocks
 if (get_row_layout() == 'testimonials') { ?>
 
 <section class="testimonials_section section_spacing_top_small">

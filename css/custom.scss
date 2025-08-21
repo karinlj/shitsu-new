@@ -3,7 +3,7 @@ Theme Name: Theme Shiatsu
 Author: Karin Ljunggren
 Author URI: http://karinljunggren.com/
 Description:  Theme for Shiatsurummet.
-Version: 1.0.1
+Version: 1.0.3
 License: GNU General Public License v2 or later
 */
 @import "_mixins.scss";
@@ -102,13 +102,6 @@ video {
   vertical-align: baseline;
 }
 
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
 blockquote,
 q {
   quotes: none;
@@ -124,13 +117,17 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+ol,
+ul {
+  list-style: none;
+}
 body {
   font-family: "Open Sans", arial, sans-serif;
   color: $themecolor;
   font-size: 16px;
   width: 100%;
   background: #fff;
+  line-height: 1;
 }
 body.no_scroll {
   overflow: hidden;
@@ -507,12 +504,6 @@ a.button_link {
     .header_items {
       max-width: 100%;
     }
-    // .header_heading {
-    //   line-height: 1.2;
-    //   color: #fff;
-    //   text-shadow: $text-shadow;
-    //   margin-bottom: 1rem;
-    // }
     .header_text {
       font-size: 1.3rem;
       color: #fff;
@@ -587,9 +578,6 @@ a.button_link {
     justify-content: flex-start;
   }
   .site_title {
-    // img{
-    //   width: 25rem;
-    // }
     font-family: "Didact Gothic", sans-serif;
     display: block;
     padding: 0;
@@ -642,7 +630,10 @@ a.button_link {
           font-size: 1.15rem;
           transition: all 0.2s ease-in;
           border-bottom: 2px solid transparent;
-          margin: 0 1rem -2px 1rem;
+          margin: 0 0.8rem -2px 0.8rem;
+          @media only screen and (min-width: $xl-min) {
+            margin: 0 1rem -2px 1rem;
+          }
           &:active,
           &:visited {
             color: $navcolor;
@@ -896,7 +887,7 @@ fullwidth_editor
 /*********************
 three_sections, info_sections & products_sections
 *********************/
-//  //background and overlay: see scss section
+//background and overlay: see scss section
 .three_sections,
 .products_sections,
 .info_sections {
@@ -1098,7 +1089,6 @@ three_sections, info_sections & products_sections
     ul {
       li {
         padding: 0.2rem 0;
-        //font-weight: initial;
         line-height: 1.5;
       }
     }
@@ -1467,8 +1457,8 @@ social icons
   no_page 404
 *********************/
 .no_page {
+  background: $lightgrey;
   min-height: 500px;
-
   .nopage-heading {
     margin-bottom: 2rem;
   }

@@ -1,5 +1,5 @@
 <?php
-// info_banner layout for  Pages Content block
+//info_banner template for Page blocks & Front Page Blocks
 if (get_row_layout() == 'info_banner') { ?>
     <?php
     $style = '';

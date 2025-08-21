@@ -29,7 +29,9 @@ function google_fonts()
 {
     //Av någon anledning knasar det med wp_enqueue_script
 ?>
-<link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet"><?php
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<?php
 }
 add_action('wp_head', 'google_fonts');
 
@@ -70,17 +72,18 @@ if (function_exists('acf_add_options_page')) {
         'position' => 3.33,
     ));
 }
+
 function my_acf_admin_head()
 {
 ?>
-<script type="text/javascript">
-(function($) {
-    $(document).ready(function() {
-        $('.layout').addClass('-collapsed');
-        $('.acf-postbox').addClass('closed');
-    });
-})(jQuery);
-</script>
+    <script type="text/javascript">
+        (function($) {
+            $(document).ready(function() {
+                $('.layout').addClass('-collapsed');
+                $('.acf-postbox').addClass('closed');
+            });
+        })(jQuery);
+    </script>
 <?php
 }
 add_action('acf/input/admin_head', 'my_acf_admin_head');

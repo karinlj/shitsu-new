@@ -1,5 +1,5 @@
 <?php
-//text_block_full_width template for page blocks
+//text_block_full_width template for Page blocks
 if (get_row_layout() == 'text_block_full_width') {
     $color = get_sub_field('color_theme');
 ?>
