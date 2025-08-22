@@ -39,14 +39,14 @@
         $style = 'style="background-image:url(\'' . wp_get_attachment_url($header_image_default, 'full') . '\')"';
     }
     ?>
-    <div class="header_wrapper">
+    <div class="header_wrapper" id="header-new">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <!-- get menu -->
                     <?php get_template_part('parts/main-menu'); ?>
 
-                    <header id="header-new"
+                    <header 
                         class="<?php echo $header_class; ?> <?php echo $color; ?> <?php echo $overlay_color; ?>"
                         <?php echo $style; ?>>
 

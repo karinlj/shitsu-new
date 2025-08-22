@@ -71,7 +71,7 @@
                                                         $social_site = get_sub_field('social_site'); ?>
 
                                                         <li class="social-item">
-                                                            <a href="<?php echo $social_url; ?>"><i
+                                                            <a href="<?php echo $social_url; ?>" aria-label="Link to <?php echo $social_site; ?>"><i
                                                                     class="fab fa-<?php echo $social_site; ?>"></i></a>
                                                         </li>
                                                 <?php
@@ -122,7 +122,7 @@
                             </div>
                             <div class="col-2">
                                 <div class="to_top">
-                                    <a href="#header-new">
+                                    <a href="#header-new" aria-label="Länk till toppen av sidan">
                                         <p title="Till toppen av sidan"></p>
                                     </a>
                                 </div>

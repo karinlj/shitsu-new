@@ -421,7 +421,8 @@ p {
 }
 @media all and (max-width: 575.9px) {
   p {
-    font-size: 17px;
+    font-size: 1.05rem;
+    line-height: 1.8;
   }
 }
 p.bigger_text {
@@ -580,14 +581,16 @@ a.button_link {
   font-family: "Didact Gothic", sans-serif;
   letter-spacing: 1px;
   display: inline-block;
-  border: 1.5px solid #2aacc6;
+  border: 1.5px solid #269DB5;
   background: #fff;
-  color: #2aacc6;
+  color: #269DB5;
   padding: 10px 18px;
-  font-size: 17px;
+  font-size: 1.05rem;
   text-transform: uppercase;
   transition: 1s;
-  line-height: 20px;
+  line-height: 24px;
+  border-radius: 4px;
+  font-weight: 500;
 }
 @media only screen and (max-width: 575.9px) {
   a.button_link {
@@ -596,25 +599,25 @@ a.button_link {
   }
 }
 a.button_link:hover {
-  background: #2aacc6;
+  background: #269DB5;
   color: #fff;
   text-decoration: none;
 }
 a.button_link:active,
 a.button_link :visited {
-  border: 1.5px solid #2aacc6;
+  border: 1.5px solid #269DB5;
   background: #fff;
-  color: #2aacc6;
+  color: #269DB5;
   text-decoration: none;
 }
 a.button_link.dark {
-  background: #2aacc6;
+  background: #269DB5;
   color: #fff;
 }
 a.button_link.dark:hover {
-  border: 1.5px solid #2aacc6;
+  border: 1.5px solid #269DB5;
   background: #fff;
-  color: #2aacc6;
+  color: #269DB5;
   text-decoration: none;
 }
 a.button_link.large {
@@ -733,32 +736,6 @@ a.button_link.large {
     justify-content: flex-start;
   }
 }
-.nav_desktop .site_title {
-  font-family: "Didact Gothic", sans-serif;
-  display: block;
-  padding: 0;
-  margin: 0;
-}
-.nav_desktop .site_title a {
-  color: #5c7e36;
-  font-size: 2.5rem;
-}
-@media only screen and (min-width: 1200px) {
-  .nav_desktop .site_title a {
-    font-size: 2.7rem;
-  }
-}
-@media all and (max-width: 575.9px) {
-  .nav_desktop .site_title a {
-    font-size: 2.3rem;
-  }
-}
-.nav_desktop .site_title a:hover,
-.nav_desktop .site_title a :focus {
-  color: #5c7e36;
-  text-decoration: none;
-  outline: none;
-}
 .nav_desktop .nav_links {
   display: flex;
   flex-direction: column;
@@ -841,7 +818,7 @@ a.button_link.large {
 }
 .nav_desktop .nav_links ul li.menu-item-has-children ul li {
   width: 100%;
-  border-bottom: 1px solid #8fba5e;
+  border-bottom: 1px solid #698f3d;
 }
 .nav_desktop .nav_links ul li.menu-item-has-children ul li:last-of-type {
   border-bottom: none;
@@ -942,6 +919,33 @@ a.button_link.large {
   transform: rotate(225deg);
 }
 
+.site_title {
+  font-family: "Didact Gothic", sans-serif;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+.site_title a {
+  color: #5c7e36;
+  font-size: 2.5rem;
+}
+@media only screen and (min-width: 1200px) {
+  .site_title a {
+    font-size: 2.7rem;
+  }
+}
+@media all and (max-width: 575.9px) {
+  .site_title a {
+    font-size: 2.3rem;
+  }
+}
+.site_title a:hover,
+.site_title a :focus {
+  color: #5c7e36;
+  text-decoration: none;
+  outline: none;
+}
+
 .nav_mobile {
   position: fixed;
   height: 100%;
@@ -949,12 +953,12 @@ a.button_link.large {
   z-index: 500;
   top: 0;
   left: 0;
-  background: #8fba5e;
+  background: #fafafb;
   padding: 0 10%;
   padding-top: 60px;
   text-align: left;
   transform: translateX(100%);
-  transition: transform 0.6s ease;
+  transition: transform 0.4s ease-in-out;
   /*toggle open*/
 }
 @media only screen and (min-width: 992px) {
@@ -966,11 +970,11 @@ a.button_link.large {
   margin: 0;
   padding: 0;
   list-style: none;
-  margin-bottom: 1rem;
+  margin: 1.5rem 0;
 }
 .nav_mobile ul li a {
   font-family: "Didact Gothic", sans-serif;
-  padding: 1rem 1rem 1rem 0;
+  padding: 0.8rem 0.8rem 0.8rem 0;
   color: #333;
   text-decoration: none;
   display: block;
@@ -1235,7 +1239,7 @@ three_sections, info_sections & products_sections
 }
 .testimonials_section .testimonials_inner .item .signature {
   text-transform: uppercase;
-  color: #2aacc6;
+  color: #269DB5;
 }
 
 /*********************
@@ -1459,8 +1463,8 @@ contact_form_block
   width: auto;
   border-radius: 0;
   display: inline-block;
-  border: 1.5px solid #2aacc6;
-  background: #2aacc6;
+  border: 1.5px solid #269DB5;
+  background: #269DB5;
   color: #fff;
   padding: 12px 20px;
   font-size: 14px;
@@ -1536,13 +1540,13 @@ social icons
   padding-bottom: 2rem;
 }
 .footer_container .footer_fields_heading {
-  color: #8fba5e !important;
+  color: #698f3d !important;
   padding-right: 0.5rem;
   line-height: 1.5;
 }
 .footer_container .footer_fields_text {
   color: #fff;
-  font-size: 15px;
+  font-size: 0.95rem;
 }
 .footer_container .logo {
   max-width: 100px;
@@ -1615,13 +1619,13 @@ social icons
 }
 .footer_container .footer-bottom .to_top {
   float: right;
-  margin-top: -1rem;
+  margin-top: -1.5rem;
 }
 .footer_container .footer-bottom .to_top p::before {
   font-family: FontAwesome;
   content: "";
   font-size: 1.4rem;
-  color: #2aacc6;
+  color: #269DB5;
   transition: all 0.3s ease;
 }
 .footer_container .footer-bottom .to_top p:hover::before {

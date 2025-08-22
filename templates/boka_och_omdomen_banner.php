@@ -21,7 +21,6 @@ if (get_row_layout() == 'boka_och_omdomen_banner') { ?>
             <div class="row justify-content-center align-items-center">
                 <div class="col-md-4">
                     <?php
-                    $text = get_sub_field('text');
                     ?>
                     <div class="reviews">
                         <div class="stars">
@@ -31,7 +30,6 @@ if (get_row_layout() == 'boka_och_omdomen_banner') { ?>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <h6 class="text"><?php echo $text; ?></h6>
                     </div>
 
                     <?php if (get_sub_field('link')) {
