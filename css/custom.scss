@@ -124,7 +124,7 @@ ul {
 body {
   font-family: "Open Sans", arial, sans-serif;
   color: $themecolor;
-  font-size: 16px;
+  font-size: 17px;
   width: 100%;
   background: #fff;
   line-height: 1;
@@ -378,12 +378,12 @@ h2 {
     font-size: 2.1rem;
   }
   &.smaller_text {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     @media all and (min-width: $xl-min) {
-      font-size: 1.8rem;
+      font-size: 1.9rem;
     }
     @media all and (max-width: $xs-max) {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
     }
   }
 }
@@ -508,15 +508,15 @@ a.button_link {
       max-width: 100%;
     }
     .header_text {
-      font-size: 1.3rem;
+      font-size: 1.4rem;
       color: #fff;
       margin-bottom: 1rem;
       text-shadow: $text-shadow;
       @media only screen and (min-width: $xl-min) {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
       }
       @media all and (max-width: $xs-max) {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
       }
     }
     .btn {
@@ -612,8 +612,13 @@ a.button_link {
           transition: all 0.2s ease-in;
           border-bottom: 2px solid transparent;
           margin: 0 0.8rem -2px 0.8rem;
+              @media only screen and (min-width: $lg-min) {
+               margin: 0 0.7rem -2px 0.7rem;
+
+      }
           @media only screen and (min-width: $xl-min) {
             margin: 0 1rem -2px 1rem;
+                      font-size: 1.3rem;
           }
           &:active,
           &:visited {
@@ -1058,7 +1063,7 @@ three_sections, info_sections & products_sections
       .text {
         font-style: italic;
         font-family: "Didact Gothic", sans-serif;
-        font-size: 17px;
+        font-size: 18px;
       }
       .signature {
         text-transform: uppercase;

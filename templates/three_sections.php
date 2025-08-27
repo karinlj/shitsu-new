@@ -39,7 +39,7 @@ if (get_row_layout() == 'three_sections') { ?>
                                         $link_url = $link['url'];
                                         $link_title = $link['title'];
                                     ?>
-                                        <a class="button_link" href="<?php echo esc_url($link_url); ?>">
+                                        <a class="button_link dark" href="<?php echo esc_url($link_url); ?>">
                                             <?php echo esc_html($link_title); ?></a>
                                     <?php } ?>
                                 </div>

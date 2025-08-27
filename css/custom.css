@@ -127,7 +127,7 @@ ul {
 body {
   font-family: "Open Sans", arial, sans-serif;
   color: #444;
-  font-size: 16px;
+  font-size: 17px;
   width: 100%;
   background: #fff;
   line-height: 1;
@@ -491,16 +491,16 @@ h2 {
   }
 }
 h2.smaller_text {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 @media all and (min-width: 1200px) {
   h2.smaller_text {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
 @media all and (max-width: 575.9px) {
   h2.smaller_text {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
   }
 }
 
@@ -651,7 +651,7 @@ a.button_link.large {
 }
 .header_wrapper .header_big .header_text,
 .header_wrapper .header_small .header_text {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #fff;
   margin-bottom: 1rem;
   text-shadow: 1px 1px rgba(7, 42, 68, 0.2);
@@ -659,13 +659,13 @@ a.button_link.large {
 @media only screen and (min-width: 1200px) {
   .header_wrapper .header_big .header_text,
 .header_wrapper .header_small .header_text {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
   }
 }
 @media all and (max-width: 575.9px) {
   .header_wrapper .header_big .header_text,
 .header_wrapper .header_small .header_text {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 .header_wrapper .header_big .btn,
@@ -777,9 +777,15 @@ a.button_link.large {
   border-bottom: 2px solid transparent;
   margin: 0 0.8rem -2px 0.8rem;
 }
+@media only screen and (min-width: 992px) {
+  .nav_desktop .nav_links ul li a {
+    margin: 0 0.7rem -2px 0.7rem;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .nav_desktop .nav_links ul li a {
     margin: 0 1rem -2px 1rem;
+    font-size: 1.3rem;
   }
 }
 .nav_desktop .nav_links ul li a:active, .nav_desktop .nav_links ul li a:visited {
@@ -818,7 +824,7 @@ a.button_link.large {
 }
 .nav_desktop .nav_links ul li.menu-item-has-children ul li {
   width: 100%;
-  border-bottom: 1px solid #698f3d;
+  border-bottom: 1px solid #86aa5e;
 }
 .nav_desktop .nav_links ul li.menu-item-has-children ul li:last-of-type {
   border-bottom: none;
@@ -1235,7 +1241,7 @@ three_sections, info_sections & products_sections
 .testimonials_section .testimonials_inner .item .text {
   font-style: italic;
   font-family: "Didact Gothic", sans-serif;
-  font-size: 17px;
+  font-size: 18px;
 }
 .testimonials_section .testimonials_inner .item .signature {
   text-transform: uppercase;
@@ -1540,7 +1546,7 @@ social icons
   padding-bottom: 2rem;
 }
 .footer_container .footer_fields_heading {
-  color: #698f3d !important;
+  color: #86aa5e !important;
   padding-right: 0.5rem;
   line-height: 1.5;
 }
