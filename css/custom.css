@@ -1519,7 +1519,6 @@ social icons
   border-radius: 50%;
   margin: 5px 2px;
   margin-top: 1em;
-  transition: 1s;
   color: #111;
   background: transparent;
   box-shadow: -1px 3px 5px 0 rgba(7, 42, 68, 0.2);
@@ -1625,16 +1624,23 @@ social icons
 }
 .footer_container .footer-bottom .to_top {
   float: right;
-  margin-top: -1.5rem;
+  margin-top: -1.3rem;
+  background: #269DB5;
+  border-radius: 4px;
+  padding: 5px;
+  height: 1.9rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.7rem;
+  transition: all 0.25s ease;
+}
+.footer_container .footer-bottom .to_top:hover {
+  transform: translateY(-2px);
 }
 .footer_container .footer-bottom .to_top p::before {
   font-family: FontAwesome;
   content: "";
-  font-size: 1.4rem;
-  color: #269DB5;
-  transition: all 0.3s ease;
-}
-.footer_container .footer-bottom .to_top p:hover::before {
+  font-size: 1.3rem;
   color: #fff;
 }
 
